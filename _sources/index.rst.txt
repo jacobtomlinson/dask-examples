@@ -12,10 +12,9 @@ You can run these examples in a live session here: |Binder|
 .. |Binder| image:: https://mybinder.org/badge.svg
    :target: https://mybinder.org/v2/gh/dask/dask-examples/master?urlpath=lab
 
-
 .. toctree::
    :maxdepth: 1
-   :caption: Basic Examples:
+   :caption: Basic Examples
 
    array
    bag
@@ -27,19 +26,22 @@ You can run these examples in a live session here: |Binder|
 
 .. toctree::
    :maxdepth: 1
-   :caption: Dataframes:
+   :caption: Dataframes
 
    dataframes/01-data-access
    dataframes/02-groupby
 
 .. toctree::
    :maxdepth: 1
-   :caption: Machine Learning:
+   :caption: Machine Learning
 
+   machine-learning/blockwise-ensemble
    machine-learning/scale-scikit-learn
    machine-learning/parallel-prediction
+   machine-learning/torch-prediction
    machine-learning/training-on-large-datasets
    machine-learning/incremental
+   machine-learning/text-vectorization
    machine-learning/hyperparam-opt.ipynb
    machine-learning/xgboost
    machine-learning/voting-classifier
@@ -49,7 +51,7 @@ You can run these examples in a live session here: |Binder|
 
 .. toctree::
    :maxdepth: 1
-   :caption: Applications:
+   :caption: Applications
 
    applications/json-data-on-the-web
    applications/async-await
@@ -60,12 +62,14 @@ You can run these examples in a live session here: |Binder|
    applications/prefect-etl
    applications/satellite-imagery-geotiff
    applications/stencils-with-numba
+   applications/forecasting-with-prophet
 
 .. toctree::
    :maxdepth: 1
-   :caption: User Surveys:
+   :caption: User Surveys
 
    surveys/2019.ipynb
+   surveys/2020.ipynb
 
 .. raw:: html
 

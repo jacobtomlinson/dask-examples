@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,104 +11,124 @@
   
 
   
-  
-  
-  
-
-  
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
-        <script type="text/javascript" src="../_static/js/custom.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
-
-  
   <link rel="stylesheet" href="../_static/css/style.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/explore.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/nbsphinx.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+        <script src="../_static/js/custom.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Scale Scikit-Learn for Small Data Problems" href="../machine-learning/scale-scikit-learn.html" />
+    <link rel="next" title="Blockwise Ensemble Methods" href="../machine-learning/blockwise-ensemble.html" />
     <link rel="prev" title="DataFrames: Read and Write Data" href="01-data-access.html" />
   <link rel="shortcut icon" href="../_static/images/favicon.ico"/>
+  
+  <meta name="Description" content="DataFrames: Groupby">
+  <meta property="og:description" content="DataFrames: Groupby">
+  <meta name="twitter:description" content="DataFrames: Groupby" />
+  <meta property="og:title" content="Dask Examples  documentation - DataFrames: Groupby">
+  <meta property="og:image" content="https://github.com/dask.png">
+  <meta property="og:image:secure_url" content="https://github.com/dask.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="380" />
+  <meta property="og:image:height" content="380" />
+  <meta property="og:url" content="dataframes/02-groupby.html">
+  <meta property="og:site_name" content="Dask Examples  documentation">
+
+  <meta name="twitter:site" content="https://dask.org" />
+  <meta name="twitter:creator" content="@dask_dev" />
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:image" content="https://github.com/dask.png" />
+  <meta name="twitter:image:alt" content="Dask Examples  documentation">
+  
 
 </head>
 
 <body class="wy-body-for-nav">
 
   
+    <nav id="explore-links">
+        <a href="https://docs.dask.org/">
+        <img class="caption" src="../_static/images/dask-horizontal-white.svg"/>
+        </a>
 
-<nav id="explore-links">
-  <a href="https://docs.dask.org/">
-    <img class="caption" src="../_static/images/dask-horizontal-white.svg"/>
-  </a>
+        <ul>
+        <li>
+            <a>Get Started</a>
+            <ul>
+            <li><a href="https://docs.dask.org/en/latest/install.html"> Install </a></li>
+            <li><a href="https://examples.dask.org"> Examples </a></li>
+            <li><a href="https://github.com/dask/dask-tutorial"> Tutorial </a></li>
+            <li><a href="https://docs.dask.org/en/latest/why.html"> Why Dask? </a></li>
+            <li><a href="https://stories.dask.org/en/latest"> Use Cases </a></li>
+            <li><a href="https://www.youtube.com/watch?v=RA_2qdipVng&list=PLRtz5iA93T4PQvWuoMnIyEIz1fXiJ5Pri"> Talks </a></li>
+            <li><a href="https://mybinder.org/v2/gh/dask/dask-examples/master?urlpath=lab"> Try Online </a></li>
+            <li><a href="https://dask.org/slides"> Slides </a></li>
+            </ul>
+        </li>
 
-  <ul>
-    <li>
-      <a>Get Started</a>
-      <ul>
-        <li><a href="https://docs.dask.org/en/latest/install.html"> Install </a></li>
-        <li><a href="https://examples.dask.org"> Examples </a></li>
-        <li><a href="https://github.com/dask/dask-tutorial"> Tutorial </a></li>
-        <li><a href="https://docs.dask.org/en/latest/why.html"> Why Dask? </a></li>
-        <li><a href="https://stories.dask.org/en/latest"> Use Cases </a></li>
-        <li><a href="https://www.youtube.com/watch?v=RA_2qdipVng&list=PLRtz5iA93T4PQvWuoMnIyEIz1fXiJ5Pri"> Talks </a></li>
-        <li><a href="https://mybinder.org/v2/gh/dask/dask-examples/master?urlpath=lab"> Try Online </a></li>
-        <li><a href="https://dask.org/slides"> Slides </a></li>
-      </ul>
-    </li>
+        <li>
+            <a href="">Algorithms</a>
+            <ul>
+            <li><a href="https://docs.dask.org/en/latest/array.html">Arrays</a></li>
+            <li><a href="https://docs.dask.org/en/latest/dataframe.html">Dataframes</a></li>
+            <li><a href="https://docs.dask.org/en/latest/bag.html">Bags</a></li>
+            <li><a href="https://docs.dask.org/en/latest/delayed.html">Delayed (custom)</a></li>
+            <li><a href="https://docs.dask.org/en/latest/futures.html">Futures (real-time)</a></li>
+            <li><a href="http://ml.dask.org">Machine Learning</a></li>
+            <li><a href="https://xarray.pydata.org/en/latest/">XArray</a></li>
+            </ul>
+        </li>
 
-    <li>
-      <a href="">Algorithms</a>
-      <ul>
-        <li><a href="https://docs.dask.org/en/latest/array.html">Arrays</a></li>
-        <li><a href="https://docs.dask.org/en/latest/dataframe.html">Dataframes</a></li>
-        <li><a href="https://docs.dask.org/en/latest/bag.html">Bags</a></li>
-        <li><a href="https://docs.dask.org/en/latest/delayed.html">Delayed (custom)</a></li>
-        <li><a href="https://docs.dask.org/en/latest/futures.html">Futures (real-time)</a></li>
-        <li><a href="http://ml.dask.org">Machine Learning</a></li>
-        <li><a href="https://xarray.pydata.org/en/latest/">XArray</a></li>
-      </ul>
-    </li>
+        <li>
+            <a href="https://docs.dask.org/en/latest/setup.html">Setup</a>
+            <ul>
+            <li><a href="https://docs.dask.org/en/latest/setup/single-machine.html"> Local </a></li>
+            <li><a href="https://docs.dask.org/en/latest/setup/cloud.html"> Cloud </a></li>
+            <li><a href="https://docs.dask.org/en/latest/setup/hpc.html"> HPC </a></li>
+            <li><a href="https://kubernetes.dask.org/en/latest/"> Kubernetes </a></li>
+            <li><a href="https://yarn.dask.org/en/latest/"> Hadoop / Yarn </a></li>
+            </ul>
+        </li>
 
-    <li>
-      <a href="https://docs.dask.org/en/latest/setup.html">Setup</a>
-      <ul>
-        <li><a href="https://docs.dask.org/en/latest/setup/single-machine.html"> Local </a></li>
-        <li><a href="https://docs.dask.org/en/latest/setup/cloud.html"> Cloud </a></li>
-        <li><a href="https://docs.dask.org/en/latest/setup/hpc.html"> HPC </a></li>
-        <li><a href="https://kubernetes.dask.org/en/latest/"> Kubernetes </a></li>
-        <li><a href="https://yarn.dask.org/en/latest/"> Hadoop / Yarn </a></li>
-      </ul>
-    </li>
+        <li>
+            <a>Community</a>
+            <ul>
+            <li><a href="http://docs.dask.org/en/latest/support.html">Ask for Help</a></li>
+            <li><a href="https://github.com/dask">Github</a></li>
+            <li><a href="https://stackoverflow.com/questions/tagged/dask">Stack Overflow</a></li>
+            <li><a href="https://twitter.com/dask_dev">Twitter</a></li>
+            <li><a href="https://blog.dask.org/"> Developer Blog </a></li>
+            <li><a href="https://youtube.com/c/dask-dev"> YouTube Channel </a></li>
+            </ul>
+        </li>
+        </ul>
 
-    <li>
-      <a>Community</a>
-      <ul>
-        <li><a href="http://docs.dask.org/en/latest/support.html">Ask for Help</a></li>
-        <li><a href="https://github.com/dask">Github</a></li>
-        <li><a href="https://stackoverflow.com/questions/tagged/dask">Stack Overflow</a></li>
-        <li><a href="https://twitter.com/dask_dev">Twitter</a></li>
-        <li><a href="https://blog.dask.org/"> Developer Blog </a></li>
-      </ul>
-    </li>
-  </ul>
-
-</nav>
-
-
+    </nav>
+  
   <div class="wy-grid-for-nav">
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
@@ -118,7 +137,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> Dask Examples
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Dask Examples
           
 
           
@@ -141,6 +160,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -148,7 +168,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">Basic Examples:</span></p>
+              <p class="caption"><span class="caption-text">Basic Examples</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../array.html">Dask Arrays</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../bag.html">Dask Bags</a></li>
@@ -158,24 +178,28 @@
 <li class="toctree-l1"><a class="reference internal" href="../machine-learning.html">Dask for Machine Learning</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../xarray.html">Xarray with Dask Arrays</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Dataframes:</span></p>
+<p class="caption"><span class="caption-text">Dataframes</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="01-data-access.html">DataFrames: Read and Write Data</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">DataFrames: Groupby</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#Start-Dask-Client-for-Dashboard">Start Dask Client for Dashboard</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#Artifical-dataset">Artifical dataset</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#Groupby-Aggregations">Groupby Aggregations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Custom-Aggregations">Custom Aggregations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#Many-groups">Many groups</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#Groupby-Apply">Groupby Apply</a></li>
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">Machine Learning:</span></p>
+<p class="caption"><span class="caption-text">Machine Learning</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../machine-learning/blockwise-ensemble.html">Blockwise Ensemble Methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../machine-learning/scale-scikit-learn.html">Scale Scikit-Learn for Small Data Problems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../machine-learning/parallel-prediction.html">Score and Predict Large Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../machine-learning/torch-prediction.html">Batch Prediction with PyTorch</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../machine-learning/training-on-large-datasets.html">Train Models on Large Datasets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../machine-learning/incremental.html">Incrementally Train Large Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../machine-learning/text-vectorization.html">Text Vectorization Pipeline</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../machine-learning/hyperparam-opt.html">Hyperparameter optimization with Dask</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../machine-learning/xgboost.html">Scale XGBoost</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../machine-learning/voting-classifier.html">Use Voting Classifiers</a></li>
@@ -183,7 +207,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../machine-learning/glm.html">Generalized Linear Models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../machine-learning/svd.html">Singular Value Decomposition</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Applications:</span></p>
+<p class="caption"><span class="caption-text">Applications</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../applications/json-data-on-the-web.html">Analyze web-hosted JSON data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../applications/async-await.html">Async/Await and Non-Blocking Execution</a></li>
@@ -194,15 +218,18 @@
 <li class="toctree-l1"><a class="reference internal" href="../applications/prefect-etl.html">ETL Pipelines with Prefect</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../applications/satellite-imagery-geotiff.html">Reading and manipulating tiled GeoTIFF datasets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../applications/stencils-with-numba.html">Stencil Computations with Numba</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../applications/forecasting-with-prophet.html">Time Series Forecasting</a></li>
 </ul>
-<p class="caption"><span class="caption-text">User Surveys:</span></p>
+<p class="caption"><span class="caption-text">User Surveys</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../surveys/2019.html">2019 Dask User Survey Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../surveys/2020.html">2020 Dask User Survey Results</a></li>
 </ul>
 
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -241,7 +268,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li>DataFrames: Groupby</li>
     
@@ -267,31 +294,45 @@
 /* CSS for nbsphinx extension */
 
 /* remove conflicting styling from Sphinx themes */
-div.nbinput,
-div.nbinput div.prompt,
-div.nbinput div.input_area,
-div.nbinput div[class*=highlight],
-div.nbinput div[class*=highlight] pre,
-div.nboutput,
-div.nbinput div.prompt,
-div.nbinput div.output_area,
-div.nboutput div[class*=highlight],
-div.nboutput div[class*=highlight] pre {
-    background: none;
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt *,
+div.nbinput.container div.input_area pre,
+div.nboutput.container div.output_area pre,
+div.nbinput.container div.input_area .highlight,
+div.nboutput.container div.output_area .highlight {
     border: none;
-    padding: 0 0;
+    padding: 0;
     margin: 0;
     box-shadow: none;
 }
 
+div.nbinput.container > div[class*=highlight],
+div.nboutput.container > div[class*=highlight] {
+    margin: 0;
+}
+
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt * {
+    background: none;
+}
+
+div.nboutput.container div.output_area .highlight,
+div.nboutput.container div.output_area pre {
+    background: unset;
+}
+
+div.nboutput.container div.output_area div.highlight {
+    color: unset;  /* override Pygments text color */
+}
+
 /* avoid gaps between output lines */
-div.nboutput div[class*=highlight] pre {
+div.nboutput.container div[class*=highlight] pre {
     line-height: normal;
 }
 
 /* input/output containers */
-div.nbinput,
-div.nboutput {
+div.nbinput.container,
+div.nboutput.container {
     display: -webkit-flex;
     display: flex;
     align-items: flex-start;
@@ -299,92 +340,104 @@ div.nboutput {
     width: 100%;
 }
 @media (max-width: 540px) {
-    div.nbinput,
-    div.nboutput {
+    div.nbinput.container,
+    div.nboutput.container {
         flex-direction: column;
     }
 }
 
 /* input container */
-div.nbinput {
+div.nbinput.container {
     padding-top: 5px;
 }
 
 /* last container */
-div.nblast {
+div.nblast.container {
     padding-bottom: 5px;
 }
 
 /* input prompt */
-div.nbinput div.prompt pre {
+div.nbinput.container div.prompt pre {
     color: #307FC1;
 }
 
 /* output prompt */
-div.nboutput div.prompt pre {
+div.nboutput.container div.prompt pre {
     color: #BF5B3D;
 }
 
 /* all prompts */
-div.nbinput div.prompt,
-div.nboutput div.prompt {
-    min-width: 7ex;
-    padding-top: 0.4em;
-    padding-right: 0.4em;
-    text-align: right;
-    flex: 0;
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
 }
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
 @media (max-width: 540px) {
-    div.nbinput div.prompt,
-    div.nboutput div.prompt {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
         text-align: left;
         padding: 0.4em;
     }
-    div.nboutput div.prompt.empty {
+    div.nboutput.container div.prompt.empty {
         padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
     }
 }
 
 /* disable scrollbars on prompts */
-div.nbinput div.prompt pre,
-div.nboutput div.prompt pre {
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
     overflow: hidden;
 }
 
 /* input/output area */
-div.nbinput div.input_area,
-div.nboutput div.output_area {
-    padding: 0.4em;
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
     -webkit-flex: 1;
     flex: 1;
     overflow: auto;
 }
 @media (max-width: 540px) {
-    div.nbinput div.input_area,
-    div.nboutput div.output_area {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
         width: 100%;
     }
 }
 
 /* input area */
-div.nbinput div.input_area {
+div.nbinput.container div.input_area {
     border: 1px solid #e0e0e0;
     border-radius: 2px;
-    background: #f5f5f5;
+    /*background: #f5f5f5;*/
 }
 
 /* override MathJax center alignment in output cells */
-div.nboutput div[class*=MathJax] {
+div.nboutput.container div[class*=MathJax] {
     text-align: left !important;
 }
 
 /* override sphinx.ext.imgmath center alignment in output cells */
-div.nboutput div.math p {
+div.nboutput.container div.math p {
     text-align: left;
 }
 
 /* standard error */
-div.nboutput div.output_area.stderr {
+div.nboutput.container div.output_area.stderr {
     background: #fdd;
 }
 
@@ -428,6 +481,28 @@ div.nboutput div.output_area.stderr {
 .ansi-bold { font-weight: bold; }
 .ansi-underline { text-decoration: underline; }
 
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+    margin: 0;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
 /* Some additional styling taken form the Jupyter notebook CSS */
 div.rendered_html table {
   border: none;
@@ -461,6 +536,28 @@ div.rendered_html tbody tr:nth-child(odd) {
 div.rendered_html tbody tr:hover {
   background: rgba(66, 165, 245, 0.2);
 }
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
 </style>
 <div class="admonition-live-notebook admonition">
 <p class="admonition-title">Live Notebook</p>
@@ -478,7 +575,7 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">from</span> <span class="nn">dask.distributed</span> <span class="k">import</span> <span class="n">Client</span>
+<span></span><span class="kn">from</span> <span class="nn">dask.distributed</span> <span class="kn">import</span> <span class="n">Client</span>
 <span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">n_workers</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">threads_per_worker</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">processes</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">memory_limit</span><span class="o">=</span><span class="s1">&#39;2GB&#39;</span><span class="p">)</span>
 <span class="n">client</span>
 </pre></div>
@@ -494,8 +591,8 @@ div.rendered_html tbody tr:hover {
 <td style="vertical-align: top; border: 0px solid white">
 <h3 style="text-align: left;">Client</h3>
 <ul style="text-align: left; list-style: none; margin: 0; padding: 0;">
-  <li><b>Scheduler: </b>inproc://10.20.1.243/12389/1</li>
-  <li><b>Dashboard: </b><a href='http://10.20.1.243/12389/1:8787/status' target='_blank'>http://10.20.1.243/12389/1:8787/status</a>
+  <li><b>Scheduler: </b>inproc://10.1.0.4/10030/1</li>
+  <li><b>Dashboard: </b><a href='http://10.1.0.4:8787/status' target='_blank'>http://10.1.0.4:8787/status</a></li>
 </ul>
 </td>
 <td style="vertical-align: top; border: 0px solid white">
@@ -631,37 +728,37 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
-<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>name
-Alice      -0.001490
-Bob        -0.000674
-Charlie    -0.002904
-Dan        -0.002109
-Edith       0.002627
-Frank      -0.000538
-George      0.002686
-Hannah     -0.001492
-Ingrid     -0.000938
-Jerry      -0.002574
-Kevin       0.000513
-Laura      -0.000874
-Michael     0.000954
-Norbert    -0.001235
-Oliver     -0.001432
-Patricia   -0.000896
-Quinn      -0.000897
-Ray         0.001696
-Sarah       0.002748
-Tim         0.000634
-Ursula      0.000949
-Victor      0.000660
-Wendy      -0.000397
-Xavier      0.002557
-Yvonne      0.000348
-Zelda       0.000031
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+name
+Alice      -0.002441
+Bob        -0.001408
+Charlie    -0.000153
+Dan        -0.001562
+Edith      -0.002905
+Frank      -0.002669
+George     -0.000373
+Hannah      0.002096
+Ingrid      0.001118
+Jerry      -0.001300
+Kevin      -0.002840
+Laura       0.002835
+Michael    -0.002200
+Norbert    -0.001350
+Oliver      0.002819
+Patricia   -0.001109
+Quinn       0.002984
+Ray         0.003883
+Sarah      -0.003772
+Tim         0.003813
+Ursula     -0.000358
+Victor      0.002454
+Wendy      -0.000793
+Xavier     -0.002203
+Yvonne      0.001883
+Zelda       0.000668
 Name: x, dtype: float64
-</pre></div>
-</div>
+</pre></div></div>
 </div>
 <p>Performance will depend on the aggregation you do (mean vs std), the key on which you group (name vs id), and the number of total groups</p>
 <div class="nbinput docutils container">
@@ -678,8 +775,8 @@ Name: x, dtype: float64
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-CPU times: user 399 ms, sys: 51.9 ms, total: 451 ms
-Wall time: 337 ms
+CPU times: user 258 ms, sys: 30.6 ms, total: 289 ms
+Wall time: 230 ms
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -696,8 +793,8 @@ Wall time: 337 ms
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-CPU times: user 889 ms, sys: 47.5 ms, total: 937 ms
-Wall time: 699 ms
+CPU times: user 581 ms, sys: 28.7 ms, total: 610 ms
+Wall time: 452 ms
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -714,8 +811,8 @@ Wall time: 699 ms
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-CPU times: user 1.4 s, sys: 142 ms, total: 1.55 s
-Wall time: 1.2 s
+CPU times: user 513 ms, sys: 29.9 ms, total: 543 ms
+Wall time: 413 ms
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -765,39 +862,39 @@ Wall time: 1.2 s
   </thead>
   <tbody>
     <tr>
-      <td>Alice</td>
-      <td>-0.001490</td>
+      <th>Alice</th>
+      <td>-0.002441</td>
       <td>0.576333</td>
-      <td>-0.001415</td>
-      <td>99402</td>
+      <td>0.001208</td>
+      <td>99875</td>
     </tr>
     <tr>
-      <td>Bob</td>
-      <td>-0.000674</td>
-      <td>0.577981</td>
-      <td>0.000975</td>
-      <td>99413</td>
+      <th>Bob</th>
+      <td>-0.001408</td>
+      <td>0.577081</td>
+      <td>-0.001538</td>
+      <td>99434</td>
     </tr>
     <tr>
-      <td>Charlie</td>
-      <td>-0.002904</td>
-      <td>0.576383</td>
-      <td>0.001724</td>
-      <td>99396</td>
+      <th>Charlie</th>
+      <td>-0.000153</td>
+      <td>0.577339</td>
+      <td>-0.000695</td>
+      <td>100055</td>
     </tr>
     <tr>
-      <td>Dan</td>
-      <td>-0.002109</td>
-      <td>0.577217</td>
-      <td>-0.000674</td>
-      <td>99558</td>
+      <th>Dan</th>
+      <td>-0.001562</td>
+      <td>0.577213</td>
+      <td>-0.001019</td>
+      <td>99794</td>
     </tr>
     <tr>
-      <td>Edith</td>
-      <td>0.002627</td>
-      <td>0.577268</td>
-      <td>-0.002792</td>
-      <td>100076</td>
+      <th>Edith</th>
+      <td>-0.002905</td>
+      <td>0.576991</td>
+      <td>0.000747</td>
+      <td>99114</td>
     </tr>
   </tbody>
 </table>
@@ -805,6 +902,10 @@ Wall time: 1.2 s
 </div>
 <p>This is the same as with Pandas. Generally speaking, Dask.dataframe groupby-aggregations are roughly same performance as Pandas groupby-aggregations, just more scalable.</p>
 <p>You can read more about Pandas’ common aggregations in <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/groupby.html#aggregation">the Pandas documentation</a>.</p>
+</div>
+<div class="section" id="Custom-Aggregations">
+<h2>Custom Aggregations<a class="headerlink" href="#Custom-Aggregations" title="Permalink to this headline">¶</a></h2>
+<p>Dask dataframe Aggregate is available for custom aggregations (See <a class="reference external" href="https://docs.dask.org/en/latest/dataframe-groupby.html#aggregate">Dask dataframe Aggregate Documentation</a>)</p>
 </div>
 <div class="section" id="Many-groups">
 <h2>Many groups<a class="headerlink" href="#Many-groups" title="Permalink to this headline">¶</a></h2>
@@ -820,12 +921,25 @@ Wall time: 1.2 s
 </pre></div>
 </div>
 </div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+Unable to revert mtime: /usr/share/fonts/cMap
+Unable to revert mtime: /usr/share/fonts/cmap/adobe-cns1
+Unable to revert mtime: /usr/share/fonts/cmap/adobe-gb1
+Unable to revert mtime: /usr/share/fonts/cmap/adobe-japan1
+Unable to revert mtime: /usr/share/fonts/cmap/adobe-japan2
+Unable to revert mtime: /usr/share/fonts/cmap/adobe-korea1
+</pre></div></div>
+</div>
 <div class="nboutput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/dataframes_02-groupby_15_0.png" src="../_images/dataframes_02-groupby_15_0.png" />
+<img alt="../_images/dataframes_02-groupby_16_1.png" src="../_images/dataframes_02-groupby_16_1.png" />
 </div>
 </div>
 <div class="nbinput docutils container">
@@ -838,12 +952,25 @@ Wall time: 1.2 s
 </pre></div>
 </div>
 </div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+Unable to revert mtime: /usr/share/fonts/cMap
+Unable to revert mtime: /usr/share/fonts/cmap/adobe-cns1
+Unable to revert mtime: /usr/share/fonts/cmap/adobe-gb1
+Unable to revert mtime: /usr/share/fonts/cmap/adobe-japan1
+Unable to revert mtime: /usr/share/fonts/cmap/adobe-japan2
+Unable to revert mtime: /usr/share/fonts/cmap/adobe-korea1
+</pre></div></div>
+</div>
 <div class="nboutput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/dataframes_02-groupby_16_0.png" src="../_images/dataframes_02-groupby_16_0.png" />
+<img alt="../_images/dataframes_02-groupby_17_1.png" src="../_images/dataframes_02-groupby_17_1.png" />
 </div>
 </div>
 </div>
@@ -857,7 +984,7 @@ Wall time: 1.2 s
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="k">import</span> <span class="n">LinearRegression</span>
+<span></span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
 
 <span class="k">def</span> <span class="nf">train</span><span class="p">(</span><span class="n">partition</span><span class="p">):</span>
     <span class="n">est</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
@@ -880,45 +1007,45 @@ Wall time: 1.2 s
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-CPU times: user 6.92 s, sys: 762 ms, total: 7.68 s
-Wall time: 6.32 s
+CPU times: user 4.76 s, sys: 745 ms, total: 5.51 s
+Wall time: 4.55 s
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
-<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>name
-Alice       LinearRegression(copy_X=True, fit_intercept=Tr...
-Bob         LinearRegression(copy_X=True, fit_intercept=Tr...
-Charlie     LinearRegression(copy_X=True, fit_intercept=Tr...
-Dan         LinearRegression(copy_X=True, fit_intercept=Tr...
-Edith       LinearRegression(copy_X=True, fit_intercept=Tr...
-Frank       LinearRegression(copy_X=True, fit_intercept=Tr...
-George      LinearRegression(copy_X=True, fit_intercept=Tr...
-Hannah      LinearRegression(copy_X=True, fit_intercept=Tr...
-Ingrid      LinearRegression(copy_X=True, fit_intercept=Tr...
-Jerry       LinearRegression(copy_X=True, fit_intercept=Tr...
-Kevin       LinearRegression(copy_X=True, fit_intercept=Tr...
-Laura       LinearRegression(copy_X=True, fit_intercept=Tr...
-Michael     LinearRegression(copy_X=True, fit_intercept=Tr...
-Norbert     LinearRegression(copy_X=True, fit_intercept=Tr...
-Oliver      LinearRegression(copy_X=True, fit_intercept=Tr...
-Patricia    LinearRegression(copy_X=True, fit_intercept=Tr...
-Quinn       LinearRegression(copy_X=True, fit_intercept=Tr...
-Ray         LinearRegression(copy_X=True, fit_intercept=Tr...
-Sarah       LinearRegression(copy_X=True, fit_intercept=Tr...
-Tim         LinearRegression(copy_X=True, fit_intercept=Tr...
-Ursula      LinearRegression(copy_X=True, fit_intercept=Tr...
-Victor      LinearRegression(copy_X=True, fit_intercept=Tr...
-Wendy       LinearRegression(copy_X=True, fit_intercept=Tr...
-Xavier      LinearRegression(copy_X=True, fit_intercept=Tr...
-Yvonne      LinearRegression(copy_X=True, fit_intercept=Tr...
-Zelda       LinearRegression(copy_X=True, fit_intercept=Tr...
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+name
+Alice       LinearRegression()
+Bob         LinearRegression()
+Charlie     LinearRegression()
+Dan         LinearRegression()
+Edith       LinearRegression()
+Frank       LinearRegression()
+George      LinearRegression()
+Hannah      LinearRegression()
+Ingrid      LinearRegression()
+Jerry       LinearRegression()
+Kevin       LinearRegression()
+Laura       LinearRegression()
+Michael     LinearRegression()
+Norbert     LinearRegression()
+Oliver      LinearRegression()
+Patricia    LinearRegression()
+Quinn       LinearRegression()
+Ray         LinearRegression()
+Sarah       LinearRegression()
+Tim         LinearRegression()
+Ursula      LinearRegression()
+Victor      LinearRegression()
+Wendy       LinearRegression()
+Xavier      LinearRegression()
+Yvonne      LinearRegression()
+Zelda       LinearRegression()
 dtype: object
-</pre></div>
-</div>
+</pre></div></div>
 </div>
 </div>
 </div>
@@ -941,7 +1068,7 @@ ga('send', 'pageview');
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../machine-learning/scale-scikit-learn.html" class="btn btn-neutral float-right" title="Scale Scikit-Learn for Small Data Problems" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../machine-learning/blockwise-ensemble.html" class="btn btn-neutral float-right" title="Blockwise Ensemble Methods" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="01-data-access.html" class="btn btn-neutral float-left" title="DataFrames: Read and Write Data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -953,11 +1080,19 @@ ga('send', 'pageview');
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2018, Dask Developers
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -968,7 +1103,6 @@ ga('send', 'pageview');
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

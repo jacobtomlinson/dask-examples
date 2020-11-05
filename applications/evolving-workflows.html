@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,104 +11,124 @@
   
 
   
-  
-  
-  
-
-  
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
-        <script type="text/javascript" src="../_static/js/custom.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
-
-  
   <link rel="stylesheet" href="../_static/css/style.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/explore.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/nbsphinx.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+        <script src="../_static/js/custom.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Image Processing" href="image-processing.html" />
     <link rel="prev" title="Embarrassingly parallel Workloads" href="embarrassingly-parallel.html" />
   <link rel="shortcut icon" href="../_static/images/favicon.ico"/>
+  
+  <meta name="Description" content="Handle Evolving Workflows">
+  <meta property="og:description" content="Handle Evolving Workflows">
+  <meta name="twitter:description" content="Handle Evolving Workflows" />
+  <meta property="og:title" content="Dask Examples  documentation - Handle Evolving Workflows">
+  <meta property="og:image" content="https://github.com/dask.png">
+  <meta property="og:image:secure_url" content="https://github.com/dask.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="380" />
+  <meta property="og:image:height" content="380" />
+  <meta property="og:url" content="applications/evolving-workflows.html">
+  <meta property="og:site_name" content="Dask Examples  documentation">
+
+  <meta name="twitter:site" content="https://dask.org" />
+  <meta name="twitter:creator" content="@dask_dev" />
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:image" content="https://github.com/dask.png" />
+  <meta name="twitter:image:alt" content="Dask Examples  documentation">
+  
 
 </head>
 
 <body class="wy-body-for-nav">
 
   
+    <nav id="explore-links">
+        <a href="https://docs.dask.org/">
+        <img class="caption" src="../_static/images/dask-horizontal-white.svg"/>
+        </a>
 
-<nav id="explore-links">
-  <a href="https://docs.dask.org/">
-    <img class="caption" src="../_static/images/dask-horizontal-white.svg"/>
-  </a>
+        <ul>
+        <li>
+            <a>Get Started</a>
+            <ul>
+            <li><a href="https://docs.dask.org/en/latest/install.html"> Install </a></li>
+            <li><a href="https://examples.dask.org"> Examples </a></li>
+            <li><a href="https://github.com/dask/dask-tutorial"> Tutorial </a></li>
+            <li><a href="https://docs.dask.org/en/latest/why.html"> Why Dask? </a></li>
+            <li><a href="https://stories.dask.org/en/latest"> Use Cases </a></li>
+            <li><a href="https://www.youtube.com/watch?v=RA_2qdipVng&list=PLRtz5iA93T4PQvWuoMnIyEIz1fXiJ5Pri"> Talks </a></li>
+            <li><a href="https://mybinder.org/v2/gh/dask/dask-examples/master?urlpath=lab"> Try Online </a></li>
+            <li><a href="https://dask.org/slides"> Slides </a></li>
+            </ul>
+        </li>
 
-  <ul>
-    <li>
-      <a>Get Started</a>
-      <ul>
-        <li><a href="https://docs.dask.org/en/latest/install.html"> Install </a></li>
-        <li><a href="https://examples.dask.org"> Examples </a></li>
-        <li><a href="https://github.com/dask/dask-tutorial"> Tutorial </a></li>
-        <li><a href="https://docs.dask.org/en/latest/why.html"> Why Dask? </a></li>
-        <li><a href="https://stories.dask.org/en/latest"> Use Cases </a></li>
-        <li><a href="https://www.youtube.com/watch?v=RA_2qdipVng&list=PLRtz5iA93T4PQvWuoMnIyEIz1fXiJ5Pri"> Talks </a></li>
-        <li><a href="https://mybinder.org/v2/gh/dask/dask-examples/master?urlpath=lab"> Try Online </a></li>
-        <li><a href="https://dask.org/slides"> Slides </a></li>
-      </ul>
-    </li>
+        <li>
+            <a href="">Algorithms</a>
+            <ul>
+            <li><a href="https://docs.dask.org/en/latest/array.html">Arrays</a></li>
+            <li><a href="https://docs.dask.org/en/latest/dataframe.html">Dataframes</a></li>
+            <li><a href="https://docs.dask.org/en/latest/bag.html">Bags</a></li>
+            <li><a href="https://docs.dask.org/en/latest/delayed.html">Delayed (custom)</a></li>
+            <li><a href="https://docs.dask.org/en/latest/futures.html">Futures (real-time)</a></li>
+            <li><a href="http://ml.dask.org">Machine Learning</a></li>
+            <li><a href="https://xarray.pydata.org/en/latest/">XArray</a></li>
+            </ul>
+        </li>
 
-    <li>
-      <a href="">Algorithms</a>
-      <ul>
-        <li><a href="https://docs.dask.org/en/latest/array.html">Arrays</a></li>
-        <li><a href="https://docs.dask.org/en/latest/dataframe.html">Dataframes</a></li>
-        <li><a href="https://docs.dask.org/en/latest/bag.html">Bags</a></li>
-        <li><a href="https://docs.dask.org/en/latest/delayed.html">Delayed (custom)</a></li>
-        <li><a href="https://docs.dask.org/en/latest/futures.html">Futures (real-time)</a></li>
-        <li><a href="http://ml.dask.org">Machine Learning</a></li>
-        <li><a href="https://xarray.pydata.org/en/latest/">XArray</a></li>
-      </ul>
-    </li>
+        <li>
+            <a href="https://docs.dask.org/en/latest/setup.html">Setup</a>
+            <ul>
+            <li><a href="https://docs.dask.org/en/latest/setup/single-machine.html"> Local </a></li>
+            <li><a href="https://docs.dask.org/en/latest/setup/cloud.html"> Cloud </a></li>
+            <li><a href="https://docs.dask.org/en/latest/setup/hpc.html"> HPC </a></li>
+            <li><a href="https://kubernetes.dask.org/en/latest/"> Kubernetes </a></li>
+            <li><a href="https://yarn.dask.org/en/latest/"> Hadoop / Yarn </a></li>
+            </ul>
+        </li>
 
-    <li>
-      <a href="https://docs.dask.org/en/latest/setup.html">Setup</a>
-      <ul>
-        <li><a href="https://docs.dask.org/en/latest/setup/single-machine.html"> Local </a></li>
-        <li><a href="https://docs.dask.org/en/latest/setup/cloud.html"> Cloud </a></li>
-        <li><a href="https://docs.dask.org/en/latest/setup/hpc.html"> HPC </a></li>
-        <li><a href="https://kubernetes.dask.org/en/latest/"> Kubernetes </a></li>
-        <li><a href="https://yarn.dask.org/en/latest/"> Hadoop / Yarn </a></li>
-      </ul>
-    </li>
+        <li>
+            <a>Community</a>
+            <ul>
+            <li><a href="http://docs.dask.org/en/latest/support.html">Ask for Help</a></li>
+            <li><a href="https://github.com/dask">Github</a></li>
+            <li><a href="https://stackoverflow.com/questions/tagged/dask">Stack Overflow</a></li>
+            <li><a href="https://twitter.com/dask_dev">Twitter</a></li>
+            <li><a href="https://blog.dask.org/"> Developer Blog </a></li>
+            <li><a href="https://youtube.com/c/dask-dev"> YouTube Channel </a></li>
+            </ul>
+        </li>
+        </ul>
 
-    <li>
-      <a>Community</a>
-      <ul>
-        <li><a href="http://docs.dask.org/en/latest/support.html">Ask for Help</a></li>
-        <li><a href="https://github.com/dask">Github</a></li>
-        <li><a href="https://stackoverflow.com/questions/tagged/dask">Stack Overflow</a></li>
-        <li><a href="https://twitter.com/dask_dev">Twitter</a></li>
-        <li><a href="https://blog.dask.org/"> Developer Blog </a></li>
-      </ul>
-    </li>
-  </ul>
-
-</nav>
-
-
+    </nav>
+  
   <div class="wy-grid-for-nav">
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
@@ -118,7 +137,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> Dask Examples
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Dask Examples
           
 
           
@@ -141,6 +160,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -148,7 +168,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">Basic Examples:</span></p>
+              <p class="caption"><span class="caption-text">Basic Examples</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../array.html">Dask Arrays</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../bag.html">Dask Bags</a></li>
@@ -158,17 +178,20 @@
 <li class="toctree-l1"><a class="reference internal" href="../machine-learning.html">Dask for Machine Learning</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../xarray.html">Xarray with Dask Arrays</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Dataframes:</span></p>
+<p class="caption"><span class="caption-text">Dataframes</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dataframes/01-data-access.html">DataFrames: Read and Write Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../dataframes/02-groupby.html">DataFrames: Groupby</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Machine Learning:</span></p>
+<p class="caption"><span class="caption-text">Machine Learning</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../machine-learning/blockwise-ensemble.html">Blockwise Ensemble Methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../machine-learning/scale-scikit-learn.html">Scale Scikit-Learn for Small Data Problems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../machine-learning/parallel-prediction.html">Score and Predict Large Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../machine-learning/torch-prediction.html">Batch Prediction with PyTorch</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../machine-learning/training-on-large-datasets.html">Train Models on Large Datasets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../machine-learning/incremental.html">Incrementally Train Large Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../machine-learning/text-vectorization.html">Text Vectorization Pipeline</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../machine-learning/hyperparam-opt.html">Hyperparameter optimization with Dask</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../machine-learning/xgboost.html">Scale XGBoost</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../machine-learning/voting-classifier.html">Use Voting Classifiers</a></li>
@@ -176,7 +199,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../machine-learning/glm.html">Generalized Linear Models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../machine-learning/svd.html">Singular Value Decomposition</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Applications:</span></p>
+<p class="caption"><span class="caption-text">Applications</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="json-data-on-the-web.html">Analyze web-hosted JSON data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="async-await.html">Async/Await and Non-Blocking Execution</a></li>
@@ -186,7 +209,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#0:-Sequential-code">0: Sequential code</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#Start-Dask-Client">Start Dask Client</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#1:-Use-as_completed">1: Use as_completed</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#2:-Use-async/await-to-handle-each-locally">2: Use async/await to handle each locally</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#2:-Use-async/await-to-handle-single-file-processing-locally">2: Use async/await to handle single file processing locally</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#3:-Submit-tasks-from-tasks">3: Submit tasks from tasks</a></li>
 </ul>
 </li>
@@ -194,15 +217,18 @@
 <li class="toctree-l1"><a class="reference internal" href="prefect-etl.html">ETL Pipelines with Prefect</a></li>
 <li class="toctree-l1"><a class="reference internal" href="satellite-imagery-geotiff.html">Reading and manipulating tiled GeoTIFF datasets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="stencils-with-numba.html">Stencil Computations with Numba</a></li>
+<li class="toctree-l1"><a class="reference internal" href="forecasting-with-prophet.html">Time Series Forecasting</a></li>
 </ul>
-<p class="caption"><span class="caption-text">User Surveys:</span></p>
+<p class="caption"><span class="caption-text">User Surveys</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../surveys/2019.html">2019 Dask User Survey Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../surveys/2020.html">2020 Dask User Survey Results</a></li>
 </ul>
 
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -241,7 +267,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li>Handle Evolving Workflows</li>
     
@@ -267,31 +293,45 @@
 /* CSS for nbsphinx extension */
 
 /* remove conflicting styling from Sphinx themes */
-div.nbinput,
-div.nbinput div.prompt,
-div.nbinput div.input_area,
-div.nbinput div[class*=highlight],
-div.nbinput div[class*=highlight] pre,
-div.nboutput,
-div.nbinput div.prompt,
-div.nbinput div.output_area,
-div.nboutput div[class*=highlight],
-div.nboutput div[class*=highlight] pre {
-    background: none;
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt *,
+div.nbinput.container div.input_area pre,
+div.nboutput.container div.output_area pre,
+div.nbinput.container div.input_area .highlight,
+div.nboutput.container div.output_area .highlight {
     border: none;
-    padding: 0 0;
+    padding: 0;
     margin: 0;
     box-shadow: none;
 }
 
+div.nbinput.container > div[class*=highlight],
+div.nboutput.container > div[class*=highlight] {
+    margin: 0;
+}
+
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt * {
+    background: none;
+}
+
+div.nboutput.container div.output_area .highlight,
+div.nboutput.container div.output_area pre {
+    background: unset;
+}
+
+div.nboutput.container div.output_area div.highlight {
+    color: unset;  /* override Pygments text color */
+}
+
 /* avoid gaps between output lines */
-div.nboutput div[class*=highlight] pre {
+div.nboutput.container div[class*=highlight] pre {
     line-height: normal;
 }
 
 /* input/output containers */
-div.nbinput,
-div.nboutput {
+div.nbinput.container,
+div.nboutput.container {
     display: -webkit-flex;
     display: flex;
     align-items: flex-start;
@@ -299,92 +339,104 @@ div.nboutput {
     width: 100%;
 }
 @media (max-width: 540px) {
-    div.nbinput,
-    div.nboutput {
+    div.nbinput.container,
+    div.nboutput.container {
         flex-direction: column;
     }
 }
 
 /* input container */
-div.nbinput {
+div.nbinput.container {
     padding-top: 5px;
 }
 
 /* last container */
-div.nblast {
+div.nblast.container {
     padding-bottom: 5px;
 }
 
 /* input prompt */
-div.nbinput div.prompt pre {
+div.nbinput.container div.prompt pre {
     color: #307FC1;
 }
 
 /* output prompt */
-div.nboutput div.prompt pre {
+div.nboutput.container div.prompt pre {
     color: #BF5B3D;
 }
 
 /* all prompts */
-div.nbinput div.prompt,
-div.nboutput div.prompt {
-    min-width: 7ex;
-    padding-top: 0.4em;
-    padding-right: 0.4em;
-    text-align: right;
-    flex: 0;
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
 }
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
 @media (max-width: 540px) {
-    div.nbinput div.prompt,
-    div.nboutput div.prompt {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
         text-align: left;
         padding: 0.4em;
     }
-    div.nboutput div.prompt.empty {
+    div.nboutput.container div.prompt.empty {
         padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
     }
 }
 
 /* disable scrollbars on prompts */
-div.nbinput div.prompt pre,
-div.nboutput div.prompt pre {
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
     overflow: hidden;
 }
 
 /* input/output area */
-div.nbinput div.input_area,
-div.nboutput div.output_area {
-    padding: 0.4em;
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
     -webkit-flex: 1;
     flex: 1;
     overflow: auto;
 }
 @media (max-width: 540px) {
-    div.nbinput div.input_area,
-    div.nboutput div.output_area {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
         width: 100%;
     }
 }
 
 /* input area */
-div.nbinput div.input_area {
+div.nbinput.container div.input_area {
     border: 1px solid #e0e0e0;
     border-radius: 2px;
-    background: #f5f5f5;
+    /*background: #f5f5f5;*/
 }
 
 /* override MathJax center alignment in output cells */
-div.nboutput div[class*=MathJax] {
+div.nboutput.container div[class*=MathJax] {
     text-align: left !important;
 }
 
 /* override sphinx.ext.imgmath center alignment in output cells */
-div.nboutput div.math p {
+div.nboutput.container div.math p {
     text-align: left;
 }
 
 /* standard error */
-div.nboutput div.output_area.stderr {
+div.nboutput.container div.output_area.stderr {
     background: #fdd;
 }
 
@@ -428,6 +480,28 @@ div.nboutput div.output_area.stderr {
 .ansi-bold { font-weight: bold; }
 .ansi-underline { text-decoration: underline; }
 
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+    margin: 0;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
 /* Some additional styling taken form the Jupyter notebook CSS */
 div.rendered_html table {
   border: none;
@@ -461,6 +535,28 @@ div.rendered_html tbody tr:nth-child(odd) {
 div.rendered_html tbody tr:hover {
   background: rgba(66, 165, 245, 0.2);
 }
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
 </style>
 <div class="admonition-live-notebook admonition">
 <p class="admonition-title">Live Notebook</p>
@@ -469,7 +565,7 @@ div.rendered_html tbody tr:hover {
 <div class="section" id="Handle-Evolving-Workflows">
 <h1>Handle Evolving Workflows<a class="headerlink" href="#Handle-Evolving-Workflows" title="Permalink to this headline">¶</a></h1>
 <p>For some workflows we don’t know the extent of the computation at the outset. We need to do some computation in order to figure out the rest of the computation that we need to do. The computation grows and evolves as we do more work.</p>
-<p>As an example, consider a situuation where you need to read many files and then based on the contents of those files, fire off additional work. You would like to read the files in parallel, and then then within each file expose more parallelism.</p>
+<p>As an example, consider a situation where you need to read many files and then based on the contents of those files, fire off additional work. You would like to read the files in parallel, and then within each file expose more parallelism.</p>
 <p>This example goes through three ways to handle this situation using <a class="reference external" href="https://docs.dask.org/en/latest/futures.html">Dask Futures</a></p>
 <ol class="arabic simple">
 <li><p>Using <code class="docutils literal notranslate"><span class="pre">as_completed</span></code></p></li>
@@ -494,10 +590,10 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
-<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>[&#39;file.0.txt&#39;, &#39;file.1.txt&#39;, &#39;file.2.txt&#39;]
-</pre></div>
-</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39;file.0.txt&#39;, &#39;file.1.txt&#39;, &#39;file.2.txt&#39;]
+</pre></div></div>
 </div>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
@@ -543,8 +639,8 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-CPU times: user 4.74 ms, sys: 657 µs, total: 5.39 ms
-Wall time: 9.27 s
+CPU times: user 8.58 ms, sys: 65 µs, total: 8.65 ms
+Wall time: 12.8 s
 </pre></div></div>
 </div>
 </div>
@@ -556,7 +652,7 @@ Wall time: 9.27 s
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">from</span> <span class="nn">dask.distributed</span> <span class="k">import</span> <span class="n">Client</span>
+<span></span><span class="kn">from</span> <span class="nn">dask.distributed</span> <span class="kn">import</span> <span class="n">Client</span>
 
 <span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">processes</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">n_workers</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">threads_per_worker</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
 <span class="n">client</span>
@@ -573,8 +669,8 @@ Wall time: 9.27 s
 <td style="vertical-align: top; border: 0px solid white">
 <h3 style="text-align: left;">Client</h3>
 <ul style="text-align: left; list-style: none; margin: 0; padding: 0;">
-  <li><b>Scheduler: </b>inproc://10.20.1.243/10173/1</li>
-  <li><b>Dashboard: </b><a href='http://10.20.1.243/10173/1:8787/status' target='_blank'>http://10.20.1.243/10173/1:8787/status</a>
+  <li><b>Scheduler: </b>inproc://10.1.0.4/7035/1</li>
+  <li><b>Dashboard: </b><a href='http://10.1.0.4:8787/status' target='_blank'>http://10.1.0.4:8787/status</a></li>
 </ul>
 </td>
 <td style="vertical-align: top; border: 0px solid white">
@@ -582,7 +678,7 @@ Wall time: 9.27 s
 <ul style="text-align: left; list-style:none; margin: 0; padding: 0;">
   <li><b>Workers: </b>1</li>
   <li><b>Cores: </b>6</li>
-  <li><b>Memory: </b>7.84 GB</li>
+  <li><b>Memory: </b>7.29 GB</li>
 </ul>
 </td>
 </tr>
@@ -605,7 +701,7 @@ Wall time: 9.27 s
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="o">%%time</span>
 
-<span class="kn">from</span> <span class="nn">dask.distributed</span> <span class="k">import</span> <span class="n">as_completed</span>
+<span class="kn">from</span> <span class="nn">dask.distributed</span> <span class="kn">import</span> <span class="n">as_completed</span>
 <span class="kn">import</span> <span class="nn">operator</span>
 
 <span class="n">lists</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">parse_file</span><span class="p">,</span> <span class="n">filenames</span><span class="p">,</span> <span class="n">pure</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -632,81 +728,66 @@ Wall time: 9.27 s
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-CPU times: user 487 ms, sys: 42.4 ms, total: 529 ms
-Wall time: 2.53 s
+CPU times: user 271 ms, sys: 13.3 ms, total: 284 ms
+Wall time: 2.21 s
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
-<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>[1.861617265655,
- 1.1181946337951234,
- 1.4634800028430521,
- 1.5518843875570107,
- 1.9997497645885376,
- 1.5974950023547794,
- 1.6013729898931535,
- 1.2913174166465466,
- 1.1088542306776505,
- 1.6803368014102533,
- 1.3931724336746103,
- 1.4505171815262123,
- 1.514662661569599,
- 1.3007653916970479,
- 1.4484428632457367,
- 1.7837556132706194,
- 1.4286051508685023,
- 1.4168488548869353,
- 1.555351893036611,
- 1.0434129695612357,
- 1.7869621314967348,
- 1.1355354414221361,
- 1.0836517404223691,
- 1.6956244054050695,
- 1.119132898026768,
- 1.3415492197772934,
- 1.547403439797637,
- 1.8172647985875159,
- 1.7560389000590988,
- 1.4660854986453187,
- 1.9754919665510313,
- 1.098763167504297,
- 1.6950165329479652,
- 1.2323947894639518,
- 1.069429285321855,
- 1.3827208806088573,
- 1.8807991374675217,
- 1.9334069792133948,
- 1.6917721889180983,
- 1.2003520781890413,
- 1.6690518305154995,
- 1.6525955476527585,
- 1.5245360052092969,
- 1.2217772087296637,
- 1.575223781123822,
- 1.3884054646130717,
- 1.1829765966897938,
- 1.6236121716339622,
- 1.8417562774035976,
- 1.4343578707721565,
- 1.4107534504929928,
- 1.2767907100186937,
- 1.475431984183905,
- 1.8293968518752504,
- 1.9642532337535976,
- 1.3372845089090184,
- 1.4565861539376543,
- 1.970186797562918,
- 1.5604012566876495,
- 1.5867805855100117]
-</pre></div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[1.8155073941743582,
+ 1.1481593249285151,
+ 1.5609626117190065,
+ 1.8657574379474942,
+ 1.947850152252406,
+ 1.4613043889698023,
+ 1.5605254896030707,
+ 1.4100673436173627,
+ 1.4253429493586802,
+ 1.1565055219371816,
+ 1.2179877818474842,
+ 1.3970031257901652,
+ 1.0966991825329528,
+ 1.8593313617526341,
+ 1.2280922078397152,
+ 1.8630679490763309,
+ 1.0720730562341467,
+ 1.2046983630781845,
+ 1.7541425508262907,
+ 1.4414686239008252,
+ 1.9242287574333643,
+ 1.9198937325425907,
+ 1.862518485418224,
+ 1.5507260316013824,
+ 1.1061833313950693,
+ 1.8779186052595969,
+ 1.5328233821626833,
+ 1.4909598550978536,
+ 1.7894687612352962,
+ 1.8951311598287697,
+ 1.6498412064345314,
+ 1.2804394449483958,
+ 1.56808404228066,
+ 1.041126074782494,
+ 1.6986519264036979,
+ 1.322967520565875,
+ 1.150863974460369,
+ 1.5866436591788857,
+ 1.7336163421724762,
+ 1.914117637499643,
+ 1.8061140705343197,
+ 1.5988380070544712,
+ 1.1326003956941468,
+ 1.3499788189845403,
+ 1.7028444523934838]
+</pre></div></div>
 </div>
 </div>
-</div>
-<div class="section" id="2:-Use-async/await-to-handle-each-locally">
-<h2>2: Use async/await to handle each locally<a class="headerlink" href="#2:-Use-async/await-to-handle-each-locally" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="2:-Use-async/await-to-handle-single-file-processing-locally">
+<h2>2: Use async/await to handle single file processing locally<a class="headerlink" href="#2:-Use-async/await-to-handle-single-file-processing-locally" title="Permalink to this headline">¶</a></h2>
 <p>We can also handle the concurrency here within our local process. This requires you to understand async/await syntax, but is generally powerful and arguably simpler than the <code class="docutils literal notranslate"><span class="pre">as_completed</span></code> approach above.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
@@ -735,9 +816,9 @@ Wall time: 2.53 s
 </div>
 </div>
 <p>We now need to run this function in the same event loop as our client is running. If we had started our client asynchronously, then we could have done this:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">client</span> <span class="o">=</span> <span class="n">await</span> <span class="n">Client</span><span class="p">(</span><span class="n">asynchronous</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">client</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Client</span><span class="p">(</span><span class="n">asynchronous</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-<span class="n">await</span> <span class="n">run_all</span><span class="p">(</span><span class="n">filenames</span><span class="p">)</span>
+<span class="k">await</span> <span class="n">run_all</span><span class="p">(</span><span class="n">filenames</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>However, because we started our client without the <code class="docutils literal notranslate"><span class="pre">asynchronous=True</span></code> flag the event loop is actually running in a separate thread, so we’ll have to ask the client to run this for us.</p>
@@ -754,55 +835,74 @@ Wall time: 2.53 s
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
-<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>[1.6083388373679266,
- 1.1016716728755223,
- 1.3132611896260298,
- 1.3328026368323713,
- 1.4257314026696624,
- 1.1936159314185328,
- 1.8897127750101648,
- 1.2354297363514006,
- 1.8802068482717487,
- 1.5320143385455136,
- 1.4398403977908583,
- 1.2339195923018265,
- 1.6019302889464944,
- 1.81639625459966,
- 1.179275630413414,
- 1.3831144753690219,
- 1.9249483832418606,
- 1.35010066394407,
- 1.331241906302138,
- 1.1123098114039742,
- 1.4456616504444075,
- 1.133217094289558,
- 1.6531892013279592,
- 1.250252490186578,
- 1.1436760688690644,
- 1.2589645401031313,
- 1.2584280667442231,
- 1.490089461826648,
- 1.56005796922964,
- 1.8357666650309261,
- 1.6356552038355172,
- 1.2617091115534778,
- 1.368040643599839,
- 1.5646271521501522,
- 1.01074301901736,
- 1.210808395167602,
- 1.318759817882991,
- 1.006667069147979,
- 1.8989847270493787,
- 1.4319656511895353,
- 1.1862224919734516,
- 1.9770508765076107,
- 1.9543755989804068,
- 1.617042459399057,
- 1.6129320020893794,
- 1.7180123765662008]
-</pre></div>
-</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[1.6317282842075067,
+ 1.2257779719121342,
+ 1.1868408879157752,
+ 1.6203666812298643,
+ 1.859958124909634,
+ 1.5645482681986134,
+ 1.4530441512670347,
+ 1.142152134882239,
+ 1.0620599068651622,
+ 1.8364480223920343,
+ 1.4070483183425764,
+ 1.1283746174088929,
+ 1.6010198407590044,
+ 1.5445102152229542,
+ 1.8965792883708295,
+ 1.8988048682932543,
+ 1.917686352820512,
+ 1.8200425900504413,
+ 1.8780545136891365,
+ 1.55217229019881,
+ 1.4367256905549803,
+ 1.817055293530124,
+ 1.9694295979597358,
+ 1.5177645388016137,
+ 1.6495941826437923,
+ 1.2080520909067045,
+ 1.3312667781395744,
+ 1.9772272066587466,
+ 1.9622905170149572,
+ 1.41422312706948,
+ 1.3879502786680509,
+ 1.0152256150110557,
+ 1.170782911922902,
+ 1.2653476067937186,
+ 1.4355007004165268,
+ 1.616867903932536,
+ 1.6594947393860107,
+ 1.6504896607426829,
+ 1.0249403043987213,
+ 1.2613124495267125,
+ 1.7248388224023459,
+ 1.371917673167585,
+ 1.5152175503126362,
+ 1.180822531903298,
+ 1.3728122394822782,
+ 1.87819891306899,
+ 1.7338100857464442,
+ 1.3355735052927122,
+ 1.8556143126873017,
+ 1.9150505793482373,
+ 1.4098438056630147,
+ 1.6488240841059407,
+ 1.4936234267755397,
+ 1.2018280109384527,
+ 1.3633647975280268,
+ 1.6083397859552375,
+ 1.3368034571409315,
+ 1.0976509498828668,
+ 1.7427840430798982,
+ 1.196207343775482,
+ 1.5668720580430073,
+ 1.631417398608212,
+ 1.326156756395132,
+ 1.4996085580746472,
+ 1.386258672952592]
+</pre></div></div>
 </div>
 </div>
 <div class="section" id="3:-Submit-tasks-from-tasks">
@@ -815,7 +915,7 @@ Wall time: 2.53 s
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="o">%%time</span>
 
-<span class="kn">from</span> <span class="nn">dask.distributed</span> <span class="k">import</span> <span class="n">get_client</span><span class="p">,</span> <span class="n">secede</span><span class="p">,</span> <span class="n">rejoin</span>
+<span class="kn">from</span> <span class="nn">dask.distributed</span> <span class="kn">import</span> <span class="n">get_client</span><span class="p">,</span> <span class="n">secede</span><span class="p">,</span> <span class="n">rejoin</span>
 
 <span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">fn</span><span class="p">):</span>
     <span class="n">L</span> <span class="o">=</span> <span class="n">parse_file</span><span class="p">(</span><span class="n">fn</span><span class="p">)</span>
@@ -837,8 +937,8 @@ Wall time: 2.53 s
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-CPU times: user 357 ms, sys: 24.9 ms, total: 382 ms
-Wall time: 2.51 s
+CPU times: user 219 ms, sys: 39.8 ms, total: 259 ms
+Wall time: 2.64 s
 </pre></div></div>
 </div>
 </div>
@@ -874,11 +974,19 @@ ga('send', 'pageview');
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2018, Dask Developers
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -889,7 +997,6 @@ ga('send', 'pageview');
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

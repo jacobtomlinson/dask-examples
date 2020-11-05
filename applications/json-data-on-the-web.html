@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,104 +11,124 @@
   
 
   
-  
-  
-  
-
-  
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
-        <script type="text/javascript" src="../_static/js/custom.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
-
-  
   <link rel="stylesheet" href="../_static/css/style.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/explore.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/nbsphinx.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+        <script src="../_static/js/custom.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Async/Await and Non-Blocking Execution" href="async-await.html" />
     <link rel="prev" title="Singular Value Decomposition" href="../machine-learning/svd.html" />
   <link rel="shortcut icon" href="../_static/images/favicon.ico"/>
+  
+  <meta name="Description" content="Analyze web-hosted JSON data">
+  <meta property="og:description" content="Analyze web-hosted JSON data">
+  <meta name="twitter:description" content="Analyze web-hosted JSON data" />
+  <meta property="og:title" content="Dask Examples  documentation - Analyze web-hosted JSON data">
+  <meta property="og:image" content="https://github.com/dask.png">
+  <meta property="og:image:secure_url" content="https://github.com/dask.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="380" />
+  <meta property="og:image:height" content="380" />
+  <meta property="og:url" content="applications/json-data-on-the-web.html">
+  <meta property="og:site_name" content="Dask Examples  documentation">
+
+  <meta name="twitter:site" content="https://dask.org" />
+  <meta name="twitter:creator" content="@dask_dev" />
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:image" content="https://github.com/dask.png" />
+  <meta name="twitter:image:alt" content="Dask Examples  documentation">
+  
 
 </head>
 
 <body class="wy-body-for-nav">
 
   
+    <nav id="explore-links">
+        <a href="https://docs.dask.org/">
+        <img class="caption" src="../_static/images/dask-horizontal-white.svg"/>
+        </a>
 
-<nav id="explore-links">
-  <a href="https://docs.dask.org/">
-    <img class="caption" src="../_static/images/dask-horizontal-white.svg"/>
-  </a>
+        <ul>
+        <li>
+            <a>Get Started</a>
+            <ul>
+            <li><a href="https://docs.dask.org/en/latest/install.html"> Install </a></li>
+            <li><a href="https://examples.dask.org"> Examples </a></li>
+            <li><a href="https://github.com/dask/dask-tutorial"> Tutorial </a></li>
+            <li><a href="https://docs.dask.org/en/latest/why.html"> Why Dask? </a></li>
+            <li><a href="https://stories.dask.org/en/latest"> Use Cases </a></li>
+            <li><a href="https://www.youtube.com/watch?v=RA_2qdipVng&list=PLRtz5iA93T4PQvWuoMnIyEIz1fXiJ5Pri"> Talks </a></li>
+            <li><a href="https://mybinder.org/v2/gh/dask/dask-examples/master?urlpath=lab"> Try Online </a></li>
+            <li><a href="https://dask.org/slides"> Slides </a></li>
+            </ul>
+        </li>
 
-  <ul>
-    <li>
-      <a>Get Started</a>
-      <ul>
-        <li><a href="https://docs.dask.org/en/latest/install.html"> Install </a></li>
-        <li><a href="https://examples.dask.org"> Examples </a></li>
-        <li><a href="https://github.com/dask/dask-tutorial"> Tutorial </a></li>
-        <li><a href="https://docs.dask.org/en/latest/why.html"> Why Dask? </a></li>
-        <li><a href="https://stories.dask.org/en/latest"> Use Cases </a></li>
-        <li><a href="https://www.youtube.com/watch?v=RA_2qdipVng&list=PLRtz5iA93T4PQvWuoMnIyEIz1fXiJ5Pri"> Talks </a></li>
-        <li><a href="https://mybinder.org/v2/gh/dask/dask-examples/master?urlpath=lab"> Try Online </a></li>
-        <li><a href="https://dask.org/slides"> Slides </a></li>
-      </ul>
-    </li>
+        <li>
+            <a href="">Algorithms</a>
+            <ul>
+            <li><a href="https://docs.dask.org/en/latest/array.html">Arrays</a></li>
+            <li><a href="https://docs.dask.org/en/latest/dataframe.html">Dataframes</a></li>
+            <li><a href="https://docs.dask.org/en/latest/bag.html">Bags</a></li>
+            <li><a href="https://docs.dask.org/en/latest/delayed.html">Delayed (custom)</a></li>
+            <li><a href="https://docs.dask.org/en/latest/futures.html">Futures (real-time)</a></li>
+            <li><a href="http://ml.dask.org">Machine Learning</a></li>
+            <li><a href="https://xarray.pydata.org/en/latest/">XArray</a></li>
+            </ul>
+        </li>
 
-    <li>
-      <a href="">Algorithms</a>
-      <ul>
-        <li><a href="https://docs.dask.org/en/latest/array.html">Arrays</a></li>
-        <li><a href="https://docs.dask.org/en/latest/dataframe.html">Dataframes</a></li>
-        <li><a href="https://docs.dask.org/en/latest/bag.html">Bags</a></li>
-        <li><a href="https://docs.dask.org/en/latest/delayed.html">Delayed (custom)</a></li>
-        <li><a href="https://docs.dask.org/en/latest/futures.html">Futures (real-time)</a></li>
-        <li><a href="http://ml.dask.org">Machine Learning</a></li>
-        <li><a href="https://xarray.pydata.org/en/latest/">XArray</a></li>
-      </ul>
-    </li>
+        <li>
+            <a href="https://docs.dask.org/en/latest/setup.html">Setup</a>
+            <ul>
+            <li><a href="https://docs.dask.org/en/latest/setup/single-machine.html"> Local </a></li>
+            <li><a href="https://docs.dask.org/en/latest/setup/cloud.html"> Cloud </a></li>
+            <li><a href="https://docs.dask.org/en/latest/setup/hpc.html"> HPC </a></li>
+            <li><a href="https://kubernetes.dask.org/en/latest/"> Kubernetes </a></li>
+            <li><a href="https://yarn.dask.org/en/latest/"> Hadoop / Yarn </a></li>
+            </ul>
+        </li>
 
-    <li>
-      <a href="https://docs.dask.org/en/latest/setup.html">Setup</a>
-      <ul>
-        <li><a href="https://docs.dask.org/en/latest/setup/single-machine.html"> Local </a></li>
-        <li><a href="https://docs.dask.org/en/latest/setup/cloud.html"> Cloud </a></li>
-        <li><a href="https://docs.dask.org/en/latest/setup/hpc.html"> HPC </a></li>
-        <li><a href="https://kubernetes.dask.org/en/latest/"> Kubernetes </a></li>
-        <li><a href="https://yarn.dask.org/en/latest/"> Hadoop / Yarn </a></li>
-      </ul>
-    </li>
+        <li>
+            <a>Community</a>
+            <ul>
+            <li><a href="http://docs.dask.org/en/latest/support.html">Ask for Help</a></li>
+            <li><a href="https://github.com/dask">Github</a></li>
+            <li><a href="https://stackoverflow.com/questions/tagged/dask">Stack Overflow</a></li>
+            <li><a href="https://twitter.com/dask_dev">Twitter</a></li>
+            <li><a href="https://blog.dask.org/"> Developer Blog </a></li>
+            <li><a href="https://youtube.com/c/dask-dev"> YouTube Channel </a></li>
+            </ul>
+        </li>
+        </ul>
 
-    <li>
-      <a>Community</a>
-      <ul>
-        <li><a href="http://docs.dask.org/en/latest/support.html">Ask for Help</a></li>
-        <li><a href="https://github.com/dask">Github</a></li>
-        <li><a href="https://stackoverflow.com/questions/tagged/dask">Stack Overflow</a></li>
-        <li><a href="https://twitter.com/dask_dev">Twitter</a></li>
-        <li><a href="https://blog.dask.org/"> Developer Blog </a></li>
-      </ul>
-    </li>
-  </ul>
-
-</nav>
-
-
+    </nav>
+  
   <div class="wy-grid-for-nav">
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
@@ -118,7 +137,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> Dask Examples
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Dask Examples
           
 
           
@@ -141,6 +160,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -148,7 +168,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">Basic Examples:</span></p>
+              <p class="caption"><span class="caption-text">Basic Examples</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../array.html">Dask Arrays</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../bag.html">Dask Bags</a></li>
@@ -158,17 +178,20 @@
 <li class="toctree-l1"><a class="reference internal" href="../machine-learning.html">Dask for Machine Learning</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../xarray.html">Xarray with Dask Arrays</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Dataframes:</span></p>
+<p class="caption"><span class="caption-text">Dataframes</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dataframes/01-data-access.html">DataFrames: Read and Write Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../dataframes/02-groupby.html">DataFrames: Groupby</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Machine Learning:</span></p>
+<p class="caption"><span class="caption-text">Machine Learning</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../machine-learning/blockwise-ensemble.html">Blockwise Ensemble Methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../machine-learning/scale-scikit-learn.html">Scale Scikit-Learn for Small Data Problems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../machine-learning/parallel-prediction.html">Score and Predict Large Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../machine-learning/torch-prediction.html">Batch Prediction with PyTorch</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../machine-learning/training-on-large-datasets.html">Train Models on Large Datasets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../machine-learning/incremental.html">Incrementally Train Large Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../machine-learning/text-vectorization.html">Text Vectorization Pipeline</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../machine-learning/hyperparam-opt.html">Hyperparameter optimization with Dask</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../machine-learning/xgboost.html">Scale XGBoost</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../machine-learning/voting-classifier.html">Use Voting Classifiers</a></li>
@@ -176,7 +199,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../machine-learning/glm.html">Generalized Linear Models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../machine-learning/svd.html">Singular Value Decomposition</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Applications:</span></p>
+<p class="caption"><span class="caption-text">Applications</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Analyze web-hosted JSON data</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#Introduction-to-the-dataset">Introduction to the dataset</a></li>
@@ -197,15 +220,18 @@
 <li class="toctree-l1"><a class="reference internal" href="prefect-etl.html">ETL Pipelines with Prefect</a></li>
 <li class="toctree-l1"><a class="reference internal" href="satellite-imagery-geotiff.html">Reading and manipulating tiled GeoTIFF datasets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="stencils-with-numba.html">Stencil Computations with Numba</a></li>
+<li class="toctree-l1"><a class="reference internal" href="forecasting-with-prophet.html">Time Series Forecasting</a></li>
 </ul>
-<p class="caption"><span class="caption-text">User Surveys:</span></p>
+<p class="caption"><span class="caption-text">User Surveys</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../surveys/2019.html">2019 Dask User Survey Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../surveys/2020.html">2020 Dask User Survey Results</a></li>
 </ul>
 
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -244,7 +270,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li>Analyze web-hosted JSON data</li>
     
@@ -270,31 +296,45 @@
 /* CSS for nbsphinx extension */
 
 /* remove conflicting styling from Sphinx themes */
-div.nbinput,
-div.nbinput div.prompt,
-div.nbinput div.input_area,
-div.nbinput div[class*=highlight],
-div.nbinput div[class*=highlight] pre,
-div.nboutput,
-div.nbinput div.prompt,
-div.nbinput div.output_area,
-div.nboutput div[class*=highlight],
-div.nboutput div[class*=highlight] pre {
-    background: none;
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt *,
+div.nbinput.container div.input_area pre,
+div.nboutput.container div.output_area pre,
+div.nbinput.container div.input_area .highlight,
+div.nboutput.container div.output_area .highlight {
     border: none;
-    padding: 0 0;
+    padding: 0;
     margin: 0;
     box-shadow: none;
 }
 
+div.nbinput.container > div[class*=highlight],
+div.nboutput.container > div[class*=highlight] {
+    margin: 0;
+}
+
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt * {
+    background: none;
+}
+
+div.nboutput.container div.output_area .highlight,
+div.nboutput.container div.output_area pre {
+    background: unset;
+}
+
+div.nboutput.container div.output_area div.highlight {
+    color: unset;  /* override Pygments text color */
+}
+
 /* avoid gaps between output lines */
-div.nboutput div[class*=highlight] pre {
+div.nboutput.container div[class*=highlight] pre {
     line-height: normal;
 }
 
 /* input/output containers */
-div.nbinput,
-div.nboutput {
+div.nbinput.container,
+div.nboutput.container {
     display: -webkit-flex;
     display: flex;
     align-items: flex-start;
@@ -302,92 +342,104 @@ div.nboutput {
     width: 100%;
 }
 @media (max-width: 540px) {
-    div.nbinput,
-    div.nboutput {
+    div.nbinput.container,
+    div.nboutput.container {
         flex-direction: column;
     }
 }
 
 /* input container */
-div.nbinput {
+div.nbinput.container {
     padding-top: 5px;
 }
 
 /* last container */
-div.nblast {
+div.nblast.container {
     padding-bottom: 5px;
 }
 
 /* input prompt */
-div.nbinput div.prompt pre {
+div.nbinput.container div.prompt pre {
     color: #307FC1;
 }
 
 /* output prompt */
-div.nboutput div.prompt pre {
+div.nboutput.container div.prompt pre {
     color: #BF5B3D;
 }
 
 /* all prompts */
-div.nbinput div.prompt,
-div.nboutput div.prompt {
-    min-width: 7ex;
-    padding-top: 0.4em;
-    padding-right: 0.4em;
-    text-align: right;
-    flex: 0;
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
 }
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
 @media (max-width: 540px) {
-    div.nbinput div.prompt,
-    div.nboutput div.prompt {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
         text-align: left;
         padding: 0.4em;
     }
-    div.nboutput div.prompt.empty {
+    div.nboutput.container div.prompt.empty {
         padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
     }
 }
 
 /* disable scrollbars on prompts */
-div.nbinput div.prompt pre,
-div.nboutput div.prompt pre {
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
     overflow: hidden;
 }
 
 /* input/output area */
-div.nbinput div.input_area,
-div.nboutput div.output_area {
-    padding: 0.4em;
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
     -webkit-flex: 1;
     flex: 1;
     overflow: auto;
 }
 @media (max-width: 540px) {
-    div.nbinput div.input_area,
-    div.nboutput div.output_area {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
         width: 100%;
     }
 }
 
 /* input area */
-div.nbinput div.input_area {
+div.nbinput.container div.input_area {
     border: 1px solid #e0e0e0;
     border-radius: 2px;
-    background: #f5f5f5;
+    /*background: #f5f5f5;*/
 }
 
 /* override MathJax center alignment in output cells */
-div.nboutput div[class*=MathJax] {
+div.nboutput.container div[class*=MathJax] {
     text-align: left !important;
 }
 
 /* override sphinx.ext.imgmath center alignment in output cells */
-div.nboutput div.math p {
+div.nboutput.container div.math p {
     text-align: left;
 }
 
 /* standard error */
-div.nboutput div.output_area.stderr {
+div.nboutput.container div.output_area.stderr {
     background: #fdd;
 }
 
@@ -431,6 +483,28 @@ div.nboutput div.output_area.stderr {
 .ansi-bold { font-weight: bold; }
 .ansi-underline { text-decoration: underline; }
 
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+    margin: 0;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
 /* Some additional styling taken form the Jupyter notebook CSS */
 div.rendered_html table {
   border: none;
@@ -464,6 +538,28 @@ div.rendered_html tbody tr:nth-child(odd) {
 div.rendered_html tbody tr:hover {
   background: rgba(66, 165, 245, 0.2);
 }
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
 </style>
 <div class="admonition-live-notebook admonition">
 <p class="admonition-title">Live Notebook</p>
@@ -490,12 +586,12 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
-<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>(&#39;{&quot;timestamp&quot;: &quot;2018-11-03T00:00:00+00:00&quot;, &quot;schema&quot;: &quot;binderhub.jupyter.org/launch&quot;, &quot;version&quot;: 1, &quot;provider&quot;: &quot;GitHub&quot;, &quot;spec&quot;: &quot;Qiskit/qiskit-tutorial/master&quot;, &quot;status&quot;: &quot;success&quot;}\n&#39;,
- &#39;{&quot;timestamp&quot;: &quot;2018-11-03T00:00:00+00:00&quot;, &quot;schema&quot;: &quot;binderhub.jupyter.org/launch&quot;, &quot;version&quot;: 1, &quot;provider&quot;: &quot;GitHub&quot;, &quot;spec&quot;: &quot;ipython/ipython-in-depth/master&quot;, &quot;status&quot;: &quot;success&quot;}\n&#39;,
- &#39;{&quot;timestamp&quot;: &quot;2018-11-03T00:00:00+00:00&quot;, &quot;schema&quot;: &quot;binderhub.jupyter.org/launch&quot;, &quot;version&quot;: 1, &quot;provider&quot;: &quot;GitHub&quot;, &quot;spec&quot;: &quot;QISKit/qiskit-tutorial/master&quot;, &quot;status&quot;: &quot;success&quot;}\n&#39;)
-</pre></div>
-</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+(&#39;{&#34;timestamp&#34;: &#34;2018-11-03T00:00:00+00:00&#34;, &#34;schema&#34;: &#34;binderhub.jupyter.org/launch&#34;, &#34;version&#34;: 1, &#34;provider&#34;: &#34;GitHub&#34;, &#34;spec&#34;: &#34;Qiskit/qiskit-tutorial/master&#34;, &#34;status&#34;: &#34;success&#34;}\n&#39;,
+ &#39;{&#34;timestamp&#34;: &#34;2018-11-03T00:00:00+00:00&#34;, &#34;schema&#34;: &#34;binderhub.jupyter.org/launch&#34;, &#34;version&#34;: 1, &#34;provider&#34;: &#34;GitHub&#34;, &#34;spec&#34;: &#34;ipython/ipython-in-depth/master&#34;, &#34;status&#34;: &#34;success&#34;}\n&#39;,
+ &#39;{&#34;timestamp&#34;: &#34;2018-11-03T00:00:00+00:00&#34;, &#34;schema&#34;: &#34;binderhub.jupyter.org/launch&#34;, &#34;version&#34;: 1, &#34;provider&#34;: &#34;GitHub&#34;, &#34;spec&#34;: &#34;QISKit/qiskit-tutorial/master&#34;, &#34;status&#34;: &#34;success&#34;}\n&#39;)
+</pre></div></div>
 </div>
 <p>We see that it includes one line for every time someone started a live notebook on the site. It includes the time that the notebook was started, as well as the repository from which it was served.</p>
 <p>In this notebook we’ll look at many such files, parse them from JSON to Python dictionaries, and then from there to Pandas dataframes. We’ll then do some simple analyses on this data.</p>
@@ -508,7 +604,7 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">from</span> <span class="nn">dask.distributed</span> <span class="k">import</span> <span class="n">Client</span><span class="p">,</span> <span class="n">progress</span>
+<span></span><span class="kn">from</span> <span class="nn">dask.distributed</span> <span class="kn">import</span> <span class="n">Client</span><span class="p">,</span> <span class="n">progress</span>
 <span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">threads_per_worker</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
                 <span class="n">n_workers</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
                 <span class="n">memory_limit</span><span class="o">=</span><span class="s1">&#39;2GB&#39;</span><span class="p">)</span>
@@ -526,8 +622,8 @@ div.rendered_html tbody tr:hover {
 <td style="vertical-align: top; border: 0px solid white">
 <h3 style="text-align: left;">Client</h3>
 <ul style="text-align: left; list-style: none; margin: 0; padding: 0;">
-  <li><b>Scheduler: </b>tcp://127.0.0.1:46327</li>
-  <li><b>Dashboard: </b><a href='http://127.0.0.1:8787/status' target='_blank'>http://127.0.0.1:8787/status</a>
+  <li><b>Scheduler: </b>tcp://127.0.0.1:35653</li>
+  <li><b>Dashboard: </b><a href='http://127.0.0.1:8787/status' target='_blank'>http://127.0.0.1:8787/status</a></li>
 </ul>
 </td>
 <td style="vertical-align: top; border: 0px solid white">
@@ -568,8 +664,9 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
-<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>[{&#39;name&#39;: &#39;events-2018-11-03.jsonl&#39;, &#39;date&#39;: &#39;2018-11-03&#39;, &#39;count&#39;: &#39;7057&#39;},
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[{&#39;name&#39;: &#39;events-2018-11-03.jsonl&#39;, &#39;date&#39;: &#39;2018-11-03&#39;, &#39;count&#39;: &#39;7057&#39;},
  {&#39;name&#39;: &#39;events-2018-11-04.jsonl&#39;, &#39;date&#39;: &#39;2018-11-04&#39;, &#39;count&#39;: &#39;7489&#39;},
  {&#39;name&#39;: &#39;events-2018-11-05.jsonl&#39;, &#39;date&#39;: &#39;2018-11-05&#39;, &#39;count&#39;: &#39;13590&#39;},
  {&#39;name&#39;: &#39;events-2018-11-06.jsonl&#39;, &#39;date&#39;: &#39;2018-11-06&#39;, &#39;count&#39;: &#39;13920&#39;},
@@ -916,9 +1013,394 @@ div.rendered_html tbody tr:hover {
  {&#39;name&#39;: &#39;events-2019-10-13.jsonl&#39;, &#39;date&#39;: &#39;2019-10-13&#39;, &#39;count&#39;: &#39;11693&#39;},
  {&#39;name&#39;: &#39;events-2019-10-14.jsonl&#39;, &#39;date&#39;: &#39;2019-10-14&#39;, &#39;count&#39;: &#39;20589&#39;},
  {&#39;name&#39;: &#39;events-2019-10-15.jsonl&#39;, &#39;date&#39;: &#39;2019-10-15&#39;, &#39;count&#39;: &#39;22692&#39;},
- {&#39;name&#39;: &#39;events-2019-10-16.jsonl&#39;, &#39;date&#39;: &#39;2019-10-16&#39;, &#39;count&#39;: &#39;20935&#39;}]
-</pre></div>
-</div>
+ {&#39;name&#39;: &#39;events-2019-10-16.jsonl&#39;, &#39;date&#39;: &#39;2019-10-16&#39;, &#39;count&#39;: &#39;23760&#39;},
+ {&#39;name&#39;: &#39;events-2019-10-17.jsonl&#39;, &#39;date&#39;: &#39;2019-10-17&#39;, &#39;count&#39;: &#39;22984&#39;},
+ {&#39;name&#39;: &#39;events-2019-10-18.jsonl&#39;, &#39;date&#39;: &#39;2019-10-18&#39;, &#39;count&#39;: &#39;18935&#39;},
+ {&#39;name&#39;: &#39;events-2019-10-19.jsonl&#39;, &#39;date&#39;: &#39;2019-10-19&#39;, &#39;count&#39;: &#39;13460&#39;},
+ {&#39;name&#39;: &#39;events-2019-10-20.jsonl&#39;, &#39;date&#39;: &#39;2019-10-20&#39;, &#39;count&#39;: &#39;12959&#39;},
+ {&#39;name&#39;: &#39;events-2019-10-21.jsonl&#39;, &#39;date&#39;: &#39;2019-10-21&#39;, &#39;count&#39;: &#39;21851&#39;},
+ {&#39;name&#39;: &#39;events-2019-10-22.jsonl&#39;, &#39;date&#39;: &#39;2019-10-22&#39;, &#39;count&#39;: &#39;23403&#39;},
+ {&#39;name&#39;: &#39;events-2019-10-23.jsonl&#39;, &#39;date&#39;: &#39;2019-10-23&#39;, &#39;count&#39;: &#39;22080&#39;},
+ {&#39;name&#39;: &#39;events-2019-10-24.jsonl&#39;, &#39;date&#39;: &#39;2019-10-24&#39;, &#39;count&#39;: &#39;21685&#39;},
+ {&#39;name&#39;: &#39;events-2019-10-25.jsonl&#39;, &#39;date&#39;: &#39;2019-10-25&#39;, &#39;count&#39;: &#39;18185&#39;},
+ {&#39;name&#39;: &#39;events-2019-10-26.jsonl&#39;, &#39;date&#39;: &#39;2019-10-26&#39;, &#39;count&#39;: &#39;11326&#39;},
+ {&#39;name&#39;: &#39;events-2019-10-27.jsonl&#39;, &#39;date&#39;: &#39;2019-10-27&#39;, &#39;count&#39;: &#39;10525&#39;},
+ {&#39;name&#39;: &#39;events-2019-10-28.jsonl&#39;, &#39;date&#39;: &#39;2019-10-28&#39;, &#39;count&#39;: &#39;18921&#39;},
+ {&#39;name&#39;: &#39;events-2019-10-29.jsonl&#39;, &#39;date&#39;: &#39;2019-10-29&#39;, &#39;count&#39;: &#39;20824&#39;},
+ {&#39;name&#39;: &#39;events-2019-10-30.jsonl&#39;, &#39;date&#39;: &#39;2019-10-30&#39;, &#39;count&#39;: &#39;20512&#39;},
+ {&#39;name&#39;: &#39;events-2019-10-31.jsonl&#39;, &#39;date&#39;: &#39;2019-10-31&#39;, &#39;count&#39;: &#39;19849&#39;},
+ {&#39;name&#39;: &#39;events-2019-11-01.jsonl&#39;, &#39;date&#39;: &#39;2019-11-01&#39;, &#39;count&#39;: &#39;15385&#39;},
+ {&#39;name&#39;: &#39;events-2019-11-02.jsonl&#39;, &#39;date&#39;: &#39;2019-11-02&#39;, &#39;count&#39;: &#39;9953&#39;},
+ {&#39;name&#39;: &#39;events-2019-11-03.jsonl&#39;, &#39;date&#39;: &#39;2019-11-03&#39;, &#39;count&#39;: &#39;11917&#39;},
+ {&#39;name&#39;: &#39;events-2019-11-04.jsonl&#39;, &#39;date&#39;: &#39;2019-11-04&#39;, &#39;count&#39;: &#39;20961&#39;},
+ {&#39;name&#39;: &#39;events-2019-11-05.jsonl&#39;, &#39;date&#39;: &#39;2019-11-05&#39;, &#39;count&#39;: &#39;23124&#39;},
+ {&#39;name&#39;: &#39;events-2019-11-06.jsonl&#39;, &#39;date&#39;: &#39;2019-11-06&#39;, &#39;count&#39;: &#39;22926&#39;},
+ {&#39;name&#39;: &#39;events-2019-11-07.jsonl&#39;, &#39;date&#39;: &#39;2019-11-07&#39;, &#39;count&#39;: &#39;23029&#39;},
+ {&#39;name&#39;: &#39;events-2019-11-08.jsonl&#39;, &#39;date&#39;: &#39;2019-11-08&#39;, &#39;count&#39;: &#39;19441&#39;},
+ {&#39;name&#39;: &#39;events-2019-11-09.jsonl&#39;, &#39;date&#39;: &#39;2019-11-09&#39;, &#39;count&#39;: &#39;12233&#39;},
+ {&#39;name&#39;: &#39;events-2019-11-10.jsonl&#39;, &#39;date&#39;: &#39;2019-11-10&#39;, &#39;count&#39;: &#39;11716&#39;},
+ {&#39;name&#39;: &#39;events-2019-11-11.jsonl&#39;, &#39;date&#39;: &#39;2019-11-11&#39;, &#39;count&#39;: &#39;18483&#39;},
+ {&#39;name&#39;: &#39;events-2019-11-12.jsonl&#39;, &#39;date&#39;: &#39;2019-11-12&#39;, &#39;count&#39;: &#39;23074&#39;},
+ {&#39;name&#39;: &#39;events-2019-11-13.jsonl&#39;, &#39;date&#39;: &#39;2019-11-13&#39;, &#39;count&#39;: &#39;22805&#39;},
+ {&#39;name&#39;: &#39;events-2019-11-14.jsonl&#39;, &#39;date&#39;: &#39;2019-11-14&#39;, &#39;count&#39;: &#39;24935&#39;},
+ {&#39;name&#39;: &#39;events-2019-11-15.jsonl&#39;, &#39;date&#39;: &#39;2019-11-15&#39;, &#39;count&#39;: &#39;19649&#39;},
+ {&#39;name&#39;: &#39;events-2019-11-16.jsonl&#39;, &#39;date&#39;: &#39;2019-11-16&#39;, &#39;count&#39;: &#39;13001&#39;},
+ {&#39;name&#39;: &#39;events-2019-11-17.jsonl&#39;, &#39;date&#39;: &#39;2019-11-17&#39;, &#39;count&#39;: &#39;13590&#39;},
+ {&#39;name&#39;: &#39;events-2019-11-18.jsonl&#39;, &#39;date&#39;: &#39;2019-11-18&#39;, &#39;count&#39;: &#39;21264&#39;},
+ {&#39;name&#39;: &#39;events-2019-11-19.jsonl&#39;, &#39;date&#39;: &#39;2019-11-19&#39;, &#39;count&#39;: &#39;23590&#39;},
+ {&#39;name&#39;: &#39;events-2019-11-20.jsonl&#39;, &#39;date&#39;: &#39;2019-11-20&#39;, &#39;count&#39;: &#39;22352&#39;},
+ {&#39;name&#39;: &#39;events-2019-11-21.jsonl&#39;, &#39;date&#39;: &#39;2019-11-21&#39;, &#39;count&#39;: &#39;22646&#39;},
+ {&#39;name&#39;: &#39;events-2019-11-22.jsonl&#39;, &#39;date&#39;: &#39;2019-11-22&#39;, &#39;count&#39;: &#39;18753&#39;},
+ {&#39;name&#39;: &#39;events-2019-11-23.jsonl&#39;, &#39;date&#39;: &#39;2019-11-23&#39;, &#39;count&#39;: &#39;11906&#39;},
+ {&#39;name&#39;: &#39;events-2019-11-24.jsonl&#39;, &#39;date&#39;: &#39;2019-11-24&#39;, &#39;count&#39;: &#39;12335&#39;},
+ {&#39;name&#39;: &#39;events-2019-11-25.jsonl&#39;, &#39;date&#39;: &#39;2019-11-25&#39;, &#39;count&#39;: &#39;21657&#39;},
+ {&#39;name&#39;: &#39;events-2019-11-26.jsonl&#39;, &#39;date&#39;: &#39;2019-11-26&#39;, &#39;count&#39;: &#39;21140&#39;},
+ {&#39;name&#39;: &#39;events-2019-11-27.jsonl&#39;, &#39;date&#39;: &#39;2019-11-27&#39;, &#39;count&#39;: &#39;20250&#39;},
+ {&#39;name&#39;: &#39;events-2019-11-28.jsonl&#39;, &#39;date&#39;: &#39;2019-11-28&#39;, &#39;count&#39;: &#39;20571&#39;},
+ {&#39;name&#39;: &#39;events-2019-11-29.jsonl&#39;, &#39;date&#39;: &#39;2019-11-29&#39;, &#39;count&#39;: &#39;16734&#39;},
+ {&#39;name&#39;: &#39;events-2019-11-30.jsonl&#39;, &#39;date&#39;: &#39;2019-11-30&#39;, &#39;count&#39;: &#39;10873&#39;},
+ {&#39;name&#39;: &#39;events-2019-12-01.jsonl&#39;, &#39;date&#39;: &#39;2019-12-01&#39;, &#39;count&#39;: &#39;11809&#39;},
+ {&#39;name&#39;: &#39;events-2019-12-02.jsonl&#39;, &#39;date&#39;: &#39;2019-12-02&#39;, &#39;count&#39;: &#39;20777&#39;},
+ {&#39;name&#39;: &#39;events-2019-12-03.jsonl&#39;, &#39;date&#39;: &#39;2019-12-03&#39;, &#39;count&#39;: &#39;23343&#39;},
+ {&#39;name&#39;: &#39;events-2019-12-04.jsonl&#39;, &#39;date&#39;: &#39;2019-12-04&#39;, &#39;count&#39;: &#39;21937&#39;},
+ {&#39;name&#39;: &#39;events-2019-12-05.jsonl&#39;, &#39;date&#39;: &#39;2019-12-05&#39;, &#39;count&#39;: &#39;20396&#39;},
+ {&#39;name&#39;: &#39;events-2019-12-06.jsonl&#39;, &#39;date&#39;: &#39;2019-12-06&#39;, &#39;count&#39;: &#39;18547&#39;},
+ {&#39;name&#39;: &#39;events-2019-12-07.jsonl&#39;, &#39;date&#39;: &#39;2019-12-07&#39;, &#39;count&#39;: &#39;11673&#39;},
+ {&#39;name&#39;: &#39;events-2019-12-08.jsonl&#39;, &#39;date&#39;: &#39;2019-12-08&#39;, &#39;count&#39;: &#39;12392&#39;},
+ {&#39;name&#39;: &#39;events-2019-12-09.jsonl&#39;, &#39;date&#39;: &#39;2019-12-09&#39;, &#39;count&#39;: &#39;21662&#39;},
+ {&#39;name&#39;: &#39;events-2019-12-10.jsonl&#39;, &#39;date&#39;: &#39;2019-12-10&#39;, &#39;count&#39;: &#39;22699&#39;},
+ {&#39;name&#39;: &#39;events-2019-12-11.jsonl&#39;, &#39;date&#39;: &#39;2019-12-11&#39;, &#39;count&#39;: &#39;20192&#39;},
+ {&#39;name&#39;: &#39;events-2019-12-12.jsonl&#39;, &#39;date&#39;: &#39;2019-12-12&#39;, &#39;count&#39;: &#39;20265&#39;},
+ {&#39;name&#39;: &#39;events-2019-12-13.jsonl&#39;, &#39;date&#39;: &#39;2019-12-13&#39;, &#39;count&#39;: &#39;17001&#39;},
+ {&#39;name&#39;: &#39;events-2019-12-14.jsonl&#39;, &#39;date&#39;: &#39;2019-12-14&#39;, &#39;count&#39;: &#39;10765&#39;},
+ {&#39;name&#39;: &#39;events-2019-12-15.jsonl&#39;, &#39;date&#39;: &#39;2019-12-15&#39;, &#39;count&#39;: &#39;11044&#39;},
+ {&#39;name&#39;: &#39;events-2019-12-16.jsonl&#39;, &#39;date&#39;: &#39;2019-12-16&#39;, &#39;count&#39;: &#39;18498&#39;},
+ {&#39;name&#39;: &#39;events-2019-12-17.jsonl&#39;, &#39;date&#39;: &#39;2019-12-17&#39;, &#39;count&#39;: &#39;17536&#39;},
+ {&#39;name&#39;: &#39;events-2019-12-18.jsonl&#39;, &#39;date&#39;: &#39;2019-12-18&#39;, &#39;count&#39;: &#39;17080&#39;},
+ {&#39;name&#39;: &#39;events-2019-12-19.jsonl&#39;, &#39;date&#39;: &#39;2019-12-19&#39;, &#39;count&#39;: &#39;17128&#39;},
+ {&#39;name&#39;: &#39;events-2019-12-20.jsonl&#39;, &#39;date&#39;: &#39;2019-12-20&#39;, &#39;count&#39;: &#39;14096&#39;},
+ {&#39;name&#39;: &#39;events-2019-12-21.jsonl&#39;, &#39;date&#39;: &#39;2019-12-21&#39;, &#39;count&#39;: &#39;8980&#39;},
+ {&#39;name&#39;: &#39;events-2019-12-22.jsonl&#39;, &#39;date&#39;: &#39;2019-12-22&#39;, &#39;count&#39;: &#39;9392&#39;},
+ {&#39;name&#39;: &#39;events-2019-12-23.jsonl&#39;, &#39;date&#39;: &#39;2019-12-23&#39;, &#39;count&#39;: &#39;14448&#39;},
+ {&#39;name&#39;: &#39;events-2019-12-24.jsonl&#39;, &#39;date&#39;: &#39;2019-12-24&#39;, &#39;count&#39;: &#39;12266&#39;},
+ {&#39;name&#39;: &#39;events-2019-12-25.jsonl&#39;, &#39;date&#39;: &#39;2019-12-25&#39;, &#39;count&#39;: &#39;10911&#39;},
+ {&#39;name&#39;: &#39;events-2019-12-26.jsonl&#39;, &#39;date&#39;: &#39;2019-12-26&#39;, &#39;count&#39;: &#39;12285&#39;},
+ {&#39;name&#39;: &#39;events-2019-12-27.jsonl&#39;, &#39;date&#39;: &#39;2019-12-27&#39;, &#39;count&#39;: &#39;12247&#39;},
+ {&#39;name&#39;: &#39;events-2019-12-28.jsonl&#39;, &#39;date&#39;: &#39;2019-12-28&#39;, &#39;count&#39;: &#39;8985&#39;},
+ {&#39;name&#39;: &#39;events-2019-12-29.jsonl&#39;, &#39;date&#39;: &#39;2019-12-29&#39;, &#39;count&#39;: &#39;8365&#39;},
+ {&#39;name&#39;: &#39;events-2019-12-30.jsonl&#39;, &#39;date&#39;: &#39;2019-12-30&#39;, &#39;count&#39;: &#39;12528&#39;},
+ {&#39;name&#39;: &#39;events-2019-12-31.jsonl&#39;, &#39;date&#39;: &#39;2019-12-31&#39;, &#39;count&#39;: &#39;9353&#39;},
+ {&#39;name&#39;: &#39;events-2020-01-01.jsonl&#39;, &#39;date&#39;: &#39;2020-01-01&#39;, &#39;count&#39;: &#39;7569&#39;},
+ {&#39;name&#39;: &#39;events-2020-01-02.jsonl&#39;, &#39;date&#39;: &#39;2020-01-02&#39;, &#39;count&#39;: &#39;12941&#39;},
+ {&#39;name&#39;: &#39;events-2020-01-03.jsonl&#39;, &#39;date&#39;: &#39;2020-01-03&#39;, &#39;count&#39;: &#39;13739&#39;},
+ {&#39;name&#39;: &#39;events-2020-01-04.jsonl&#39;, &#39;date&#39;: &#39;2020-01-04&#39;, &#39;count&#39;: &#39;11419&#39;},
+ {&#39;name&#39;: &#39;events-2020-01-05.jsonl&#39;, &#39;date&#39;: &#39;2020-01-05&#39;, &#39;count&#39;: &#39;10818&#39;},
+ {&#39;name&#39;: &#39;events-2020-01-06.jsonl&#39;, &#39;date&#39;: &#39;2020-01-06&#39;, &#39;count&#39;: &#39;16731&#39;},
+ {&#39;name&#39;: &#39;events-2020-01-07.jsonl&#39;, &#39;date&#39;: &#39;2020-01-07&#39;, &#39;count&#39;: &#39;18264&#39;},
+ {&#39;name&#39;: &#39;events-2020-01-08.jsonl&#39;, &#39;date&#39;: &#39;2020-01-08&#39;, &#39;count&#39;: &#39;19480&#39;},
+ {&#39;name&#39;: &#39;events-2020-01-09.jsonl&#39;, &#39;date&#39;: &#39;2020-01-09&#39;, &#39;count&#39;: &#39;20348&#39;},
+ {&#39;name&#39;: &#39;events-2020-01-10.jsonl&#39;, &#39;date&#39;: &#39;2020-01-10&#39;, &#39;count&#39;: &#39;17701&#39;},
+ {&#39;name&#39;: &#39;events-2020-01-11.jsonl&#39;, &#39;date&#39;: &#39;2020-01-11&#39;, &#39;count&#39;: &#39;13129&#39;},
+ {&#39;name&#39;: &#39;events-2020-01-12.jsonl&#39;, &#39;date&#39;: &#39;2020-01-12&#39;, &#39;count&#39;: &#39;10491&#39;},
+ {&#39;name&#39;: &#39;events-2020-01-13.jsonl&#39;, &#39;date&#39;: &#39;2020-01-13&#39;, &#39;count&#39;: &#39;20103&#39;},
+ {&#39;name&#39;: &#39;events-2020-01-14.jsonl&#39;, &#39;date&#39;: &#39;2020-01-14&#39;, &#39;count&#39;: &#39;20412&#39;},
+ {&#39;name&#39;: &#39;events-2020-01-15.jsonl&#39;, &#39;date&#39;: &#39;2020-01-15&#39;, &#39;count&#39;: &#39;19454&#39;},
+ {&#39;name&#39;: &#39;events-2020-01-16.jsonl&#39;, &#39;date&#39;: &#39;2020-01-16&#39;, &#39;count&#39;: &#39;18902&#39;},
+ {&#39;name&#39;: &#39;events-2020-01-17.jsonl&#39;, &#39;date&#39;: &#39;2020-01-17&#39;, &#39;count&#39;: &#39;17250&#39;},
+ {&#39;name&#39;: &#39;events-2020-01-18.jsonl&#39;, &#39;date&#39;: &#39;2020-01-18&#39;, &#39;count&#39;: &#39;10804&#39;},
+ {&#39;name&#39;: &#39;events-2020-01-19.jsonl&#39;, &#39;date&#39;: &#39;2020-01-19&#39;, &#39;count&#39;: &#39;10925&#39;},
+ {&#39;name&#39;: &#39;events-2020-01-20.jsonl&#39;, &#39;date&#39;: &#39;2020-01-20&#39;, &#39;count&#39;: &#39;19948&#39;},
+ {&#39;name&#39;: &#39;events-2020-01-21.jsonl&#39;, &#39;date&#39;: &#39;2020-01-21&#39;, &#39;count&#39;: &#39;21930&#39;},
+ {&#39;name&#39;: &#39;events-2020-01-22.jsonl&#39;, &#39;date&#39;: &#39;2020-01-22&#39;, &#39;count&#39;: &#39;21068&#39;},
+ {&#39;name&#39;: &#39;events-2020-01-23.jsonl&#39;, &#39;date&#39;: &#39;2020-01-23&#39;, &#39;count&#39;: &#39;20788&#39;},
+ {&#39;name&#39;: &#39;events-2020-01-24.jsonl&#39;, &#39;date&#39;: &#39;2020-01-24&#39;, &#39;count&#39;: &#39;16844&#39;},
+ {&#39;name&#39;: &#39;events-2020-01-25.jsonl&#39;, &#39;date&#39;: &#39;2020-01-25&#39;, &#39;count&#39;: &#39;11146&#39;},
+ {&#39;name&#39;: &#39;events-2020-01-26.jsonl&#39;, &#39;date&#39;: &#39;2020-01-26&#39;, &#39;count&#39;: &#39;10251&#39;},
+ {&#39;name&#39;: &#39;events-2020-01-27.jsonl&#39;, &#39;date&#39;: &#39;2020-01-27&#39;, &#39;count&#39;: &#39;20331&#39;},
+ {&#39;name&#39;: &#39;events-2020-01-28.jsonl&#39;, &#39;date&#39;: &#39;2020-01-28&#39;, &#39;count&#39;: &#39;21281&#39;},
+ {&#39;name&#39;: &#39;events-2020-01-29.jsonl&#39;, &#39;date&#39;: &#39;2020-01-29&#39;, &#39;count&#39;: &#39;21225&#39;},
+ {&#39;name&#39;: &#39;events-2020-01-30.jsonl&#39;, &#39;date&#39;: &#39;2020-01-30&#39;, &#39;count&#39;: &#39;22051&#39;},
+ {&#39;name&#39;: &#39;events-2020-01-31.jsonl&#39;, &#39;date&#39;: &#39;2020-01-31&#39;, &#39;count&#39;: &#39;18093&#39;},
+ {&#39;name&#39;: &#39;events-2020-02-01.jsonl&#39;, &#39;date&#39;: &#39;2020-02-01&#39;, &#39;count&#39;: &#39;20197&#39;},
+ {&#39;name&#39;: &#39;events-2020-02-02.jsonl&#39;, &#39;date&#39;: &#39;2020-02-02&#39;, &#39;count&#39;: &#39;11742&#39;},
+ {&#39;name&#39;: &#39;events-2020-02-03.jsonl&#39;, &#39;date&#39;: &#39;2020-02-03&#39;, &#39;count&#39;: &#39;20265&#39;},
+ {&#39;name&#39;: &#39;events-2020-02-04.jsonl&#39;, &#39;date&#39;: &#39;2020-02-04&#39;, &#39;count&#39;: &#39;22734&#39;},
+ {&#39;name&#39;: &#39;events-2020-02-05.jsonl&#39;, &#39;date&#39;: &#39;2020-02-05&#39;, &#39;count&#39;: &#39;24161&#39;},
+ {&#39;name&#39;: &#39;events-2020-02-06.jsonl&#39;, &#39;date&#39;: &#39;2020-02-06&#39;, &#39;count&#39;: &#39;23361&#39;},
+ {&#39;name&#39;: &#39;events-2020-02-07.jsonl&#39;, &#39;date&#39;: &#39;2020-02-07&#39;, &#39;count&#39;: &#39;22682&#39;},
+ {&#39;name&#39;: &#39;events-2020-02-08.jsonl&#39;, &#39;date&#39;: &#39;2020-02-08&#39;, &#39;count&#39;: &#39;13200&#39;},
+ {&#39;name&#39;: &#39;events-2020-02-09.jsonl&#39;, &#39;date&#39;: &#39;2020-02-09&#39;, &#39;count&#39;: &#39;12558&#39;},
+ {&#39;name&#39;: &#39;events-2020-02-10.jsonl&#39;, &#39;date&#39;: &#39;2020-02-10&#39;, &#39;count&#39;: &#39;21711&#39;},
+ {&#39;name&#39;: &#39;events-2020-02-11.jsonl&#39;, &#39;date&#39;: &#39;2020-02-11&#39;, &#39;count&#39;: &#39;24638&#39;},
+ {&#39;name&#39;: &#39;events-2020-02-12.jsonl&#39;, &#39;date&#39;: &#39;2020-02-12&#39;, &#39;count&#39;: &#39;23316&#39;},
+ {&#39;name&#39;: &#39;events-2020-02-13.jsonl&#39;, &#39;date&#39;: &#39;2020-02-13&#39;, &#39;count&#39;: &#39;23178&#39;},
+ {&#39;name&#39;: &#39;events-2020-02-14.jsonl&#39;, &#39;date&#39;: &#39;2020-02-14&#39;, &#39;count&#39;: &#39;19044&#39;},
+ {&#39;name&#39;: &#39;events-2020-02-15.jsonl&#39;, &#39;date&#39;: &#39;2020-02-15&#39;, &#39;count&#39;: &#39;12710&#39;},
+ {&#39;name&#39;: &#39;events-2020-02-16.jsonl&#39;, &#39;date&#39;: &#39;2020-02-16&#39;, &#39;count&#39;: &#39;12211&#39;},
+ {&#39;name&#39;: &#39;events-2020-02-17.jsonl&#39;, &#39;date&#39;: &#39;2020-02-17&#39;, &#39;count&#39;: &#39;23476&#39;},
+ {&#39;name&#39;: &#39;events-2020-02-18.jsonl&#39;, &#39;date&#39;: &#39;2020-02-18&#39;, &#39;count&#39;: &#39;24373&#39;},
+ {&#39;name&#39;: &#39;events-2020-02-19.jsonl&#39;, &#39;date&#39;: &#39;2020-02-19&#39;, &#39;count&#39;: &#39;23461&#39;},
+ {&#39;name&#39;: &#39;events-2020-02-20.jsonl&#39;, &#39;date&#39;: &#39;2020-02-20&#39;, &#39;count&#39;: &#39;22204&#39;},
+ {&#39;name&#39;: &#39;events-2020-02-21.jsonl&#39;, &#39;date&#39;: &#39;2020-02-21&#39;, &#39;count&#39;: &#39;17242&#39;},
+ {&#39;name&#39;: &#39;events-2020-02-22.jsonl&#39;, &#39;date&#39;: &#39;2020-02-22&#39;, &#39;count&#39;: &#39;13390&#39;},
+ {&#39;name&#39;: &#39;events-2020-02-23.jsonl&#39;, &#39;date&#39;: &#39;2020-02-23&#39;, &#39;count&#39;: &#39;12478&#39;},
+ {&#39;name&#39;: &#39;events-2020-02-24.jsonl&#39;, &#39;date&#39;: &#39;2020-02-24&#39;, &#39;count&#39;: &#39;21419&#39;},
+ {&#39;name&#39;: &#39;events-2020-02-25.jsonl&#39;, &#39;date&#39;: &#39;2020-02-25&#39;, &#39;count&#39;: &#39;24205&#39;},
+ {&#39;name&#39;: &#39;events-2020-02-26.jsonl&#39;, &#39;date&#39;: &#39;2020-02-26&#39;, &#39;count&#39;: &#39;23978&#39;},
+ {&#39;name&#39;: &#39;events-2020-02-27.jsonl&#39;, &#39;date&#39;: &#39;2020-02-27&#39;, &#39;count&#39;: &#39;24371&#39;},
+ {&#39;name&#39;: &#39;events-2020-02-28.jsonl&#39;, &#39;date&#39;: &#39;2020-02-28&#39;, &#39;count&#39;: &#39;21942&#39;},
+ {&#39;name&#39;: &#39;events-2020-02-29.jsonl&#39;, &#39;date&#39;: &#39;2020-02-29&#39;, &#39;count&#39;: &#39;13544&#39;},
+ {&#39;name&#39;: &#39;events-2020-03-01.jsonl&#39;, &#39;date&#39;: &#39;2020-03-01&#39;, &#39;count&#39;: &#39;13403&#39;},
+ {&#39;name&#39;: &#39;events-2020-03-02.jsonl&#39;, &#39;date&#39;: &#39;2020-03-02&#39;, &#39;count&#39;: &#39;24387&#39;},
+ {&#39;name&#39;: &#39;events-2020-03-03.jsonl&#39;, &#39;date&#39;: &#39;2020-03-03&#39;, &#39;count&#39;: &#39;26251&#39;},
+ {&#39;name&#39;: &#39;events-2020-03-04.jsonl&#39;, &#39;date&#39;: &#39;2020-03-04&#39;, &#39;count&#39;: &#39;24735&#39;},
+ {&#39;name&#39;: &#39;events-2020-03-05.jsonl&#39;, &#39;date&#39;: &#39;2020-03-05&#39;, &#39;count&#39;: &#39;23813&#39;},
+ {&#39;name&#39;: &#39;events-2020-03-06.jsonl&#39;, &#39;date&#39;: &#39;2020-03-06&#39;, &#39;count&#39;: &#39;22069&#39;},
+ {&#39;name&#39;: &#39;events-2020-03-07.jsonl&#39;, &#39;date&#39;: &#39;2020-03-07&#39;, &#39;count&#39;: &#39;14102&#39;},
+ {&#39;name&#39;: &#39;events-2020-03-08.jsonl&#39;, &#39;date&#39;: &#39;2020-03-08&#39;, &#39;count&#39;: &#39;13290&#39;},
+ {&#39;name&#39;: &#39;events-2020-03-09.jsonl&#39;, &#39;date&#39;: &#39;2020-03-09&#39;, &#39;count&#39;: &#39;23030&#39;},
+ {&#39;name&#39;: &#39;events-2020-03-10.jsonl&#39;, &#39;date&#39;: &#39;2020-03-10&#39;, &#39;count&#39;: &#39;22159&#39;},
+ {&#39;name&#39;: &#39;events-2020-03-11.jsonl&#39;, &#39;date&#39;: &#39;2020-03-11&#39;, &#39;count&#39;: &#39;23601&#39;},
+ {&#39;name&#39;: &#39;events-2020-03-12.jsonl&#39;, &#39;date&#39;: &#39;2020-03-12&#39;, &#39;count&#39;: &#39;22362&#39;},
+ {&#39;name&#39;: &#39;events-2020-03-13.jsonl&#39;, &#39;date&#39;: &#39;2020-03-13&#39;, &#39;count&#39;: &#39;19824&#39;},
+ {&#39;name&#39;: &#39;events-2020-03-14.jsonl&#39;, &#39;date&#39;: &#39;2020-03-14&#39;, &#39;count&#39;: &#39;13284&#39;},
+ {&#39;name&#39;: &#39;events-2020-03-15.jsonl&#39;, &#39;date&#39;: &#39;2020-03-15&#39;, &#39;count&#39;: &#39;12938&#39;},
+ {&#39;name&#39;: &#39;events-2020-03-16.jsonl&#39;, &#39;date&#39;: &#39;2020-03-16&#39;, &#39;count&#39;: &#39;19145&#39;},
+ {&#39;name&#39;: &#39;events-2020-03-17.jsonl&#39;, &#39;date&#39;: &#39;2020-03-17&#39;, &#39;count&#39;: &#39;20060&#39;},
+ {&#39;name&#39;: &#39;events-2020-03-18.jsonl&#39;, &#39;date&#39;: &#39;2020-03-18&#39;, &#39;count&#39;: &#39;20094&#39;},
+ {&#39;name&#39;: &#39;events-2020-03-19.jsonl&#39;, &#39;date&#39;: &#39;2020-03-19&#39;, &#39;count&#39;: &#39;21392&#39;},
+ {&#39;name&#39;: &#39;events-2020-03-20.jsonl&#39;, &#39;date&#39;: &#39;2020-03-20&#39;, &#39;count&#39;: &#39;18643&#39;},
+ {&#39;name&#39;: &#39;events-2020-03-21.jsonl&#39;, &#39;date&#39;: &#39;2020-03-21&#39;, &#39;count&#39;: &#39;14672&#39;},
+ {&#39;name&#39;: &#39;events-2020-03-22.jsonl&#39;, &#39;date&#39;: &#39;2020-03-22&#39;, &#39;count&#39;: &#39;16088&#39;},
+ {&#39;name&#39;: &#39;events-2020-03-23.jsonl&#39;, &#39;date&#39;: &#39;2020-03-23&#39;, &#39;count&#39;: &#39;21468&#39;},
+ {&#39;name&#39;: &#39;events-2020-03-24.jsonl&#39;, &#39;date&#39;: &#39;2020-03-24&#39;, &#39;count&#39;: &#39;24090&#39;},
+ {&#39;name&#39;: &#39;events-2020-03-25.jsonl&#39;, &#39;date&#39;: &#39;2020-03-25&#39;, &#39;count&#39;: &#39;21960&#39;},
+ {&#39;name&#39;: &#39;events-2020-03-26.jsonl&#39;, &#39;date&#39;: &#39;2020-03-26&#39;, &#39;count&#39;: &#39;23396&#39;},
+ {&#39;name&#39;: &#39;events-2020-03-27.jsonl&#39;, &#39;date&#39;: &#39;2020-03-27&#39;, &#39;count&#39;: &#39;25006&#39;},
+ {&#39;name&#39;: &#39;events-2020-03-28.jsonl&#39;, &#39;date&#39;: &#39;2020-03-28&#39;, &#39;count&#39;: &#39;20641&#39;},
+ {&#39;name&#39;: &#39;events-2020-03-29.jsonl&#39;, &#39;date&#39;: &#39;2020-03-29&#39;, &#39;count&#39;: &#39;21379&#39;},
+ {&#39;name&#39;: &#39;events-2020-03-30.jsonl&#39;, &#39;date&#39;: &#39;2020-03-30&#39;, &#39;count&#39;: &#39;25870&#39;},
+ {&#39;name&#39;: &#39;events-2020-03-31.jsonl&#39;, &#39;date&#39;: &#39;2020-03-31&#39;, &#39;count&#39;: &#39;27398&#39;},
+ {&#39;name&#39;: &#39;events-2020-04-01.jsonl&#39;, &#39;date&#39;: &#39;2020-04-01&#39;, &#39;count&#39;: &#39;28008&#39;},
+ {&#39;name&#39;: &#39;events-2020-04-02.jsonl&#39;, &#39;date&#39;: &#39;2020-04-02&#39;, &#39;count&#39;: &#39;26711&#39;},
+ {&#39;name&#39;: &#39;events-2020-04-03.jsonl&#39;, &#39;date&#39;: &#39;2020-04-03&#39;, &#39;count&#39;: &#39;26140&#39;},
+ {&#39;name&#39;: &#39;events-2020-04-04.jsonl&#39;, &#39;date&#39;: &#39;2020-04-04&#39;, &#39;count&#39;: &#39;19433&#39;},
+ {&#39;name&#39;: &#39;events-2020-04-05.jsonl&#39;, &#39;date&#39;: &#39;2020-04-05&#39;, &#39;count&#39;: &#39;20381&#39;},
+ {&#39;name&#39;: &#39;events-2020-04-06.jsonl&#39;, &#39;date&#39;: &#39;2020-04-06&#39;, &#39;count&#39;: &#39;25839&#39;},
+ {&#39;name&#39;: &#39;events-2020-04-07.jsonl&#39;, &#39;date&#39;: &#39;2020-04-07&#39;, &#39;count&#39;: &#39;26154&#39;},
+ {&#39;name&#39;: &#39;events-2020-04-08.jsonl&#39;, &#39;date&#39;: &#39;2020-04-08&#39;, &#39;count&#39;: &#39;25781&#39;},
+ {&#39;name&#39;: &#39;events-2020-04-09.jsonl&#39;, &#39;date&#39;: &#39;2020-04-09&#39;, &#39;count&#39;: &#39;24925&#39;},
+ {&#39;name&#39;: &#39;events-2020-04-10.jsonl&#39;, &#39;date&#39;: &#39;2020-04-10&#39;, &#39;count&#39;: &#39;22659&#39;},
+ {&#39;name&#39;: &#39;events-2020-04-11.jsonl&#39;, &#39;date&#39;: &#39;2020-04-11&#39;, &#39;count&#39;: &#39;18810&#39;},
+ {&#39;name&#39;: &#39;events-2020-04-12.jsonl&#39;, &#39;date&#39;: &#39;2020-04-12&#39;, &#39;count&#39;: &#39;19827&#39;},
+ {&#39;name&#39;: &#39;events-2020-04-13.jsonl&#39;, &#39;date&#39;: &#39;2020-04-13&#39;, &#39;count&#39;: &#39;25081&#39;},
+ {&#39;name&#39;: &#39;events-2020-04-14.jsonl&#39;, &#39;date&#39;: &#39;2020-04-14&#39;, &#39;count&#39;: &#39;26300&#39;},
+ {&#39;name&#39;: &#39;events-2020-04-15.jsonl&#39;, &#39;date&#39;: &#39;2020-04-15&#39;, &#39;count&#39;: &#39;26044&#39;},
+ {&#39;name&#39;: &#39;events-2020-04-16.jsonl&#39;, &#39;date&#39;: &#39;2020-04-16&#39;, &#39;count&#39;: &#39;25610&#39;},
+ {&#39;name&#39;: &#39;events-2020-04-17.jsonl&#39;, &#39;date&#39;: &#39;2020-04-17&#39;, &#39;count&#39;: &#39;24908&#39;},
+ {&#39;name&#39;: &#39;events-2020-04-18.jsonl&#39;, &#39;date&#39;: &#39;2020-04-18&#39;, &#39;count&#39;: &#39;19508&#39;},
+ {&#39;name&#39;: &#39;events-2020-04-19.jsonl&#39;, &#39;date&#39;: &#39;2020-04-19&#39;, &#39;count&#39;: &#39;18818&#39;},
+ {&#39;name&#39;: &#39;events-2020-04-20.jsonl&#39;, &#39;date&#39;: &#39;2020-04-20&#39;, &#39;count&#39;: &#39;25547&#39;},
+ {&#39;name&#39;: &#39;events-2020-04-21.jsonl&#39;, &#39;date&#39;: &#39;2020-04-21&#39;, &#39;count&#39;: &#39;24510&#39;},
+ {&#39;name&#39;: &#39;events-2020-04-22.jsonl&#39;, &#39;date&#39;: &#39;2020-04-22&#39;, &#39;count&#39;: &#39;26403&#39;},
+ {&#39;name&#39;: &#39;events-2020-04-23.jsonl&#39;, &#39;date&#39;: &#39;2020-04-23&#39;, &#39;count&#39;: &#39;25322&#39;},
+ {&#39;name&#39;: &#39;events-2020-04-24.jsonl&#39;, &#39;date&#39;: &#39;2020-04-24&#39;, &#39;count&#39;: &#39;24265&#39;},
+ {&#39;name&#39;: &#39;events-2020-04-25.jsonl&#39;, &#39;date&#39;: &#39;2020-04-25&#39;, &#39;count&#39;: &#39;19042&#39;},
+ {&#39;name&#39;: &#39;events-2020-04-26.jsonl&#39;, &#39;date&#39;: &#39;2020-04-26&#39;, &#39;count&#39;: &#39;21103&#39;},
+ {&#39;name&#39;: &#39;events-2020-04-27.jsonl&#39;, &#39;date&#39;: &#39;2020-04-27&#39;, &#39;count&#39;: &#39;27600&#39;},
+ {&#39;name&#39;: &#39;events-2020-04-28.jsonl&#39;, &#39;date&#39;: &#39;2020-04-28&#39;, &#39;count&#39;: &#39;27554&#39;},
+ {&#39;name&#39;: &#39;events-2020-04-29.jsonl&#39;, &#39;date&#39;: &#39;2020-04-29&#39;, &#39;count&#39;: &#39;26767&#39;},
+ {&#39;name&#39;: &#39;events-2020-04-30.jsonl&#39;, &#39;date&#39;: &#39;2020-04-30&#39;, &#39;count&#39;: &#39;24620&#39;},
+ {&#39;name&#39;: &#39;events-2020-05-01.jsonl&#39;, &#39;date&#39;: &#39;2020-05-01&#39;, &#39;count&#39;: &#39;21203&#39;},
+ {&#39;name&#39;: &#39;events-2020-05-02.jsonl&#39;, &#39;date&#39;: &#39;2020-05-02&#39;, &#39;count&#39;: &#39;19994&#39;},
+ {&#39;name&#39;: &#39;events-2020-05-03.jsonl&#39;, &#39;date&#39;: &#39;2020-05-03&#39;, &#39;count&#39;: &#39;19051&#39;},
+ {&#39;name&#39;: &#39;events-2020-05-04.jsonl&#39;, &#39;date&#39;: &#39;2020-05-04&#39;, &#39;count&#39;: &#39;24241&#39;},
+ {&#39;name&#39;: &#39;events-2020-05-05.jsonl&#39;, &#39;date&#39;: &#39;2020-05-05&#39;, &#39;count&#39;: &#39;26096&#39;},
+ {&#39;name&#39;: &#39;events-2020-05-06.jsonl&#39;, &#39;date&#39;: &#39;2020-05-06&#39;, &#39;count&#39;: &#39;26464&#39;},
+ {&#39;name&#39;: &#39;events-2020-05-07.jsonl&#39;, &#39;date&#39;: &#39;2020-05-07&#39;, &#39;count&#39;: &#39;26238&#39;},
+ {&#39;name&#39;: &#39;events-2020-05-08.jsonl&#39;, &#39;date&#39;: &#39;2020-05-08&#39;, &#39;count&#39;: &#39;24750&#39;},
+ {&#39;name&#39;: &#39;events-2020-05-09.jsonl&#39;, &#39;date&#39;: &#39;2020-05-09&#39;, &#39;count&#39;: &#39;19638&#39;},
+ {&#39;name&#39;: &#39;events-2020-05-10.jsonl&#39;, &#39;date&#39;: &#39;2020-05-10&#39;, &#39;count&#39;: &#39;20291&#39;},
+ {&#39;name&#39;: &#39;events-2020-05-11.jsonl&#39;, &#39;date&#39;: &#39;2020-05-11&#39;, &#39;count&#39;: &#39;26832&#39;},
+ {&#39;name&#39;: &#39;events-2020-05-12.jsonl&#39;, &#39;date&#39;: &#39;2020-05-12&#39;, &#39;count&#39;: &#39;27855&#39;},
+ {&#39;name&#39;: &#39;events-2020-05-13.jsonl&#39;, &#39;date&#39;: &#39;2020-05-13&#39;, &#39;count&#39;: &#39;26748&#39;},
+ {&#39;name&#39;: &#39;events-2020-05-14.jsonl&#39;, &#39;date&#39;: &#39;2020-05-14&#39;, &#39;count&#39;: &#39;25702&#39;},
+ {&#39;name&#39;: &#39;events-2020-05-15.jsonl&#39;, &#39;date&#39;: &#39;2020-05-15&#39;, &#39;count&#39;: &#39;23869&#39;},
+ {&#39;name&#39;: &#39;events-2020-05-16.jsonl&#39;, &#39;date&#39;: &#39;2020-05-16&#39;, &#39;count&#39;: &#39;18430&#39;},
+ {&#39;name&#39;: &#39;events-2020-05-17.jsonl&#39;, &#39;date&#39;: &#39;2020-05-17&#39;, &#39;count&#39;: &#39;16853&#39;},
+ {&#39;name&#39;: &#39;events-2020-05-18.jsonl&#39;, &#39;date&#39;: &#39;2020-05-18&#39;, &#39;count&#39;: &#39;22166&#39;},
+ {&#39;name&#39;: &#39;events-2020-05-19.jsonl&#39;, &#39;date&#39;: &#39;2020-05-19&#39;, &#39;count&#39;: &#39;24371&#39;},
+ {&#39;name&#39;: &#39;events-2020-05-20.jsonl&#39;, &#39;date&#39;: &#39;2020-05-20&#39;, &#39;count&#39;: &#39;24157&#39;},
+ {&#39;name&#39;: &#39;events-2020-05-21.jsonl&#39;, &#39;date&#39;: &#39;2020-05-21&#39;, &#39;count&#39;: &#39;22260&#39;},
+ {&#39;name&#39;: &#39;events-2020-05-22.jsonl&#39;, &#39;date&#39;: &#39;2020-05-22&#39;, &#39;count&#39;: &#39;21093&#39;},
+ {&#39;name&#39;: &#39;events-2020-05-23.jsonl&#39;, &#39;date&#39;: &#39;2020-05-23&#39;, &#39;count&#39;: &#39;17099&#39;},
+ {&#39;name&#39;: &#39;events-2020-05-24.jsonl&#39;, &#39;date&#39;: &#39;2020-05-24&#39;, &#39;count&#39;: &#39;18957&#39;},
+ {&#39;name&#39;: &#39;events-2020-05-25.jsonl&#39;, &#39;date&#39;: &#39;2020-05-25&#39;, &#39;count&#39;: &#39;22741&#39;},
+ {&#39;name&#39;: &#39;events-2020-05-26.jsonl&#39;, &#39;date&#39;: &#39;2020-05-26&#39;, &#39;count&#39;: &#39;25616&#39;},
+ {&#39;name&#39;: &#39;events-2020-05-27.jsonl&#39;, &#39;date&#39;: &#39;2020-05-27&#39;, &#39;count&#39;: &#39;23822&#39;},
+ {&#39;name&#39;: &#39;events-2020-05-28.jsonl&#39;, &#39;date&#39;: &#39;2020-05-28&#39;, &#39;count&#39;: &#39;24773&#39;},
+ {&#39;name&#39;: &#39;events-2020-05-29.jsonl&#39;, &#39;date&#39;: &#39;2020-05-29&#39;, &#39;count&#39;: &#39;23313&#39;},
+ {&#39;name&#39;: &#39;events-2020-05-30.jsonl&#39;, &#39;date&#39;: &#39;2020-05-30&#39;, &#39;count&#39;: &#39;20825&#39;},
+ {&#39;name&#39;: &#39;events-2020-05-31.jsonl&#39;, &#39;date&#39;: &#39;2020-05-31&#39;, &#39;count&#39;: &#39;17512&#39;},
+ {&#39;name&#39;: &#39;events-2020-06-01.jsonl&#39;, &#39;date&#39;: &#39;2020-06-01&#39;, &#39;count&#39;: &#39;21707&#39;},
+ {&#39;name&#39;: &#39;events-2020-06-02.jsonl&#39;, &#39;date&#39;: &#39;2020-06-02&#39;, &#39;count&#39;: &#39;24375&#39;},
+ {&#39;name&#39;: &#39;events-2020-06-03.jsonl&#39;, &#39;date&#39;: &#39;2020-06-03&#39;, &#39;count&#39;: &#39;25372&#39;},
+ {&#39;name&#39;: &#39;events-2020-06-04.jsonl&#39;, &#39;date&#39;: &#39;2020-06-04&#39;, &#39;count&#39;: &#39;23361&#39;},
+ {&#39;name&#39;: &#39;events-2020-06-05.jsonl&#39;, &#39;date&#39;: &#39;2020-06-05&#39;, &#39;count&#39;: &#39;21887&#39;},
+ {&#39;name&#39;: &#39;events-2020-06-06.jsonl&#39;, &#39;date&#39;: &#39;2020-06-06&#39;, &#39;count&#39;: &#39;16219&#39;},
+ {&#39;name&#39;: &#39;events-2020-06-07.jsonl&#39;, &#39;date&#39;: &#39;2020-06-07&#39;, &#39;count&#39;: &#39;16475&#39;},
+ {&#39;name&#39;: &#39;events-2020-06-08.jsonl&#39;, &#39;date&#39;: &#39;2020-06-08&#39;, &#39;count&#39;: &#39;23880&#39;},
+ {&#39;name&#39;: &#39;events-2020-06-09.jsonl&#39;, &#39;date&#39;: &#39;2020-06-09&#39;, &#39;count&#39;: &#39;25469&#39;},
+ {&#39;name&#39;: &#39;events-2020-06-10.jsonl&#39;, &#39;date&#39;: &#39;2020-06-10&#39;, &#39;count&#39;: &#39;23286&#39;},
+ {&#39;name&#39;: &#39;events-2020-06-11.jsonl&#39;, &#39;date&#39;: &#39;2020-06-11&#39;, &#39;count&#39;: &#39;22106&#39;},
+ {&#39;name&#39;: &#39;events-2020-06-12.jsonl&#39;, &#39;date&#39;: &#39;2020-06-12&#39;, &#39;count&#39;: &#39;20633&#39;},
+ {&#39;name&#39;: &#39;events-2020-06-13.jsonl&#39;, &#39;date&#39;: &#39;2020-06-13&#39;, &#39;count&#39;: &#39;16567&#39;},
+ {&#39;name&#39;: &#39;events-2020-06-14.jsonl&#39;, &#39;date&#39;: &#39;2020-06-14&#39;, &#39;count&#39;: &#39;16268&#39;},
+ {&#39;name&#39;: &#39;events-2020-06-15.jsonl&#39;, &#39;date&#39;: &#39;2020-06-15&#39;, &#39;count&#39;: &#39;21897&#39;},
+ {&#39;name&#39;: &#39;events-2020-06-16.jsonl&#39;, &#39;date&#39;: &#39;2020-06-16&#39;, &#39;count&#39;: &#39;23392&#39;},
+ {&#39;name&#39;: &#39;events-2020-06-17.jsonl&#39;, &#39;date&#39;: &#39;2020-06-17&#39;, &#39;count&#39;: &#39;22782&#39;},
+ {&#39;name&#39;: &#39;events-2020-06-18.jsonl&#39;, &#39;date&#39;: &#39;2020-06-18&#39;, &#39;count&#39;: &#39;22448&#39;},
+ {&#39;name&#39;: &#39;events-2020-06-19.jsonl&#39;, &#39;date&#39;: &#39;2020-06-19&#39;, &#39;count&#39;: &#39;21531&#39;},
+ {&#39;name&#39;: &#39;events-2020-06-20.jsonl&#39;, &#39;date&#39;: &#39;2020-06-20&#39;, &#39;count&#39;: &#39;15470&#39;},
+ {&#39;name&#39;: &#39;events-2020-06-21.jsonl&#39;, &#39;date&#39;: &#39;2020-06-21&#39;, &#39;count&#39;: &#39;15269&#39;},
+ {&#39;name&#39;: &#39;events-2020-06-22.jsonl&#39;, &#39;date&#39;: &#39;2020-06-22&#39;, &#39;count&#39;: &#39;21643&#39;},
+ {&#39;name&#39;: &#39;events-2020-06-23.jsonl&#39;, &#39;date&#39;: &#39;2020-06-23&#39;, &#39;count&#39;: &#39;21836&#39;},
+ {&#39;name&#39;: &#39;events-2020-06-24.jsonl&#39;, &#39;date&#39;: &#39;2020-06-24&#39;, &#39;count&#39;: &#39;20792&#39;},
+ {&#39;name&#39;: &#39;events-2020-06-25.jsonl&#39;, &#39;date&#39;: &#39;2020-06-25&#39;, &#39;count&#39;: &#39;21050&#39;},
+ {&#39;name&#39;: &#39;events-2020-06-26.jsonl&#39;, &#39;date&#39;: &#39;2020-06-26&#39;, &#39;count&#39;: &#39;18843&#39;},
+ {&#39;name&#39;: &#39;events-2020-06-27.jsonl&#39;, &#39;date&#39;: &#39;2020-06-27&#39;, &#39;count&#39;: &#39;14404&#39;},
+ {&#39;name&#39;: &#39;events-2020-06-28.jsonl&#39;, &#39;date&#39;: &#39;2020-06-28&#39;, &#39;count&#39;: &#39;14484&#39;},
+ {&#39;name&#39;: &#39;events-2020-06-29.jsonl&#39;, &#39;date&#39;: &#39;2020-06-29&#39;, &#39;count&#39;: &#39;20279&#39;},
+ {&#39;name&#39;: &#39;events-2020-06-30.jsonl&#39;, &#39;date&#39;: &#39;2020-06-30&#39;, &#39;count&#39;: &#39;20924&#39;},
+ {&#39;name&#39;: &#39;events-2020-07-01.jsonl&#39;, &#39;date&#39;: &#39;2020-07-01&#39;, &#39;count&#39;: &#39;18993&#39;},
+ {&#39;name&#39;: &#39;events-2020-07-02.jsonl&#39;, &#39;date&#39;: &#39;2020-07-02&#39;, &#39;count&#39;: &#39;21409&#39;},
+ {&#39;name&#39;: &#39;events-2020-07-03.jsonl&#39;, &#39;date&#39;: &#39;2020-07-03&#39;, &#39;count&#39;: &#39;18453&#39;},
+ {&#39;name&#39;: &#39;events-2020-07-04.jsonl&#39;, &#39;date&#39;: &#39;2020-07-04&#39;, &#39;count&#39;: &#39;13618&#39;},
+ {&#39;name&#39;: &#39;events-2020-07-05.jsonl&#39;, &#39;date&#39;: &#39;2020-07-05&#39;, &#39;count&#39;: &#39;13498&#39;},
+ {&#39;name&#39;: &#39;events-2020-07-06.jsonl&#39;, &#39;date&#39;: &#39;2020-07-06&#39;, &#39;count&#39;: &#39;20551&#39;},
+ {&#39;name&#39;: &#39;events-2020-07-07.jsonl&#39;, &#39;date&#39;: &#39;2020-07-07&#39;, &#39;count&#39;: &#39;20350&#39;},
+ {&#39;name&#39;: &#39;events-2020-07-08.jsonl&#39;, &#39;date&#39;: &#39;2020-07-08&#39;, &#39;count&#39;: &#39;20207&#39;},
+ {&#39;name&#39;: &#39;events-2020-07-09.jsonl&#39;, &#39;date&#39;: &#39;2020-07-09&#39;, &#39;count&#39;: &#39;19584&#39;},
+ {&#39;name&#39;: &#39;events-2020-07-10.jsonl&#39;, &#39;date&#39;: &#39;2020-07-10&#39;, &#39;count&#39;: &#39;17825&#39;},
+ {&#39;name&#39;: &#39;events-2020-07-11.jsonl&#39;, &#39;date&#39;: &#39;2020-07-11&#39;, &#39;count&#39;: &#39;11821&#39;},
+ {&#39;name&#39;: &#39;events-2020-07-12.jsonl&#39;, &#39;date&#39;: &#39;2020-07-12&#39;, &#39;count&#39;: &#39;13356&#39;},
+ {&#39;name&#39;: &#39;events-2020-07-13.jsonl&#39;, &#39;date&#39;: &#39;2020-07-13&#39;, &#39;count&#39;: &#39;19956&#39;},
+ {&#39;name&#39;: &#39;events-2020-07-14.jsonl&#39;, &#39;date&#39;: &#39;2020-07-14&#39;, &#39;count&#39;: &#39;20609&#39;},
+ {&#39;name&#39;: &#39;events-2020-07-15.jsonl&#39;, &#39;date&#39;: &#39;2020-07-15&#39;, &#39;count&#39;: &#39;20483&#39;},
+ {&#39;name&#39;: &#39;events-2020-07-16.jsonl&#39;, &#39;date&#39;: &#39;2020-07-16&#39;, &#39;count&#39;: &#39;19798&#39;},
+ {&#39;name&#39;: &#39;events-2020-07-17.jsonl&#39;, &#39;date&#39;: &#39;2020-07-17&#39;, &#39;count&#39;: &#39;17890&#39;},
+ {&#39;name&#39;: &#39;events-2020-07-18.jsonl&#39;, &#39;date&#39;: &#39;2020-07-18&#39;, &#39;count&#39;: &#39;13860&#39;},
+ {&#39;name&#39;: &#39;events-2020-07-19.jsonl&#39;, &#39;date&#39;: &#39;2020-07-19&#39;, &#39;count&#39;: &#39;13912&#39;},
+ {&#39;name&#39;: &#39;events-2020-07-20.jsonl&#39;, &#39;date&#39;: &#39;2020-07-20&#39;, &#39;count&#39;: &#39;19410&#39;},
+ {&#39;name&#39;: &#39;events-2020-07-21.jsonl&#39;, &#39;date&#39;: &#39;2020-07-21&#39;, &#39;count&#39;: &#39;20981&#39;},
+ {&#39;name&#39;: &#39;events-2020-07-22.jsonl&#39;, &#39;date&#39;: &#39;2020-07-22&#39;, &#39;count&#39;: &#39;19529&#39;},
+ {&#39;name&#39;: &#39;events-2020-07-23.jsonl&#39;, &#39;date&#39;: &#39;2020-07-23&#39;, &#39;count&#39;: &#39;18812&#39;},
+ {&#39;name&#39;: &#39;events-2020-07-24.jsonl&#39;, &#39;date&#39;: &#39;2020-07-24&#39;, &#39;count&#39;: &#39;17762&#39;},
+ {&#39;name&#39;: &#39;events-2020-07-25.jsonl&#39;, &#39;date&#39;: &#39;2020-07-25&#39;, &#39;count&#39;: &#39;12576&#39;},
+ {&#39;name&#39;: &#39;events-2020-07-26.jsonl&#39;, &#39;date&#39;: &#39;2020-07-26&#39;, &#39;count&#39;: &#39;12303&#39;},
+ {&#39;name&#39;: &#39;events-2020-07-27.jsonl&#39;, &#39;date&#39;: &#39;2020-07-27&#39;, &#39;count&#39;: &#39;18604&#39;},
+ {&#39;name&#39;: &#39;events-2020-07-28.jsonl&#39;, &#39;date&#39;: &#39;2020-07-28&#39;, &#39;count&#39;: &#39;20799&#39;},
+ {&#39;name&#39;: &#39;events-2020-07-29.jsonl&#39;, &#39;date&#39;: &#39;2020-07-29&#39;, &#39;count&#39;: &#39;19578&#39;},
+ {&#39;name&#39;: &#39;events-2020-07-30.jsonl&#39;, &#39;date&#39;: &#39;2020-07-30&#39;, &#39;count&#39;: &#39;19905&#39;},
+ {&#39;name&#39;: &#39;events-2020-07-31.jsonl&#39;, &#39;date&#39;: &#39;2020-07-31&#39;, &#39;count&#39;: &#39;16981&#39;},
+ {&#39;name&#39;: &#39;events-2020-08-01.jsonl&#39;, &#39;date&#39;: &#39;2020-08-01&#39;, &#39;count&#39;: &#39;11496&#39;},
+ {&#39;name&#39;: &#39;events-2020-08-02.jsonl&#39;, &#39;date&#39;: &#39;2020-08-02&#39;, &#39;count&#39;: &#39;11438&#39;},
+ {&#39;name&#39;: &#39;events-2020-08-03.jsonl&#39;, &#39;date&#39;: &#39;2020-08-03&#39;, &#39;count&#39;: &#39;16829&#39;},
+ {&#39;name&#39;: &#39;events-2020-08-04.jsonl&#39;, &#39;date&#39;: &#39;2020-08-04&#39;, &#39;count&#39;: &#39;20630&#39;},
+ {&#39;name&#39;: &#39;events-2020-08-05.jsonl&#39;, &#39;date&#39;: &#39;2020-08-05&#39;, &#39;count&#39;: &#39;18799&#39;},
+ {&#39;name&#39;: &#39;events-2020-08-06.jsonl&#39;, &#39;date&#39;: &#39;2020-08-06&#39;, &#39;count&#39;: &#39;18633&#39;},
+ {&#39;name&#39;: &#39;events-2020-08-07.jsonl&#39;, &#39;date&#39;: &#39;2020-08-07&#39;, &#39;count&#39;: &#39;17544&#39;},
+ {&#39;name&#39;: &#39;events-2020-08-08.jsonl&#39;, &#39;date&#39;: &#39;2020-08-08&#39;, &#39;count&#39;: &#39;12818&#39;},
+ {&#39;name&#39;: &#39;events-2020-08-09.jsonl&#39;, &#39;date&#39;: &#39;2020-08-09&#39;, &#39;count&#39;: &#39;12142&#39;},
+ {&#39;name&#39;: &#39;events-2020-08-10.jsonl&#39;, &#39;date&#39;: &#39;2020-08-10&#39;, &#39;count&#39;: &#39;18075&#39;},
+ {&#39;name&#39;: &#39;events-2020-08-11.jsonl&#39;, &#39;date&#39;: &#39;2020-08-11&#39;, &#39;count&#39;: &#39;18996&#39;},
+ {&#39;name&#39;: &#39;events-2020-08-12.jsonl&#39;, &#39;date&#39;: &#39;2020-08-12&#39;, &#39;count&#39;: &#39;18551&#39;},
+ {&#39;name&#39;: &#39;events-2020-08-13.jsonl&#39;, &#39;date&#39;: &#39;2020-08-13&#39;, &#39;count&#39;: &#39;19246&#39;},
+ {&#39;name&#39;: &#39;events-2020-08-14.jsonl&#39;, &#39;date&#39;: &#39;2020-08-14&#39;, &#39;count&#39;: &#39;18778&#39;},
+ {&#39;name&#39;: &#39;events-2020-08-15.jsonl&#39;, &#39;date&#39;: &#39;2020-08-15&#39;, &#39;count&#39;: &#39;16567&#39;},
+ {&#39;name&#39;: &#39;events-2020-08-16.jsonl&#39;, &#39;date&#39;: &#39;2020-08-16&#39;, &#39;count&#39;: &#39;16359&#39;},
+ {&#39;name&#39;: &#39;events-2020-08-17.jsonl&#39;, &#39;date&#39;: &#39;2020-08-17&#39;, &#39;count&#39;: &#39;23541&#39;},
+ {&#39;name&#39;: &#39;events-2020-08-18.jsonl&#39;, &#39;date&#39;: &#39;2020-08-18&#39;, &#39;count&#39;: &#39;22510&#39;},
+ {&#39;name&#39;: &#39;events-2020-08-19.jsonl&#39;, &#39;date&#39;: &#39;2020-08-19&#39;, &#39;count&#39;: &#39;21473&#39;},
+ {&#39;name&#39;: &#39;events-2020-08-20.jsonl&#39;, &#39;date&#39;: &#39;2020-08-20&#39;, &#39;count&#39;: &#39;21745&#39;},
+ {&#39;name&#39;: &#39;events-2020-08-21.jsonl&#39;, &#39;date&#39;: &#39;2020-08-21&#39;, &#39;count&#39;: &#39;19955&#39;},
+ {&#39;name&#39;: &#39;events-2020-08-22.jsonl&#39;, &#39;date&#39;: &#39;2020-08-22&#39;, &#39;count&#39;: &#39;14327&#39;},
+ {&#39;name&#39;: &#39;events-2020-08-23.jsonl&#39;, &#39;date&#39;: &#39;2020-08-23&#39;, &#39;count&#39;: &#39;15216&#39;},
+ {&#39;name&#39;: &#39;events-2020-08-24.jsonl&#39;, &#39;date&#39;: &#39;2020-08-24&#39;, &#39;count&#39;: &#39;21516&#39;},
+ {&#39;name&#39;: &#39;events-2020-08-25.jsonl&#39;, &#39;date&#39;: &#39;2020-08-25&#39;, &#39;count&#39;: &#39;22352&#39;},
+ {&#39;name&#39;: &#39;events-2020-08-26.jsonl&#39;, &#39;date&#39;: &#39;2020-08-26&#39;, &#39;count&#39;: &#39;22622&#39;},
+ {&#39;name&#39;: &#39;events-2020-08-27.jsonl&#39;, &#39;date&#39;: &#39;2020-08-27&#39;, &#39;count&#39;: &#39;24249&#39;},
+ {&#39;name&#39;: &#39;events-2020-08-28.jsonl&#39;, &#39;date&#39;: &#39;2020-08-28&#39;, &#39;count&#39;: &#39;22195&#39;},
+ {&#39;name&#39;: &#39;events-2020-08-29.jsonl&#39;, &#39;date&#39;: &#39;2020-08-29&#39;, &#39;count&#39;: &#39;17465&#39;},
+ {&#39;name&#39;: &#39;events-2020-08-30.jsonl&#39;, &#39;date&#39;: &#39;2020-08-30&#39;, &#39;count&#39;: &#39;16034&#39;},
+ {&#39;name&#39;: &#39;events-2020-08-31.jsonl&#39;, &#39;date&#39;: &#39;2020-08-31&#39;, &#39;count&#39;: &#39;22988&#39;},
+ {&#39;name&#39;: &#39;events-2020-09-01.jsonl&#39;, &#39;date&#39;: &#39;2020-09-01&#39;, &#39;count&#39;: &#39;23383&#39;},
+ {&#39;name&#39;: &#39;events-2020-09-02.jsonl&#39;, &#39;date&#39;: &#39;2020-09-02&#39;, &#39;count&#39;: &#39;24541&#39;},
+ {&#39;name&#39;: &#39;events-2020-09-03.jsonl&#39;, &#39;date&#39;: &#39;2020-09-03&#39;, &#39;count&#39;: &#39;25311&#39;},
+ {&#39;name&#39;: &#39;events-2020-09-04.jsonl&#39;, &#39;date&#39;: &#39;2020-09-04&#39;, &#39;count&#39;: &#39;23513&#39;},
+ {&#39;name&#39;: &#39;events-2020-09-05.jsonl&#39;, &#39;date&#39;: &#39;2020-09-05&#39;, &#39;count&#39;: &#39;17542&#39;},
+ {&#39;name&#39;: &#39;events-2020-09-06.jsonl&#39;, &#39;date&#39;: &#39;2020-09-06&#39;, &#39;count&#39;: &#39;16205&#39;},
+ {&#39;name&#39;: &#39;events-2020-09-07.jsonl&#39;, &#39;date&#39;: &#39;2020-09-07&#39;, &#39;count&#39;: &#39;24417&#39;},
+ {&#39;name&#39;: &#39;events-2020-09-08.jsonl&#39;, &#39;date&#39;: &#39;2020-09-08&#39;, &#39;count&#39;: &#39;27177&#39;},
+ {&#39;name&#39;: &#39;events-2020-09-09.jsonl&#39;, &#39;date&#39;: &#39;2020-09-09&#39;, &#39;count&#39;: &#39;27128&#39;},
+ {&#39;name&#39;: &#39;events-2020-09-10.jsonl&#39;, &#39;date&#39;: &#39;2020-09-10&#39;, &#39;count&#39;: &#39;26151&#39;},
+ {&#39;name&#39;: &#39;events-2020-09-11.jsonl&#39;, &#39;date&#39;: &#39;2020-09-11&#39;, &#39;count&#39;: &#39;25571&#39;},
+ {&#39;name&#39;: &#39;events-2020-09-12.jsonl&#39;, &#39;date&#39;: &#39;2020-09-12&#39;, &#39;count&#39;: &#39;20915&#39;},
+ {&#39;name&#39;: &#39;events-2020-09-13.jsonl&#39;, &#39;date&#39;: &#39;2020-09-13&#39;, &#39;count&#39;: &#39;16488&#39;},
+ {&#39;name&#39;: &#39;events-2020-09-14.jsonl&#39;, &#39;date&#39;: &#39;2020-09-14&#39;, &#39;count&#39;: &#39;25312&#39;},
+ {&#39;name&#39;: &#39;events-2020-09-15.jsonl&#39;, &#39;date&#39;: &#39;2020-09-15&#39;, &#39;count&#39;: &#39;28255&#39;},
+ {&#39;name&#39;: &#39;events-2020-09-16.jsonl&#39;, &#39;date&#39;: &#39;2020-09-16&#39;, &#39;count&#39;: &#39;27374&#39;},
+ {&#39;name&#39;: &#39;events-2020-09-17.jsonl&#39;, &#39;date&#39;: &#39;2020-09-17&#39;, &#39;count&#39;: &#39;25924&#39;},
+ {&#39;name&#39;: &#39;events-2020-09-18.jsonl&#39;, &#39;date&#39;: &#39;2020-09-18&#39;, &#39;count&#39;: &#39;24883&#39;},
+ {&#39;name&#39;: &#39;events-2020-09-19.jsonl&#39;, &#39;date&#39;: &#39;2020-09-19&#39;, &#39;count&#39;: &#39;18823&#39;},
+ {&#39;name&#39;: &#39;events-2020-09-20.jsonl&#39;, &#39;date&#39;: &#39;2020-09-20&#39;, &#39;count&#39;: &#39;17539&#39;},
+ {&#39;name&#39;: &#39;events-2020-09-21.jsonl&#39;, &#39;date&#39;: &#39;2020-09-21&#39;, &#39;count&#39;: &#39;26290&#39;},
+ {&#39;name&#39;: &#39;events-2020-09-22.jsonl&#39;, &#39;date&#39;: &#39;2020-09-22&#39;, &#39;count&#39;: &#39;25644&#39;},
+ {&#39;name&#39;: &#39;events-2020-09-23.jsonl&#39;, &#39;date&#39;: &#39;2020-09-23&#39;, &#39;count&#39;: &#39;26542&#39;},
+ {&#39;name&#39;: &#39;events-2020-09-24.jsonl&#39;, &#39;date&#39;: &#39;2020-09-24&#39;, &#39;count&#39;: &#39;26559&#39;},
+ {&#39;name&#39;: &#39;events-2020-09-25.jsonl&#39;, &#39;date&#39;: &#39;2020-09-25&#39;, &#39;count&#39;: &#39;24738&#39;},
+ {&#39;name&#39;: &#39;events-2020-09-26.jsonl&#39;, &#39;date&#39;: &#39;2020-09-26&#39;, &#39;count&#39;: &#39;18691&#39;},
+ {&#39;name&#39;: &#39;events-2020-09-27.jsonl&#39;, &#39;date&#39;: &#39;2020-09-27&#39;, &#39;count&#39;: &#39;18554&#39;},
+ {&#39;name&#39;: &#39;events-2020-09-28.jsonl&#39;, &#39;date&#39;: &#39;2020-09-28&#39;, &#39;count&#39;: &#39;25137&#39;},
+ {&#39;name&#39;: &#39;events-2020-09-29.jsonl&#39;, &#39;date&#39;: &#39;2020-09-29&#39;, &#39;count&#39;: &#39;26615&#39;},
+ {&#39;name&#39;: &#39;events-2020-09-30.jsonl&#39;, &#39;date&#39;: &#39;2020-09-30&#39;, &#39;count&#39;: &#39;26129&#39;},
+ {&#39;name&#39;: &#39;events-2020-10-01.jsonl&#39;, &#39;date&#39;: &#39;2020-10-01&#39;, &#39;count&#39;: &#39;25285&#39;},
+ {&#39;name&#39;: &#39;events-2020-10-02.jsonl&#39;, &#39;date&#39;: &#39;2020-10-02&#39;, &#39;count&#39;: &#39;21384&#39;},
+ {&#39;name&#39;: &#39;events-2020-10-03.jsonl&#39;, &#39;date&#39;: &#39;2020-10-03&#39;, &#39;count&#39;: &#39;15914&#39;},
+ {&#39;name&#39;: &#39;events-2020-10-04.jsonl&#39;, &#39;date&#39;: &#39;2020-10-04&#39;, &#39;count&#39;: &#39;16228&#39;},
+ {&#39;name&#39;: &#39;events-2020-10-05.jsonl&#39;, &#39;date&#39;: &#39;2020-10-05&#39;, &#39;count&#39;: &#39;25652&#39;},
+ {&#39;name&#39;: &#39;events-2020-10-06.jsonl&#39;, &#39;date&#39;: &#39;2020-10-06&#39;, &#39;count&#39;: &#39;26980&#39;},
+ {&#39;name&#39;: &#39;events-2020-10-07.jsonl&#39;, &#39;date&#39;: &#39;2020-10-07&#39;, &#39;count&#39;: &#39;27229&#39;},
+ {&#39;name&#39;: &#39;events-2020-10-08.jsonl&#39;, &#39;date&#39;: &#39;2020-10-08&#39;, &#39;count&#39;: &#39;25918&#39;},
+ {&#39;name&#39;: &#39;events-2020-10-09.jsonl&#39;, &#39;date&#39;: &#39;2020-10-09&#39;, &#39;count&#39;: &#39;23370&#39;},
+ {&#39;name&#39;: &#39;events-2020-10-10.jsonl&#39;, &#39;date&#39;: &#39;2020-10-10&#39;, &#39;count&#39;: &#39;17679&#39;},
+ {&#39;name&#39;: &#39;events-2020-10-11.jsonl&#39;, &#39;date&#39;: &#39;2020-10-11&#39;, &#39;count&#39;: &#39;16363&#39;},
+ {&#39;name&#39;: &#39;events-2020-10-12.jsonl&#39;, &#39;date&#39;: &#39;2020-10-12&#39;, &#39;count&#39;: &#39;25224&#39;},
+ {&#39;name&#39;: &#39;events-2020-10-13.jsonl&#39;, &#39;date&#39;: &#39;2020-10-13&#39;, &#39;count&#39;: &#39;26939&#39;},
+ {&#39;name&#39;: &#39;events-2020-10-14.jsonl&#39;, &#39;date&#39;: &#39;2020-10-14&#39;, &#39;count&#39;: &#39;26821&#39;},
+ {&#39;name&#39;: &#39;events-2020-10-15.jsonl&#39;, &#39;date&#39;: &#39;2020-10-15&#39;, &#39;count&#39;: &#39;27077&#39;},
+ {&#39;name&#39;: &#39;events-2020-10-16.jsonl&#39;, &#39;date&#39;: &#39;2020-10-16&#39;, &#39;count&#39;: &#39;23718&#39;},
+ {&#39;name&#39;: &#39;events-2020-10-17.jsonl&#39;, &#39;date&#39;: &#39;2020-10-17&#39;, &#39;count&#39;: &#39;17236&#39;},
+ {&#39;name&#39;: &#39;events-2020-10-18.jsonl&#39;, &#39;date&#39;: &#39;2020-10-18&#39;, &#39;count&#39;: &#39;17244&#39;},
+ {&#39;name&#39;: &#39;events-2020-10-19.jsonl&#39;, &#39;date&#39;: &#39;2020-10-19&#39;, &#39;count&#39;: &#39;26838&#39;},
+ {&#39;name&#39;: &#39;events-2020-10-20.jsonl&#39;, &#39;date&#39;: &#39;2020-10-20&#39;, &#39;count&#39;: &#39;26621&#39;},
+ {&#39;name&#39;: &#39;events-2020-10-21.jsonl&#39;, &#39;date&#39;: &#39;2020-10-21&#39;, &#39;count&#39;: &#39;26310&#39;},
+ {&#39;name&#39;: &#39;events-2020-10-22.jsonl&#39;, &#39;date&#39;: &#39;2020-10-22&#39;, &#39;count&#39;: &#39;25589&#39;},
+ {&#39;name&#39;: &#39;events-2020-10-23.jsonl&#39;, &#39;date&#39;: &#39;2020-10-23&#39;, &#39;count&#39;: &#39;22069&#39;},
+ {&#39;name&#39;: &#39;events-2020-10-24.jsonl&#39;, &#39;date&#39;: &#39;2020-10-24&#39;, &#39;count&#39;: &#39;16169&#39;},
+ {&#39;name&#39;: &#39;events-2020-10-25.jsonl&#39;, &#39;date&#39;: &#39;2020-10-25&#39;, &#39;count&#39;: &#39;15763&#39;},
+ {&#39;name&#39;: &#39;events-2020-10-26.jsonl&#39;, &#39;date&#39;: &#39;2020-10-26&#39;, &#39;count&#39;: &#39;24497&#39;},
+ {&#39;name&#39;: &#39;events-2020-10-27.jsonl&#39;, &#39;date&#39;: &#39;2020-10-27&#39;, &#39;count&#39;: &#39;26120&#39;},
+ {&#39;name&#39;: &#39;events-2020-10-28.jsonl&#39;, &#39;date&#39;: &#39;2020-10-28&#39;, &#39;count&#39;: &#39;25567&#39;},
+ {&#39;name&#39;: &#39;events-2020-10-29.jsonl&#39;, &#39;date&#39;: &#39;2020-10-29&#39;, &#39;count&#39;: &#39;24149&#39;},
+ {&#39;name&#39;: &#39;events-2020-10-30.jsonl&#39;, &#39;date&#39;: &#39;2020-10-30&#39;, &#39;count&#39;: &#39;20340&#39;},
+ {&#39;name&#39;: &#39;events-2020-10-31.jsonl&#39;, &#39;date&#39;: &#39;2020-10-31&#39;, &#39;count&#39;: &#39;16525&#39;},
+ {&#39;name&#39;: &#39;events-2020-11-01.jsonl&#39;, &#39;date&#39;: &#39;2020-11-01&#39;, &#39;count&#39;: &#39;17515&#39;},
+ {&#39;name&#39;: &#39;events-2020-11-02.jsonl&#39;, &#39;date&#39;: &#39;2020-11-02&#39;, &#39;count&#39;: &#39;24385&#39;},
+ {&#39;name&#39;: &#39;events-2020-11-03.jsonl&#39;, &#39;date&#39;: &#39;2020-11-03&#39;, &#39;count&#39;: &#39;26967&#39;},
+ {&#39;name&#39;: &#39;events-2020-11-04.jsonl&#39;, &#39;date&#39;: &#39;2020-11-04&#39;, &#39;count&#39;: &#39;25831&#39;},
+ {&#39;name&#39;: &#39;events-2020-11-05.jsonl&#39;, &#39;date&#39;: &#39;2020-11-05&#39;, &#39;count&#39;: &#39;7742&#39;}]
+</pre></div></div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
@@ -939,14 +1421,14 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
-<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>[&#39;https://archive.analytics.mybinder.org/events-2018-11-03.jsonl&#39;,
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39;https://archive.analytics.mybinder.org/events-2018-11-03.jsonl&#39;,
  &#39;https://archive.analytics.mybinder.org/events-2018-11-04.jsonl&#39;,
  &#39;https://archive.analytics.mybinder.org/events-2018-11-05.jsonl&#39;,
  &#39;https://archive.analytics.mybinder.org/events-2018-11-06.jsonl&#39;,
  &#39;https://archive.analytics.mybinder.org/events-2018-11-07.jsonl&#39;]
-</pre></div>
-</div>
+</pre></div></div>
 </div>
 </div>
 <div class="section" id="Create-Bag-of-all-events">
@@ -966,8 +1448,9 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
-<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>({&#39;timestamp&#39;: &#39;2018-11-03T00:00:00+00:00&#39;,
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+({&#39;timestamp&#39;: &#39;2018-11-03T00:00:00+00:00&#39;,
   &#39;schema&#39;: &#39;binderhub.jupyter.org/launch&#39;,
   &#39;version&#39;: 1,
   &#39;provider&#39;: &#39;GitHub&#39;,
@@ -979,8 +1462,7 @@ div.rendered_html tbody tr:hover {
   &#39;provider&#39;: &#39;GitHub&#39;,
   &#39;spec&#39;: &#39;ipython/ipython-in-depth/master&#39;,
   &#39;status&#39;: &#39;success&#39;})
-</pre></div>
-</div>
+</pre></div></div>
 </div>
 </div>
 <div class="section" id="Most-Popular-Binders">
@@ -999,29 +1481,29 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
-<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>((&#39;ipython/ipython-in-depth/master&#39;, 1966412),
- (&#39;jupyterlab/jupyterlab-demo/master&#39;, 340568),
- (&#39;jupyterlab/jupyterlab-demo/try.jupyter.org&#39;, 285266),
- (&#39;ines/spacy-io-binder/live&#39;, 185166),
- (&#39;DS-100/textbook/master&#39;, 150260),
- (&#39;bokeh/bokeh-notebooks/master&#39;, 92133),
- (&#39;binder-examples/requirements/master&#39;, 87843),
- (&#39;binder-examples/r/master&#39;, 71266),
- (&#39;rationalmatter/juno-demo-notebooks/master&#39;, 57190),
- (&#39;QuantStack/xeus-cling/stable&#39;, 50517),
- (&#39;ines/spacy-course/binder&#39;, 33963),
- (&#39;numba/numba-examples/master&#39;, 28830),
- (&#39;rasahq/docs-binder/master&#39;, 21936),
- (&#39;binder-examples/julia-python/master&#39;, 21041),
- (&#39;QISKit/qiskit-tutorial/master&#39;, 19453),
- (&#39;RasaHQ/rasa_core/master&#39;, 19253),
- (&#39;dask/dask-examples/master&#39;, 19003),
- (&#39;ELC/8fdc0f490b3058872a7014f01416dfb6/master&#39;, 18548),
- (&#39;wshuyi/demo-spacy-text-processing/master&#39;, 15618),
- (&#39;data-8/textbook/gh-pages&#39;, 15591))
-</pre></div>
-</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+((&#39;ipython/ipython-in-depth/master&#39;, 4390069),
+ (&#39;jupyterlab/jupyterlab-demo/try.jupyter.org&#39;, 1588019),
+ (&#39;jupyterlab/jupyterlab-demo/master&#39;, 617631),
+ (&#39;binder-examples/requirements/master&#39;, 388720),
+ (&#39;ines/spacy-io-binder/live&#39;, 331063),
+ (&#39;DS-100/textbook/master&#39;, 221403),
+ (&#39;bokeh/bokeh-notebooks/master&#39;, 169640),
+ (&#39;binder-examples/r/master&#39;, 155416),
+ (&#39;ines/spacy-course/binder&#39;, 111428),
+ (&#39;ELC/8fdc0f490b3058872a7014f01416dfb6/master&#39;, 108426),
+ (&#39;QuantStack/xeus-cling/stable&#39;, 102793),
+ (&#39;SamLau95/nbinteract/master&#39;, 83059),
+ (&#39;explosion/spacy-io-binder/live&#39;, 77067),
+ (&#39;rationalmatter/juno-demo-notebooks/master&#39;, 68141),
+ (&#39;rasahq/docs-binder/master&#39;, 63473),
+ (&#39;numba/numba-examples/master&#39;, 61560),
+ (&#39;Petlja/AnalizaPodatakaGim2/master&#39;, 57189),
+ (&#39;binder-examples/demo-julia/master&#39;, 53176),
+ (&#39;joelachance/thebelab-requirements/master&#39;, 47648),
+ (&#39;ELC/380e584b87227b15727ec886223d9d4a/master&#39;, 44923))
+</pre></div></div>
 </div>
 </div>
 <div class="section" id="Convert-to-Dask-Dataframe">
@@ -1071,7 +1553,7 @@ div.rendered_html tbody tr:hover {
   </thead>
   <tbody>
     <tr>
-      <td>0</td>
+      <th>0</th>
       <td>2018-11-03T00:00:00+00:00</td>
       <td>binderhub.jupyter.org/launch</td>
       <td>1</td>
@@ -1080,7 +1562,7 @@ div.rendered_html tbody tr:hover {
       <td>success</td>
     </tr>
     <tr>
-      <td>1</td>
+      <th>1</th>
       <td>2018-11-03T00:00:00+00:00</td>
       <td>binderhub.jupyter.org/launch</td>
       <td>1</td>
@@ -1089,7 +1571,7 @@ div.rendered_html tbody tr:hover {
       <td>success</td>
     </tr>
     <tr>
-      <td>2</td>
+      <th>2</th>
       <td>2018-11-03T00:00:00+00:00</td>
       <td>binderhub.jupyter.org/launch</td>
       <td>1</td>
@@ -1098,7 +1580,7 @@ div.rendered_html tbody tr:hover {
       <td>success</td>
     </tr>
     <tr>
-      <td>3</td>
+      <th>3</th>
       <td>2018-11-03T00:01:00+00:00</td>
       <td>binderhub.jupyter.org/launch</td>
       <td>1</td>
@@ -1107,7 +1589,7 @@ div.rendered_html tbody tr:hover {
       <td>success</td>
     </tr>
     <tr>
-      <td>4</td>
+      <th>4</th>
       <td>2018-11-03T00:01:00+00:00</td>
       <td>binderhub.jupyter.org/launch</td>
       <td>1</td>
@@ -1156,84 +1638,84 @@ div.rendered_html tbody tr:hover {
   </thead>
   <tbody>
     <tr>
-      <td>ipython/ipython-in-depth/master</td>
-      <td>1966412</td>
+      <th>ipython/ipython-in-depth/master</th>
+      <td>4390069</td>
     </tr>
     <tr>
-      <td>jupyterlab/jupyterlab-demo/master</td>
-      <td>340568</td>
+      <th>jupyterlab/jupyterlab-demo/try.jupyter.org</th>
+      <td>1588019</td>
     </tr>
     <tr>
-      <td>jupyterlab/jupyterlab-demo/try.jupyter.org</td>
-      <td>285266</td>
+      <th>jupyterlab/jupyterlab-demo/master</th>
+      <td>617631</td>
     </tr>
     <tr>
-      <td>ines/spacy-io-binder/live</td>
-      <td>185166</td>
+      <th>binder-examples/requirements/master</th>
+      <td>388720</td>
     </tr>
     <tr>
-      <td>DS-100/textbook/master</td>
-      <td>150260</td>
+      <th>ines/spacy-io-binder/live</th>
+      <td>331063</td>
     </tr>
     <tr>
-      <td>bokeh/bokeh-notebooks/master</td>
-      <td>92133</td>
+      <th>DS-100/textbook/master</th>
+      <td>221403</td>
     </tr>
     <tr>
-      <td>binder-examples/requirements/master</td>
-      <td>87843</td>
+      <th>bokeh/bokeh-notebooks/master</th>
+      <td>169640</td>
     </tr>
     <tr>
-      <td>binder-examples/r/master</td>
-      <td>71266</td>
+      <th>binder-examples/r/master</th>
+      <td>155416</td>
     </tr>
     <tr>
-      <td>rationalmatter/juno-demo-notebooks/master</td>
-      <td>57190</td>
+      <th>ines/spacy-course/binder</th>
+      <td>111428</td>
     </tr>
     <tr>
-      <td>QuantStack/xeus-cling/stable</td>
-      <td>50517</td>
+      <th>ELC/8fdc0f490b3058872a7014f01416dfb6/master</th>
+      <td>108426</td>
     </tr>
     <tr>
-      <td>ines/spacy-course/binder</td>
-      <td>33963</td>
+      <th>QuantStack/xeus-cling/stable</th>
+      <td>102793</td>
     </tr>
     <tr>
-      <td>numba/numba-examples/master</td>
-      <td>28830</td>
+      <th>SamLau95/nbinteract/master</th>
+      <td>83059</td>
     </tr>
     <tr>
-      <td>rasahq/docs-binder/master</td>
-      <td>21936</td>
+      <th>explosion/spacy-io-binder/live</th>
+      <td>77067</td>
     </tr>
     <tr>
-      <td>binder-examples/julia-python/master</td>
-      <td>21041</td>
+      <th>rationalmatter/juno-demo-notebooks/master</th>
+      <td>68141</td>
     </tr>
     <tr>
-      <td>QISKit/qiskit-tutorial/master</td>
-      <td>19453</td>
+      <th>rasahq/docs-binder/master</th>
+      <td>63473</td>
     </tr>
     <tr>
-      <td>RasaHQ/rasa_core/master</td>
-      <td>19253</td>
+      <th>numba/numba-examples/master</th>
+      <td>61560</td>
     </tr>
     <tr>
-      <td>dask/dask-examples/master</td>
-      <td>19003</td>
+      <th>Petlja/AnalizaPodatakaGim2/master</th>
+      <td>57189</td>
     </tr>
     <tr>
-      <td>ELC/8fdc0f490b3058872a7014f01416dfb6/master</td>
-      <td>18548</td>
+      <th>binder-examples/demo-julia/master</th>
+      <td>53176</td>
     </tr>
     <tr>
-      <td>wshuyi/demo-spacy-text-processing/master</td>
-      <td>15618</td>
+      <th>joelachance/thebelab-requirements/master</th>
+      <td>47648</td>
     </tr>
     <tr>
-      <td>data-8/textbook/gh-pages</td>
-      <td>15591</td>
+      <th>ELC/380e584b87227b15727ec886223d9d4a/master</th>
+      <td>44923</td>
     </tr>
   </tbody>
 </table>
@@ -1279,16 +1761,18 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
-<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>GitHub      4497792
-Gist          27980
-GitLab        17084
-Git           10473
-Zenodo          332
-Figshare        124
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+GitHub        11849011
+Gist            197357
+Git             168736
+GitLab           51997
+Zenodo            1168
+Hydroshare         431
+Figshare           316
+Dataverse          153
 Name: provider, dtype: int64
-</pre></div>
-</div>
+</pre></div></div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
@@ -1332,52 +1816,52 @@ Name: provider, dtype: int64
   </thead>
   <tbody>
     <tr>
-      <td>rruizz/inforfis/R</td>
-      <td>1480</td>
+      <th>rafelyall/biology-on-the-command-line/master</th>
+      <td>2800</td>
     </tr>
     <tr>
-      <td>rruizz/inforfis/master</td>
-      <td>1263</td>
+      <th>DGothrek/ipyaggrid/binder-demo</th>
+      <td>2608</td>
     </tr>
     <tr>
-      <td>lfortran/web/lfortran-binder/master</td>
-      <td>1192</td>
+      <th>JC_Bonnefoy/snt_2019/master</th>
+      <td>2526</td>
     </tr>
     <tr>
-      <td>JC_Bonnefoy/snt_2019/master</td>
-      <td>1124</td>
+      <th>lfortran/web/lfortran-binder/master</th>
+      <td>2490</td>
     </tr>
     <tr>
-      <td>DGothrek/ipyaggrid/binder-demo</td>
-      <td>845</td>
+      <th>rafelyall/introduction-to-ngs/master</th>
+      <td>1594</td>
     </tr>
     <tr>
+      <th>...</th>
       <td>...</td>
-      <td>...</td>
     </tr>
     <tr>
-      <td>smendez2/minimal-notebook-test/124ced540ed5587ea5565c20d8f6c10eff1b024f</td>
+      <th>jose_delamare/nsi-type-abstrait-de-donnees/85255c9e6b5fdd35279bd29b16d3e75bafd09a39</th>
       <td>1</td>
     </tr>
     <tr>
-      <td>rogermarkussen/test/master</td>
+      <th>jose_delamare/nsi-type-abstrait-de-donnees/a4b8477f18ff305166c1ceae9005adfa5a8288c7</th>
       <td>1</td>
     </tr>
     <tr>
-      <td>atomap/atomap_demos/master</td>
+      <th>jose_delamare/nsi-type-abstrait-de-donnees/a9e0a98a85498f1b596eb6ce514f9e610672cf35</th>
       <td>1</td>
     </tr>
     <tr>
-      <td>elfua/ipython-notebooks/master</td>
+      <th>jose_delamare/nsi-type-abstrait-de-donnees/ffb4198ca5a2a632d3439aade6b6329e81a17643</th>
       <td>1</td>
     </tr>
     <tr>
-      <td>plotnips/numerical_linear_algebra_notebooks/master</td>
+      <th>1337cheatcode/gitgud/master</th>
       <td>1</td>
     </tr>
   </tbody>
 </table>
-<p>453 rows × 1 columns</p>
+<p>1441 rows × 1 columns</p>
 </div></div>
 </div>
 <div class="nbinput docutils container">
@@ -1422,52 +1906,52 @@ Name: provider, dtype: int64
   </thead>
   <tbody>
     <tr>
-      <td>https://git.unilim.fr/grossp01/notebooks.git/master</td>
-      <td>944</td>
+      <th>https://jovian.ml/api/git/6213bcb90b054261b82e68a6b8c75c3f_11.git/fb8b5c097292a32d8a35281e6db69031e9e33c9c</th>
+      <td>8637</td>
     </tr>
     <tr>
-      <td>https://bitbucket.org/nikiubel/nikiubel.bitbucket.io.git/841046b40e936fa187b974aabb310a6ac0ecd094</td>
-      <td>794</td>
+      <th>https://jovian.ml/api/git/48a3164311c945628d7053812c1ce869_15.git/a6696d9684d6e695fe2b4fc98896beaf789e40c7</th>
+      <td>6833</td>
     </tr>
     <tr>
-      <td>https://gitlab.science.ru.nl/roesner_public/programming_2_notebooks.git/master</td>
-      <td>521</td>
+      <th>https://jovian.ml/api/git/77bf991ec84148f191e8b573242b9c60_6.git/106c482fe6a2753e8fad4c94c5c7bf6b49169e0a</th>
+      <td>6203</td>
     </tr>
     <tr>
-      <td>https://framagit.org/debimax/cours-debimax/master</td>
-      <td>410</td>
+      <th>https://gitlab.tubit.tu-berlin.de/dima/ISDA-SS20.git/master</th>
+      <td>6117</td>
     </tr>
     <tr>
-      <td>https://gitlab.tudelft.nl/aj-lab/teaching.git/master</td>
-      <td>355</td>
+      <th>https://gitlab.gwdg.de/fuelle1/statistik.git/master</th>
+      <td>5383</td>
     </tr>
     <tr>
+      <th>...</th>
       <td>...</td>
-      <td>...</td>
     </tr>
     <tr>
-      <td>https://dominikschroeck.de/gitea/dominik/stockquote_analyses/92445b46d65253c165d57809f3a5298e0551e9bf</td>
+      <th>https://jovian.ml/api/git/79c8239fbb6e4e148a819b2c7c7eebc1_9.git/6f170f4f4d4cff1cbfbe2f1024bcdf605babaff5</th>
       <td>1</td>
     </tr>
     <tr>
-      <td>https://dominikschroeck.de/gitea/dominik/stockquote_analyses/961d014669a4fd6e3cbce7bd8c4b716c19fd724b</td>
+      <th>https://jovian.ml/api/git/79caf976e4fe4c72bb88fdb5ddfe6736_4.git/cfcc6456c0708d1766fd80a87a3f64a214f3eedb</th>
       <td>1</td>
     </tr>
     <tr>
-      <td>https://gitlab.in2p3.fr/gregoire.henning/python-class-for-nuclear-physicist/9a46ec05bd72f30f366e9aa9e354c7d55ce363e8</td>
+      <th>https://jovian.ml/api/git/d793dbb57c4a424e81b2aa1708e81c9f_4.git/d433c3d0caf39dfb27ecf22092b5ee862abf187b</th>
       <td>1</td>
     </tr>
     <tr>
-      <td>https://elmord.org/cgit/mybinder-test.git/master</td>
+      <th>https://jovian.ml/api/git/d793dbb57c4a424e81b2aa1708e81c9f_13.git/63049a01d7800e586a4b1a0c3041112f935556db</th>
       <td>1</td>
     </tr>
     <tr>
-      <td>https://bitbucket.org/therealMatteo/newspopolarityproject/src/master/e62cfdaad8759cb3266e37f2dfcd8defc091543a</td>
+      <th>git://github.com/timothyrenner/RungeKutta.jl.git/master</th>
       <td>1</td>
     </tr>
   </tbody>
 </table>
-<p>1117 rows × 1 columns</p>
+<p>41906 rows × 1 columns</p>
 </div></div>
 </div>
 <div class="nbinput nblast docutils container">
@@ -1512,11 +1996,19 @@ ga('send', 'pageview');
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2018, Dask Developers
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -1527,7 +2019,6 @@ ga('send', 'pageview');
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

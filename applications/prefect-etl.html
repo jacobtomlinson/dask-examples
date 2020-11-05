@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,104 +11,124 @@
   
 
   
-  
-  
-  
-
-  
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
-        <script type="text/javascript" src="../_static/js/custom.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
-
-  
   <link rel="stylesheet" href="../_static/css/style.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/explore.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/nbsphinx.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+        <script src="../_static/js/custom.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Reading and manipulating tiled GeoTIFF datasets" href="satellite-imagery-geotiff.html" />
     <link rel="prev" title="Image Processing" href="image-processing.html" />
   <link rel="shortcut icon" href="../_static/images/favicon.ico"/>
+  
+  <meta name="Description" content="ETL Pipelines with Prefect">
+  <meta property="og:description" content="ETL Pipelines with Prefect">
+  <meta name="twitter:description" content="ETL Pipelines with Prefect" />
+  <meta property="og:title" content="Dask Examples  documentation - ETL Pipelines with Prefect">
+  <meta property="og:image" content="https://github.com/dask.png">
+  <meta property="og:image:secure_url" content="https://github.com/dask.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="380" />
+  <meta property="og:image:height" content="380" />
+  <meta property="og:url" content="applications/prefect-etl.html">
+  <meta property="og:site_name" content="Dask Examples  documentation">
+
+  <meta name="twitter:site" content="https://dask.org" />
+  <meta name="twitter:creator" content="@dask_dev" />
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:image" content="https://github.com/dask.png" />
+  <meta name="twitter:image:alt" content="Dask Examples  documentation">
+  
 
 </head>
 
 <body class="wy-body-for-nav">
 
   
+    <nav id="explore-links">
+        <a href="https://docs.dask.org/">
+        <img class="caption" src="../_static/images/dask-horizontal-white.svg"/>
+        </a>
 
-<nav id="explore-links">
-  <a href="https://docs.dask.org/">
-    <img class="caption" src="../_static/images/dask-horizontal-white.svg"/>
-  </a>
+        <ul>
+        <li>
+            <a>Get Started</a>
+            <ul>
+            <li><a href="https://docs.dask.org/en/latest/install.html"> Install </a></li>
+            <li><a href="https://examples.dask.org"> Examples </a></li>
+            <li><a href="https://github.com/dask/dask-tutorial"> Tutorial </a></li>
+            <li><a href="https://docs.dask.org/en/latest/why.html"> Why Dask? </a></li>
+            <li><a href="https://stories.dask.org/en/latest"> Use Cases </a></li>
+            <li><a href="https://www.youtube.com/watch?v=RA_2qdipVng&list=PLRtz5iA93T4PQvWuoMnIyEIz1fXiJ5Pri"> Talks </a></li>
+            <li><a href="https://mybinder.org/v2/gh/dask/dask-examples/master?urlpath=lab"> Try Online </a></li>
+            <li><a href="https://dask.org/slides"> Slides </a></li>
+            </ul>
+        </li>
 
-  <ul>
-    <li>
-      <a>Get Started</a>
-      <ul>
-        <li><a href="https://docs.dask.org/en/latest/install.html"> Install </a></li>
-        <li><a href="https://examples.dask.org"> Examples </a></li>
-        <li><a href="https://github.com/dask/dask-tutorial"> Tutorial </a></li>
-        <li><a href="https://docs.dask.org/en/latest/why.html"> Why Dask? </a></li>
-        <li><a href="https://stories.dask.org/en/latest"> Use Cases </a></li>
-        <li><a href="https://www.youtube.com/watch?v=RA_2qdipVng&list=PLRtz5iA93T4PQvWuoMnIyEIz1fXiJ5Pri"> Talks </a></li>
-        <li><a href="https://mybinder.org/v2/gh/dask/dask-examples/master?urlpath=lab"> Try Online </a></li>
-        <li><a href="https://dask.org/slides"> Slides </a></li>
-      </ul>
-    </li>
+        <li>
+            <a href="">Algorithms</a>
+            <ul>
+            <li><a href="https://docs.dask.org/en/latest/array.html">Arrays</a></li>
+            <li><a href="https://docs.dask.org/en/latest/dataframe.html">Dataframes</a></li>
+            <li><a href="https://docs.dask.org/en/latest/bag.html">Bags</a></li>
+            <li><a href="https://docs.dask.org/en/latest/delayed.html">Delayed (custom)</a></li>
+            <li><a href="https://docs.dask.org/en/latest/futures.html">Futures (real-time)</a></li>
+            <li><a href="http://ml.dask.org">Machine Learning</a></li>
+            <li><a href="https://xarray.pydata.org/en/latest/">XArray</a></li>
+            </ul>
+        </li>
 
-    <li>
-      <a href="">Algorithms</a>
-      <ul>
-        <li><a href="https://docs.dask.org/en/latest/array.html">Arrays</a></li>
-        <li><a href="https://docs.dask.org/en/latest/dataframe.html">Dataframes</a></li>
-        <li><a href="https://docs.dask.org/en/latest/bag.html">Bags</a></li>
-        <li><a href="https://docs.dask.org/en/latest/delayed.html">Delayed (custom)</a></li>
-        <li><a href="https://docs.dask.org/en/latest/futures.html">Futures (real-time)</a></li>
-        <li><a href="http://ml.dask.org">Machine Learning</a></li>
-        <li><a href="https://xarray.pydata.org/en/latest/">XArray</a></li>
-      </ul>
-    </li>
+        <li>
+            <a href="https://docs.dask.org/en/latest/setup.html">Setup</a>
+            <ul>
+            <li><a href="https://docs.dask.org/en/latest/setup/single-machine.html"> Local </a></li>
+            <li><a href="https://docs.dask.org/en/latest/setup/cloud.html"> Cloud </a></li>
+            <li><a href="https://docs.dask.org/en/latest/setup/hpc.html"> HPC </a></li>
+            <li><a href="https://kubernetes.dask.org/en/latest/"> Kubernetes </a></li>
+            <li><a href="https://yarn.dask.org/en/latest/"> Hadoop / Yarn </a></li>
+            </ul>
+        </li>
 
-    <li>
-      <a href="https://docs.dask.org/en/latest/setup.html">Setup</a>
-      <ul>
-        <li><a href="https://docs.dask.org/en/latest/setup/single-machine.html"> Local </a></li>
-        <li><a href="https://docs.dask.org/en/latest/setup/cloud.html"> Cloud </a></li>
-        <li><a href="https://docs.dask.org/en/latest/setup/hpc.html"> HPC </a></li>
-        <li><a href="https://kubernetes.dask.org/en/latest/"> Kubernetes </a></li>
-        <li><a href="https://yarn.dask.org/en/latest/"> Hadoop / Yarn </a></li>
-      </ul>
-    </li>
+        <li>
+            <a>Community</a>
+            <ul>
+            <li><a href="http://docs.dask.org/en/latest/support.html">Ask for Help</a></li>
+            <li><a href="https://github.com/dask">Github</a></li>
+            <li><a href="https://stackoverflow.com/questions/tagged/dask">Stack Overflow</a></li>
+            <li><a href="https://twitter.com/dask_dev">Twitter</a></li>
+            <li><a href="https://blog.dask.org/"> Developer Blog </a></li>
+            <li><a href="https://youtube.com/c/dask-dev"> YouTube Channel </a></li>
+            </ul>
+        </li>
+        </ul>
 
-    <li>
-      <a>Community</a>
-      <ul>
-        <li><a href="http://docs.dask.org/en/latest/support.html">Ask for Help</a></li>
-        <li><a href="https://github.com/dask">Github</a></li>
-        <li><a href="https://stackoverflow.com/questions/tagged/dask">Stack Overflow</a></li>
-        <li><a href="https://twitter.com/dask_dev">Twitter</a></li>
-        <li><a href="https://blog.dask.org/"> Developer Blog </a></li>
-      </ul>
-    </li>
-  </ul>
-
-</nav>
-
-
+    </nav>
+  
   <div class="wy-grid-for-nav">
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
@@ -118,7 +137,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> Dask Examples
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Dask Examples
           
 
           
@@ -141,6 +160,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -148,7 +168,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">Basic Examples:</span></p>
+              <p class="caption"><span class="caption-text">Basic Examples</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../array.html">Dask Arrays</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../bag.html">Dask Bags</a></li>
@@ -158,17 +178,20 @@
 <li class="toctree-l1"><a class="reference internal" href="../machine-learning.html">Dask for Machine Learning</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../xarray.html">Xarray with Dask Arrays</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Dataframes:</span></p>
+<p class="caption"><span class="caption-text">Dataframes</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../dataframes/01-data-access.html">DataFrames: Read and Write Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../dataframes/02-groupby.html">DataFrames: Groupby</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Machine Learning:</span></p>
+<p class="caption"><span class="caption-text">Machine Learning</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../machine-learning/blockwise-ensemble.html">Blockwise Ensemble Methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../machine-learning/scale-scikit-learn.html">Scale Scikit-Learn for Small Data Problems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../machine-learning/parallel-prediction.html">Score and Predict Large Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../machine-learning/torch-prediction.html">Batch Prediction with PyTorch</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../machine-learning/training-on-large-datasets.html">Train Models on Large Datasets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../machine-learning/incremental.html">Incrementally Train Large Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../machine-learning/text-vectorization.html">Text Vectorization Pipeline</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../machine-learning/hyperparam-opt.html">Hyperparameter optimization with Dask</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../machine-learning/xgboost.html">Scale XGBoost</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../machine-learning/voting-classifier.html">Use Voting Classifiers</a></li>
@@ -176,7 +199,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../machine-learning/glm.html">Generalized Linear Models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../machine-learning/svd.html">Singular Value Decomposition</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Applications:</span></p>
+<p class="caption"><span class="caption-text">Applications</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="json-data-on-the-web.html">Analyze web-hosted JSON data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="async-await.html">Async/Await and Non-Blocking Execution</a></li>
@@ -202,15 +225,18 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="satellite-imagery-geotiff.html">Reading and manipulating tiled GeoTIFF datasets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="stencils-with-numba.html">Stencil Computations with Numba</a></li>
+<li class="toctree-l1"><a class="reference internal" href="forecasting-with-prophet.html">Time Series Forecasting</a></li>
 </ul>
-<p class="caption"><span class="caption-text">User Surveys:</span></p>
+<p class="caption"><span class="caption-text">User Surveys</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../surveys/2019.html">2019 Dask User Survey Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../surveys/2020.html">2020 Dask User Survey Results</a></li>
 </ul>
 
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -249,7 +275,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li>ETL Pipelines with Prefect</li>
     
@@ -275,31 +301,45 @@
 /* CSS for nbsphinx extension */
 
 /* remove conflicting styling from Sphinx themes */
-div.nbinput,
-div.nbinput div.prompt,
-div.nbinput div.input_area,
-div.nbinput div[class*=highlight],
-div.nbinput div[class*=highlight] pre,
-div.nboutput,
-div.nbinput div.prompt,
-div.nbinput div.output_area,
-div.nboutput div[class*=highlight],
-div.nboutput div[class*=highlight] pre {
-    background: none;
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt *,
+div.nbinput.container div.input_area pre,
+div.nboutput.container div.output_area pre,
+div.nbinput.container div.input_area .highlight,
+div.nboutput.container div.output_area .highlight {
     border: none;
-    padding: 0 0;
+    padding: 0;
     margin: 0;
     box-shadow: none;
 }
 
+div.nbinput.container > div[class*=highlight],
+div.nboutput.container > div[class*=highlight] {
+    margin: 0;
+}
+
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt * {
+    background: none;
+}
+
+div.nboutput.container div.output_area .highlight,
+div.nboutput.container div.output_area pre {
+    background: unset;
+}
+
+div.nboutput.container div.output_area div.highlight {
+    color: unset;  /* override Pygments text color */
+}
+
 /* avoid gaps between output lines */
-div.nboutput div[class*=highlight] pre {
+div.nboutput.container div[class*=highlight] pre {
     line-height: normal;
 }
 
 /* input/output containers */
-div.nbinput,
-div.nboutput {
+div.nbinput.container,
+div.nboutput.container {
     display: -webkit-flex;
     display: flex;
     align-items: flex-start;
@@ -307,92 +347,104 @@ div.nboutput {
     width: 100%;
 }
 @media (max-width: 540px) {
-    div.nbinput,
-    div.nboutput {
+    div.nbinput.container,
+    div.nboutput.container {
         flex-direction: column;
     }
 }
 
 /* input container */
-div.nbinput {
+div.nbinput.container {
     padding-top: 5px;
 }
 
 /* last container */
-div.nblast {
+div.nblast.container {
     padding-bottom: 5px;
 }
 
 /* input prompt */
-div.nbinput div.prompt pre {
+div.nbinput.container div.prompt pre {
     color: #307FC1;
 }
 
 /* output prompt */
-div.nboutput div.prompt pre {
+div.nboutput.container div.prompt pre {
     color: #BF5B3D;
 }
 
 /* all prompts */
-div.nbinput div.prompt,
-div.nboutput div.prompt {
-    min-width: 7ex;
-    padding-top: 0.4em;
-    padding-right: 0.4em;
-    text-align: right;
-    flex: 0;
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
 }
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
 @media (max-width: 540px) {
-    div.nbinput div.prompt,
-    div.nboutput div.prompt {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
         text-align: left;
         padding: 0.4em;
     }
-    div.nboutput div.prompt.empty {
+    div.nboutput.container div.prompt.empty {
         padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
     }
 }
 
 /* disable scrollbars on prompts */
-div.nbinput div.prompt pre,
-div.nboutput div.prompt pre {
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
     overflow: hidden;
 }
 
 /* input/output area */
-div.nbinput div.input_area,
-div.nboutput div.output_area {
-    padding: 0.4em;
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
     -webkit-flex: 1;
     flex: 1;
     overflow: auto;
 }
 @media (max-width: 540px) {
-    div.nbinput div.input_area,
-    div.nboutput div.output_area {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
         width: 100%;
     }
 }
 
 /* input area */
-div.nbinput div.input_area {
+div.nbinput.container div.input_area {
     border: 1px solid #e0e0e0;
     border-radius: 2px;
-    background: #f5f5f5;
+    /*background: #f5f5f5;*/
 }
 
 /* override MathJax center alignment in output cells */
-div.nboutput div[class*=MathJax] {
+div.nboutput.container div[class*=MathJax] {
     text-align: left !important;
 }
 
 /* override sphinx.ext.imgmath center alignment in output cells */
-div.nboutput div.math p {
+div.nboutput.container div.math p {
     text-align: left;
 }
 
 /* standard error */
-div.nboutput div.output_area.stderr {
+div.nboutput.container div.output_area.stderr {
     background: #fdd;
 }
 
@@ -436,6 +488,28 @@ div.nboutput div.output_area.stderr {
 .ansi-bold { font-weight: bold; }
 .ansi-underline { text-decoration: underline; }
 
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+    margin: 0;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
 /* Some additional styling taken form the Jupyter notebook CSS */
 div.rendered_html table {
   border: none;
@@ -468,6 +542,28 @@ div.rendered_html tbody tr:nth-child(odd) {
 }
 div.rendered_html tbody tr:hover {
   background: rgba(66, 165, 245, 0.2);
+}
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
 }
 </style>
 <div class="admonition-live-notebook admonition">
@@ -532,87 +628,78 @@ HCDBB5;5?</p>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Requirement already satisfied: imageio in /home/travis/miniconda/envs/test/lib/python3.7/site-packages (2.6.1)
+Requirement already satisfied: imageio in /usr/share/miniconda3/envs/dask-examples/lib/python3.8/site-packages (2.9.0)
 Collecting prefect[viz]
-  Downloading https://files.pythonhosted.org/packages/01/70/b3b455f31cd229de01bcbcf6346c8b604586960aded8a84a2d3286430da5/prefect-0.6.7-py3-none-any.whl (461kB)
-
-Requirement already satisfied: numpy in /home/travis/miniconda/envs/test/lib/python3.7/site-packages (from imageio) (1.17.2)
-Requirement already satisfied: pillow in /home/travis/miniconda/envs/test/lib/python3.7/site-packages (from imageio) (6.2.0)
-Collecting marshmallow-oneofschema&lt;3.0,&gt;=2.0.0b2
-  Downloading https://files.pythonhosted.org/packages/7a/f3/da71ec4c539b6b5e16f1988fc46d8ea3374e258ef79fb5a7d88478fb922f/marshmallow_oneofschema-2.0.1-py2.py3-none-any.whl
-Requirement already satisfied: requests&lt;3.0,&gt;=2.20 in /home/travis/miniconda/envs/test/lib/python3.7/site-packages (from prefect[viz]) (2.22.0)
-Collecting python-slugify&lt;4.0,&gt;=1.2.6
-  Downloading https://files.pythonhosted.org/packages/03/cd/f0b39ad9b5a17f93c0a006dbd49f67fc5dc8b53de58a61542bc034ca70a8/python-slugify-3.0.6.tar.gz
+  Downloading prefect-0.13.13-py3-none-any.whl (454 kB)
+     |████████████████████████████████| 454 kB 5.0 MB/s
+Requirement already satisfied: numpy in /usr/share/miniconda3/envs/dask-examples/lib/python3.8/site-packages (from imageio) (1.18.5)
+Requirement already satisfied: pillow in /usr/share/miniconda3/envs/dask-examples/lib/python3.8/site-packages (from imageio) (8.0.1)
+Collecting importlib-resources&gt;=3.0.0; python_version &lt; &#34;3.9&#34;
+  Downloading importlib_resources-3.3.0-py2.py3-none-any.whl (26 kB)
+Collecting docker&gt;=3.4.1
+  Downloading docker-4.3.1-py2.py3-none-any.whl (145 kB)
+     |████████████████████████████████| 145 kB 21.0 MB/s
+Collecting pendulum&gt;=2.0.4
+  Downloading pendulum-2.1.2-cp38-cp38-manylinux1_x86_64.whl (155 kB)
+     |████████████████████████████████| 155 kB 19.2 MB/s
+Requirement already satisfied: requests&gt;=2.20 in /usr/share/miniconda3/envs/dask-examples/lib/python3.8/site-packages (from prefect[viz]) (2.24.0)
+Requirement already satisfied: python-dateutil&gt;=2.7.0 in /usr/share/miniconda3/envs/dask-examples/lib/python3.8/site-packages (from prefect[viz]) (2.8.1)
+Requirement already satisfied: msgpack&gt;=0.6.0 in /usr/share/miniconda3/envs/dask-examples/lib/python3.8/site-packages (from prefect[viz]) (1.0.0)
+Collecting tabulate&gt;=0.8.0
+  Downloading tabulate-0.8.7-py3-none-any.whl (24 kB)
+Requirement already satisfied: pytz&gt;=2018.7 in /usr/share/miniconda3/envs/dask-examples/lib/python3.8/site-packages (from prefect[viz]) (2020.4)
+Collecting toml&gt;=0.9.4
+  Downloading toml-0.10.2-py2.py3-none-any.whl (16 kB)
+Requirement already satisfied: dask&gt;=2.15.0 in /usr/share/miniconda3/envs/dask-examples/lib/python3.8/site-packages (from prefect[viz]) (2.20.0)
+Requirement already satisfied: distributed&gt;=2.15.0 in /usr/share/miniconda3/envs/dask-examples/lib/python3.8/site-packages (from prefect[viz]) (2.30.1)
+Collecting python-slugify&gt;=1.2.6
+  Downloading python-slugify-4.0.1.tar.gz (11 kB)
+Collecting marshmallow&gt;=3.0.0b19
+  Downloading marshmallow-3.9.0-py2.py3-none-any.whl (46 kB)
+     |████████████████████████████████| 46 kB 10.9 MB/s
+Requirement already satisfied: click&gt;=7.0 in /usr/share/miniconda3/envs/dask-examples/lib/python3.8/site-packages (from prefect[viz]) (7.1.2)
+Requirement already satisfied: pyyaml&gt;=3.13 in /usr/share/miniconda3/envs/dask-examples/lib/python3.8/site-packages (from prefect[viz]) (5.3.1)
+Collecting python-box&gt;=5.1.0
+  Downloading python_box-5.2.0-py3-none-any.whl (20 kB)
 Collecting croniter&lt;1.0,&gt;=0.3.24
-  Downloading https://files.pythonhosted.org/packages/c8/4c/04dea44f87b963d5c3f2bbc391e6c69d0a14aa896e35590be56213a04e4f/croniter-0.3.30-py2.py3-none-any.whl
-Collecting typing-extensions&lt;4.0,&gt;=3.6.2
-  Downloading https://files.pythonhosted.org/packages/27/aa/bd1442cfb0224da1b671ab334d3b0a4302e4161ea916e28904ff9618d471/typing_extensions-3.7.4-py3-none-any.whl
-Requirement already satisfied: click&lt;8.0,&gt;=7.0 in /home/travis/miniconda/envs/test/lib/python3.7/site-packages (from prefect[viz]) (7.0)
-Collecting docker&lt;5.0,&gt;=3.4.1
-  Downloading https://files.pythonhosted.org/packages/cc/ca/699d4754a932787ef353a157ada74efd1ceb6d1fc0bfb7989ae1e7b33111/docker-4.1.0-py2.py3-none-any.whl (139kB)
-
-Requirement already satisfied: python-dateutil~=2.7 in /home/travis/miniconda/envs/test/lib/python3.7/site-packages (from prefect[viz]) (2.8.0)
-Requirement already satisfied: cloudpickle&lt;1.3,&gt;=0.6.0 in /home/travis/miniconda/envs/test/lib/python3.7/site-packages (from prefect[viz]) (1.2.2)
-Collecting python-box&lt;4.0,&gt;=3.4.4
-  Downloading https://files.pythonhosted.org/packages/0a/8f/1797a73eb18d55aafe7a4a97ad9be88eb352b97bca58cfc10226d263d177/python_box-3.4.5-py2.py3-none-any.whl
-Collecting pendulum&lt;3.0,&gt;=2.0.4
-  Downloading https://files.pythonhosted.org/packages/0b/db/eadff08d7a50a5a28d13efba6a029868f72b662f7cb30079f4af56a8de02/pendulum-2.0.5-cp37-cp37m-manylinux1_x86_64.whl (141kB)
-
-Collecting typing&lt;4.0,&gt;=3.6.1
-  Downloading https://files.pythonhosted.org/packages/fe/2e/b480ee1b75e6d17d2993738670e75c1feeb9ff7f64452153cf018051cc92/typing-3.7.4.1-py3-none-any.whl
-Collecting marshmallow&lt;3.1.0,&gt;=3.0.0b19
-  Downloading https://files.pythonhosted.org/packages/ea/43/6d61ca1a4de901701e20f5cf3a15332df4447391fa2258f4e7d87019b14d/marshmallow-3.0.5-py2.py3-none-any.whl (43kB)
-
-Collecting toml&lt;1.0,&gt;=0.9.4
-  Downloading https://files.pythonhosted.org/packages/a2/12/ced7105d2de62fa7c8fb5fce92cc4ce66b57c95fb875e9318dba7f8c5db0/toml-0.10.0-py2.py3-none-any.whl
-Collecting mypy-extensions&lt;1.0,&gt;=0.4.0
-  Downloading https://files.pythonhosted.org/packages/1e/2f/7bba47eb58f62a473387cd7658dedd0bedb4b0fa9d530bbbfa0a6d23034a/mypy_extensions-0.4.2.tar.gz
-Requirement already satisfied: dask[bag]&lt;3.0,&gt;=0.19.3 in /home/travis/miniconda/envs/test/lib/python3.7/site-packages (from prefect[viz]) (2.6.0)
-Requirement already satisfied: pytz&gt;=2018.7 in /home/travis/miniconda/envs/test/lib/python3.7/site-packages (from prefect[viz]) (2019.3)
-Requirement already satisfied: distributed&lt;3.0,&gt;=1.26.1 in /home/travis/miniconda/envs/test/lib/python3.7/site-packages (from prefect[viz]) (2.6.0)
-Requirement already satisfied: pyyaml&lt;5.2,&gt;=3.13 in /home/travis/miniconda/envs/test/lib/python3.7/site-packages (from prefect[viz]) (5.1.2)
-Collecting tabulate&lt;1.0,&gt;=0.8.0
-  Downloading https://files.pythonhosted.org/packages/66/d4/977fdd5186b7cdbb7c43a7aac7c5e4e0337a84cb802e154616f3cfc84563/tabulate-0.8.5.tar.gz (45kB)
-
-Requirement already satisfied: graphviz&gt;=0.8.3; extra == &#34;viz&#34; in /home/travis/miniconda/envs/test/lib/python3.7/site-packages (from prefect[viz]) (0.13)
-Requirement already satisfied: urllib3!=1.25.0,!=1.25.1,&lt;1.26,&gt;=1.21.1 in /home/travis/miniconda/envs/test/lib/python3.7/site-packages (from requests&lt;3.0,&gt;=2.20-&gt;prefect[viz]) (1.25.6)
-Requirement already satisfied: idna&lt;2.9,&gt;=2.5 in /home/travis/miniconda/envs/test/lib/python3.7/site-packages (from requests&lt;3.0,&gt;=2.20-&gt;prefect[viz]) (2.8)
-Requirement already satisfied: certifi&gt;=2017.4.17 in /home/travis/miniconda/envs/test/lib/python3.7/site-packages (from requests&lt;3.0,&gt;=2.20-&gt;prefect[viz]) (2019.9.11)
-Requirement already satisfied: chardet&lt;3.1.0,&gt;=3.0.2 in /home/travis/miniconda/envs/test/lib/python3.7/site-packages (from requests&lt;3.0,&gt;=2.20-&gt;prefect[viz]) (3.0.4)
-Collecting text-unidecode&gt;=1.3
-  Downloading https://files.pythonhosted.org/packages/a6/a5/c0b6468d3824fe3fde30dbb5e1f687b291608f9473681bbf7dabbf5a87d7/text_unidecode-1.3-py2.py3-none-any.whl (78kB)
-
+  Downloading croniter-0.3.36-py2.py3-none-any.whl (13 kB)
+Collecting mypy-extensions&gt;=0.4.0
+  Downloading mypy_extensions-0.4.3-py2.py3-none-any.whl (4.5 kB)
+Requirement already satisfied: urllib3&gt;=1.24.3 in /usr/share/miniconda3/envs/dask-examples/lib/python3.8/site-packages (from prefect[viz]) (1.25.11)
+Requirement already satisfied: cloudpickle&gt;=0.6.0 in /usr/share/miniconda3/envs/dask-examples/lib/python3.8/site-packages (from prefect[viz]) (1.6.0)
+Collecting marshmallow-oneofschema&gt;=2.0.0b2
+  Downloading marshmallow_oneofschema-2.1.0-py2.py3-none-any.whl (5.7 kB)
+Requirement already satisfied: graphviz&gt;=0.8.3; extra == &#34;viz&#34; in /usr/share/miniconda3/envs/dask-examples/lib/python3.8/site-packages (from prefect[viz]) (0.14.2)
 Collecting websocket-client&gt;=0.32.0
-  Downloading https://files.pythonhosted.org/packages/29/19/44753eab1fdb50770ac69605527e8859468f3c0fd7dc5a76dd9c4dbd7906/websocket_client-0.56.0-py2.py3-none-any.whl (200kB)
-
-Requirement already satisfied: six&gt;=1.4.0 in /home/travis/miniconda/envs/test/lib/python3.7/site-packages (from docker&lt;5.0,&gt;=3.4.1-&gt;prefect[viz]) (1.12.0)
-Collecting pytzdata&gt;=2018.3
-  Downloading https://files.pythonhosted.org/packages/7f/f9/cdd39831b0465285c02ed90cfbf0db25bb951cb2a35ded0e69222375bea3/pytzdata-2019.3-py2.py3-none-any.whl (489kB)
-
-Requirement already satisfied: fsspec&gt;=0.5.1; extra == &#34;bag&#34; in /home/travis/miniconda/envs/test/lib/python3.7/site-packages (from dask[bag]&lt;3.0,&gt;=0.19.3-&gt;prefect[viz]) (0.5.2)
-Requirement already satisfied: toolz&gt;=0.7.3; extra == &#34;bag&#34; in /home/travis/miniconda/envs/test/lib/python3.7/site-packages (from dask[bag]&lt;3.0,&gt;=0.19.3-&gt;prefect[viz]) (0.10.0)
-Requirement already satisfied: partd&gt;=0.3.10; extra == &#34;bag&#34; in /home/travis/miniconda/envs/test/lib/python3.7/site-packages (from dask[bag]&lt;3.0,&gt;=0.19.3-&gt;prefect[viz]) (1.0.0)
-Requirement already satisfied: zict&gt;=0.1.3 in /home/travis/miniconda/envs/test/lib/python3.7/site-packages (from distributed&lt;3.0,&gt;=1.26.1-&gt;prefect[viz]) (1.0.0)
-Requirement already satisfied: psutil&gt;=5.0 in /home/travis/miniconda/envs/test/lib/python3.7/site-packages (from distributed&lt;3.0,&gt;=1.26.1-&gt;prefect[viz]) (5.6.3)
-Requirement already satisfied: tblib in /home/travis/miniconda/envs/test/lib/python3.7/site-packages (from distributed&lt;3.0,&gt;=1.26.1-&gt;prefect[viz]) (1.4.0)
-Requirement already satisfied: tornado&gt;=5 in /home/travis/miniconda/envs/test/lib/python3.7/site-packages (from distributed&lt;3.0,&gt;=1.26.1-&gt;prefect[viz]) (5.1.1)
-Requirement already satisfied: msgpack in /home/travis/miniconda/envs/test/lib/python3.7/site-packages (from distributed&lt;3.0,&gt;=1.26.1-&gt;prefect[viz]) (0.6.2)
-Requirement already satisfied: sortedcontainers!=2.0.0,!=2.0.1 in /home/travis/miniconda/envs/test/lib/python3.7/site-packages (from distributed&lt;3.0,&gt;=1.26.1-&gt;prefect[viz]) (2.1.0)
-Requirement already satisfied: locket in /home/travis/miniconda/envs/test/lib/python3.7/site-packages (from partd&gt;=0.3.10; extra == &#34;bag&#34;-&gt;dask[bag]&lt;3.0,&gt;=0.19.3-&gt;prefect[viz]) (0.2.0)
-Requirement already satisfied: heapdict in /home/travis/miniconda/envs/test/lib/python3.7/site-packages (from zict&gt;=0.1.3-&gt;distributed&lt;3.0,&gt;=1.26.1-&gt;prefect[viz]) (1.0.1)
-Building wheels for collected packages: python-slugify, mypy-extensions, tabulate
-  Building wheel for python-slugify (setup.py) ... - done
-  Created wheel for python-slugify: filename=python_slugify-3.0.6-py2.py3-none-any.whl size=5470 sha256=cef9bc7f770a435024b8eadddd3bcabb710d8987b018e09fbae7cfb111525262
-  Stored in directory: /home/travis/.cache/pip/wheels/00/09/3b/beb8520abeb5d6eb7cb8a8cd23c412103e5bb60cbb0145b25d
-  Building wheel for mypy-extensions (setup.py) ... - done
-  Created wheel for mypy-extensions: filename=mypy_extensions-0.4.2-py2.py3-none-any.whl size=4463 sha256=84555c7e4e423c615cf956f20781a961da3fc1bef1aca31e968399f5c755ffe6
-  Stored in directory: /home/travis/.cache/pip/wheels/d6/7b/51/3dea4153cf7748cf89d5a9f2e89a619abded55e3a2e82c521e
-  Building wheel for tabulate (setup.py) ... - done
-  Created wheel for tabulate: filename=tabulate-0.8.5-cp37-none-any.whl size=23257 sha256=90235c007539ac32d73ffdd199b1b450d702b7e94099e7406717e452ec4c8c23
-  Stored in directory: /home/travis/.cache/pip/wheels/e1/41/5e/e201f95d90fc84f93aa629b6638adacda680fe63aac47174ab
-Successfully built python-slugify mypy-extensions tabulate
-Installing collected packages: marshmallow, marshmallow-oneofschema, text-unidecode, python-slugify, croniter, typing-extensions, websocket-client, docker, python-box, pytzdata, pendulum, typing, toml, mypy-extensions, tabulate, prefect
-Successfully installed croniter-0.3.30 docker-4.1.0 marshmallow-3.0.5 marshmallow-oneofschema-2.0.1 mypy-extensions-0.4.2 pendulum-2.0.5 prefect-0.6.7 python-box-3.4.5 python-slugify-3.0.6 pytzdata-2019.3 tabulate-0.8.5 text-unidecode-1.3 toml-0.10.0 typing-3.7.4.1 typing-extensions-3.7.4 websocket-client-0.56.0
+  Downloading websocket_client-0.57.0-py2.py3-none-any.whl (200 kB)
+     |████████████████████████████████| 200 kB 28.6 MB/s
+Requirement already satisfied: six&gt;=1.4.0 in /usr/share/miniconda3/envs/dask-examples/lib/python3.8/site-packages (from docker&gt;=3.4.1-&gt;prefect[viz]) (1.15.0)
+Collecting pytzdata&gt;=2020.1
+  Downloading pytzdata-2020.1-py2.py3-none-any.whl (489 kB)
+     |████████████████████████████████| 489 kB 25.8 MB/s
+Requirement already satisfied: chardet&lt;4,&gt;=3.0.2 in /usr/share/miniconda3/envs/dask-examples/lib/python3.8/site-packages (from requests&gt;=2.20-&gt;prefect[viz]) (3.0.4)
+Requirement already satisfied: idna&lt;3,&gt;=2.5 in /usr/share/miniconda3/envs/dask-examples/lib/python3.8/site-packages (from requests&gt;=2.20-&gt;prefect[viz]) (2.10)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/share/miniconda3/envs/dask-examples/lib/python3.8/site-packages (from requests&gt;=2.20-&gt;prefect[viz]) (2020.6.20)
+Requirement already satisfied: setuptools in /usr/share/miniconda3/envs/dask-examples/lib/python3.8/site-packages (from distributed&gt;=2.15.0-&gt;prefect[viz]) (49.6.0.post20201009)
+Requirement already satisfied: sortedcontainers!=2.0.0,!=2.0.1 in /usr/share/miniconda3/envs/dask-examples/lib/python3.8/site-packages (from distributed&gt;=2.15.0-&gt;prefect[viz]) (2.2.2)
+Requirement already satisfied: toolz&gt;=0.8.2 in /usr/share/miniconda3/envs/dask-examples/lib/python3.8/site-packages (from distributed&gt;=2.15.0-&gt;prefect[viz]) (0.11.1)
+Requirement already satisfied: zict&gt;=0.1.3 in /usr/share/miniconda3/envs/dask-examples/lib/python3.8/site-packages (from distributed&gt;=2.15.0-&gt;prefect[viz]) (2.0.0)
+Requirement already satisfied: tblib&gt;=1.6.0 in /usr/share/miniconda3/envs/dask-examples/lib/python3.8/site-packages (from distributed&gt;=2.15.0-&gt;prefect[viz]) (1.6.0)
+Requirement already satisfied: psutil&gt;=5.0 in /usr/share/miniconda3/envs/dask-examples/lib/python3.8/site-packages (from distributed&gt;=2.15.0-&gt;prefect[viz]) (5.7.3)
+Requirement already satisfied: tornado&gt;=6.0.3; python_version &gt;= &#34;3.8&#34; in /usr/share/miniconda3/envs/dask-examples/lib/python3.8/site-packages (from distributed&gt;=2.15.0-&gt;prefect[viz]) (6.1)
+Collecting text-unidecode&gt;=1.3
+  Downloading text_unidecode-1.3-py2.py3-none-any.whl (78 kB)
+     |████████████████████████████████| 78 kB 14.9 MB/s
+Collecting natsort
+  Downloading natsort-7.0.1-py3-none-any.whl (33 kB)
+Requirement already satisfied: heapdict in /usr/share/miniconda3/envs/dask-examples/lib/python3.8/site-packages (from zict&gt;=0.1.3-&gt;distributed&gt;=2.15.0-&gt;prefect[viz]) (1.0.1)
+Building wheels for collected packages: python-slugify
+  Building wheel for python-slugify (setup.py) ... - \ done
+  Created wheel for python-slugify: filename=python_slugify-4.0.1-py2.py3-none-any.whl size=6769 sha256=c467939fa2971e8a237d5517eba04ebb783c734605d7adf25f56672e66dc4e86
+  Stored in directory: /home/runner/.cache/pip/wheels/91/4d/4f/e740a68c215791688c46c4d6251770a570e8dfea91af1acb5c
+Successfully built python-slugify
+Installing collected packages: importlib-resources, websocket-client, docker, pytzdata, pendulum, tabulate, toml, text-unidecode, python-slugify, marshmallow, python-box, natsort, croniter, mypy-extensions, marshmallow-oneofschema, prefect
+Successfully installed croniter-0.3.36 docker-4.3.1 importlib-resources-3.3.0 marshmallow-3.9.0 marshmallow-oneofschema-2.1.0 mypy-extensions-0.4.3 natsort-7.0.1 pendulum-2.1.2 prefect-0.13.13 python-box-5.2.0 python-slugify-4.0.1 pytzdata-2020.1 tabulate-0.8.7 text-unidecode-1.3 toml-0.10.2 websocket-client-0.57.0
 </pre></div></div>
 </div>
 <div class="section" id="Extract">
@@ -630,9 +717,9 @@ concern ourselves with temporary intermittent connection issues.</p>
 <span class="kn">import</span> <span class="nn">os</span>
 
 <span class="kn">import</span> <span class="nn">prefect</span>
-<span class="kn">from</span> <span class="nn">prefect</span> <span class="k">import</span> <span class="n">task</span>
-<span class="kn">from</span> <span class="nn">prefect.engine.signals</span> <span class="k">import</span> <span class="n">SKIP</span>
-<span class="kn">from</span> <span class="nn">prefect.tasks.shell</span> <span class="k">import</span> <span class="n">ShellTask</span>
+<span class="kn">from</span> <span class="nn">prefect</span> <span class="kn">import</span> <span class="n">task</span>
+<span class="kn">from</span> <span class="nn">prefect.engine.signals</span> <span class="kn">import</span> <span class="n">SKIP</span>
+<span class="kn">from</span> <span class="nn">prefect.tasks.shell</span> <span class="kn">import</span> <span class="n">ShellTask</span>
 
 
 <span class="nd">@task</span>
@@ -707,7 +794,7 @@ on, we look in <code class="docutils literal notranslate"><span class="pre">`pre
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="kn">import</span> <span class="nn">imageio</span>
-<span class="kn">from</span> <span class="nn">io</span> <span class="k">import</span> <span class="n">BytesIO</span>
+<span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">BytesIO</span>
 
 
 <span class="nd">@task</span>
@@ -732,7 +819,7 @@ on, we look in <code class="docutils literal notranslate"><span class="pre">`pre
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">from</span> <span class="nn">prefect</span> <span class="k">import</span> <span class="n">Parameter</span><span class="p">,</span> <span class="n">Flow</span>
+<span></span><span class="kn">from</span> <span class="nn">prefect</span> <span class="kn">import</span> <span class="n">Parameter</span><span class="p">,</span> <span class="n">Flow</span>
 
 
 <span class="n">DATA_URL</span> <span class="o">=</span> <span class="n">Parameter</span><span class="p">(</span><span class="s2">&quot;DATA_URL&quot;</span><span class="p">,</span>
@@ -760,12 +847,25 @@ on, we look in <code class="docutils literal notranslate"><span class="pre">`pre
 </pre></div>
 </div>
 </div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+Unable to revert mtime: /usr/share/fonts/cMap
+Unable to revert mtime: /usr/share/fonts/cmap/adobe-cns1
+Unable to revert mtime: /usr/share/fonts/cmap/adobe-gb1
+Unable to revert mtime: /usr/share/fonts/cmap/adobe-japan1
+Unable to revert mtime: /usr/share/fonts/cmap/adobe-japan2
+Unable to revert mtime: /usr/share/fonts/cmap/adobe-korea1
+</pre></div></div>
+</div>
 <div class="nboutput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/applications_prefect-etl_12_0.svg" src="../_images/applications_prefect-etl_12_0.svg" /></div>
+<img alt="../_images/applications_prefect-etl_12_1.svg" src="../_images/applications_prefect-etl_12_1.svg" /></div>
 </div>
 <div class="section" id="Running-the-Flow-on-Dask">
 <h3>Running the Flow on Dask<a class="headerlink" href="#Running-the-Flow-on-Dask" title="Permalink to this headline">¶</a></h3>
@@ -777,14 +877,14 @@ on, we look in <code class="docutils literal notranslate"><span class="pre">`pre
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="c1"># start our Dask cluster</span>
-<span class="kn">from</span> <span class="nn">dask.distributed</span> <span class="k">import</span> <span class="n">Client</span>
+<span class="kn">from</span> <span class="nn">dask.distributed</span> <span class="kn">import</span> <span class="n">Client</span>
 
 
 <span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">n_workers</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">threads_per_worker</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
 <span class="c1"># point Prefect&#39;s DaskExecutor to our Dask cluster</span>
 
-<span class="kn">from</span> <span class="nn">prefect.engine.executors</span> <span class="k">import</span> <span class="n">DaskExecutor</span>
+<span class="kn">from</span> <span class="nn">prefect.engine.executors</span> <span class="kn">import</span> <span class="n">DaskExecutor</span>
 
 <span class="n">executor</span> <span class="o">=</span> <span class="n">DaskExecutor</span><span class="p">(</span><span class="n">address</span><span class="o">=</span><span class="n">client</span><span class="o">.</span><span class="n">scheduler</span><span class="o">.</span><span class="n">address</span><span class="p">)</span>
 <span class="n">flow</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">executor</span><span class="o">=</span><span class="n">executor</span><span class="p">)</span>
@@ -794,21 +894,45 @@ on, we look in <code class="docutils literal notranslate"><span class="pre">`pre
 <div class="nboutput docutils container">
 <div class="prompt empty docutils container">
 </div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[2020-11-05 11:09:27] INFO - prefect.FlowRunner | Beginning Flow run for &#39;Image ETL&#39;
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-[2019-10-16 21:14:51,061] INFO - prefect.FlowRunner | Beginning Flow run for &#39;Image ETL&#39;
-[2019-10-16 21:14:51,065] INFO - prefect.FlowRunner | Starting flow run.
-[2019-10-16 21:14:56,897] INFO - prefect.FlowRunner | Flow run SUCCESS: all reference tasks succeeded
+/usr/share/miniconda3/envs/dask-examples/lib/python3.8/site-packages/distributed/worker.py:3373: UserWarning: Large object of size 2.03 MB detected in task graph:
+  {&#39;task&#39;: &lt;Task: write_to_disk&gt;, &#39;state&#39;: None, &#39;up ... _parent&#39;: True}
+Consider scattering large objects ahead of time
+with client.scatter to reduce scheduler burden and
+keep data on workers
+
+    future = client.submit(func, big_data)    # bad
+
+    big_future = client.scatter(big_data)     # good
+    future = client.submit(func, big_future)  # good
+  warnings.warn(
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[2020-11-05 11:09:31] INFO - prefect.FlowRunner | Flow run SUCCESS: all reference tasks succeeded
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
-<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>&lt;Success: &quot;All reference tasks succeeded.&quot;&gt;
-</pre></div>
-</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;Success: &#34;All reference tasks succeeded.&#34;&gt;
+</pre></div></div>
 </div>
 </div>
 </div>
@@ -830,7 +954,7 @@ on, we look in <code class="docutils literal notranslate"><span class="pre">`pre
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">HTML</span>
+<span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
 
 <span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&lt;img src=&quot;./clip.gif&quot; alt=&quot;Rick Daskley&quot;&gt;&#39;</span><span class="p">)</span>
 </pre></div>
@@ -876,11 +1000,19 @@ ga('send', 'pageview');
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2018, Dask Developers
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -891,7 +1023,6 @@ ga('send', 'pageview');
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

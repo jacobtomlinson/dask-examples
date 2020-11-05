@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,104 +11,124 @@
   
 
   
-  
-  
-  
-
-  
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
-        <script type="text/javascript" src="../_static/js/custom.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
-
-  
   <link rel="stylesheet" href="../_static/css/style.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/explore.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/nbsphinx.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+        <script src="../_static/js/custom.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="DataFrames: Groupby" href="02-groupby.html" />
     <link rel="prev" title="Xarray with Dask Arrays" href="../xarray.html" />
   <link rel="shortcut icon" href="../_static/images/favicon.ico"/>
+  
+  <meta name="Description" content="DataFrames: Read and Write Data">
+  <meta property="og:description" content="DataFrames: Read and Write Data">
+  <meta name="twitter:description" content="DataFrames: Read and Write Data" />
+  <meta property="og:title" content="Dask Examples  documentation - DataFrames: Read and Write Data">
+  <meta property="og:image" content="https://github.com/dask.png">
+  <meta property="og:image:secure_url" content="https://github.com/dask.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="380" />
+  <meta property="og:image:height" content="380" />
+  <meta property="og:url" content="dataframes/01-data-access.html">
+  <meta property="og:site_name" content="Dask Examples  documentation">
+
+  <meta name="twitter:site" content="https://dask.org" />
+  <meta name="twitter:creator" content="@dask_dev" />
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:image" content="https://github.com/dask.png" />
+  <meta name="twitter:image:alt" content="Dask Examples  documentation">
+  
 
 </head>
 
 <body class="wy-body-for-nav">
 
   
+    <nav id="explore-links">
+        <a href="https://docs.dask.org/">
+        <img class="caption" src="../_static/images/dask-horizontal-white.svg"/>
+        </a>
 
-<nav id="explore-links">
-  <a href="https://docs.dask.org/">
-    <img class="caption" src="../_static/images/dask-horizontal-white.svg"/>
-  </a>
+        <ul>
+        <li>
+            <a>Get Started</a>
+            <ul>
+            <li><a href="https://docs.dask.org/en/latest/install.html"> Install </a></li>
+            <li><a href="https://examples.dask.org"> Examples </a></li>
+            <li><a href="https://github.com/dask/dask-tutorial"> Tutorial </a></li>
+            <li><a href="https://docs.dask.org/en/latest/why.html"> Why Dask? </a></li>
+            <li><a href="https://stories.dask.org/en/latest"> Use Cases </a></li>
+            <li><a href="https://www.youtube.com/watch?v=RA_2qdipVng&list=PLRtz5iA93T4PQvWuoMnIyEIz1fXiJ5Pri"> Talks </a></li>
+            <li><a href="https://mybinder.org/v2/gh/dask/dask-examples/master?urlpath=lab"> Try Online </a></li>
+            <li><a href="https://dask.org/slides"> Slides </a></li>
+            </ul>
+        </li>
 
-  <ul>
-    <li>
-      <a>Get Started</a>
-      <ul>
-        <li><a href="https://docs.dask.org/en/latest/install.html"> Install </a></li>
-        <li><a href="https://examples.dask.org"> Examples </a></li>
-        <li><a href="https://github.com/dask/dask-tutorial"> Tutorial </a></li>
-        <li><a href="https://docs.dask.org/en/latest/why.html"> Why Dask? </a></li>
-        <li><a href="https://stories.dask.org/en/latest"> Use Cases </a></li>
-        <li><a href="https://www.youtube.com/watch?v=RA_2qdipVng&list=PLRtz5iA93T4PQvWuoMnIyEIz1fXiJ5Pri"> Talks </a></li>
-        <li><a href="https://mybinder.org/v2/gh/dask/dask-examples/master?urlpath=lab"> Try Online </a></li>
-        <li><a href="https://dask.org/slides"> Slides </a></li>
-      </ul>
-    </li>
+        <li>
+            <a href="">Algorithms</a>
+            <ul>
+            <li><a href="https://docs.dask.org/en/latest/array.html">Arrays</a></li>
+            <li><a href="https://docs.dask.org/en/latest/dataframe.html">Dataframes</a></li>
+            <li><a href="https://docs.dask.org/en/latest/bag.html">Bags</a></li>
+            <li><a href="https://docs.dask.org/en/latest/delayed.html">Delayed (custom)</a></li>
+            <li><a href="https://docs.dask.org/en/latest/futures.html">Futures (real-time)</a></li>
+            <li><a href="http://ml.dask.org">Machine Learning</a></li>
+            <li><a href="https://xarray.pydata.org/en/latest/">XArray</a></li>
+            </ul>
+        </li>
 
-    <li>
-      <a href="">Algorithms</a>
-      <ul>
-        <li><a href="https://docs.dask.org/en/latest/array.html">Arrays</a></li>
-        <li><a href="https://docs.dask.org/en/latest/dataframe.html">Dataframes</a></li>
-        <li><a href="https://docs.dask.org/en/latest/bag.html">Bags</a></li>
-        <li><a href="https://docs.dask.org/en/latest/delayed.html">Delayed (custom)</a></li>
-        <li><a href="https://docs.dask.org/en/latest/futures.html">Futures (real-time)</a></li>
-        <li><a href="http://ml.dask.org">Machine Learning</a></li>
-        <li><a href="https://xarray.pydata.org/en/latest/">XArray</a></li>
-      </ul>
-    </li>
+        <li>
+            <a href="https://docs.dask.org/en/latest/setup.html">Setup</a>
+            <ul>
+            <li><a href="https://docs.dask.org/en/latest/setup/single-machine.html"> Local </a></li>
+            <li><a href="https://docs.dask.org/en/latest/setup/cloud.html"> Cloud </a></li>
+            <li><a href="https://docs.dask.org/en/latest/setup/hpc.html"> HPC </a></li>
+            <li><a href="https://kubernetes.dask.org/en/latest/"> Kubernetes </a></li>
+            <li><a href="https://yarn.dask.org/en/latest/"> Hadoop / Yarn </a></li>
+            </ul>
+        </li>
 
-    <li>
-      <a href="https://docs.dask.org/en/latest/setup.html">Setup</a>
-      <ul>
-        <li><a href="https://docs.dask.org/en/latest/setup/single-machine.html"> Local </a></li>
-        <li><a href="https://docs.dask.org/en/latest/setup/cloud.html"> Cloud </a></li>
-        <li><a href="https://docs.dask.org/en/latest/setup/hpc.html"> HPC </a></li>
-        <li><a href="https://kubernetes.dask.org/en/latest/"> Kubernetes </a></li>
-        <li><a href="https://yarn.dask.org/en/latest/"> Hadoop / Yarn </a></li>
-      </ul>
-    </li>
+        <li>
+            <a>Community</a>
+            <ul>
+            <li><a href="http://docs.dask.org/en/latest/support.html">Ask for Help</a></li>
+            <li><a href="https://github.com/dask">Github</a></li>
+            <li><a href="https://stackoverflow.com/questions/tagged/dask">Stack Overflow</a></li>
+            <li><a href="https://twitter.com/dask_dev">Twitter</a></li>
+            <li><a href="https://blog.dask.org/"> Developer Blog </a></li>
+            <li><a href="https://youtube.com/c/dask-dev"> YouTube Channel </a></li>
+            </ul>
+        </li>
+        </ul>
 
-    <li>
-      <a>Community</a>
-      <ul>
-        <li><a href="http://docs.dask.org/en/latest/support.html">Ask for Help</a></li>
-        <li><a href="https://github.com/dask">Github</a></li>
-        <li><a href="https://stackoverflow.com/questions/tagged/dask">Stack Overflow</a></li>
-        <li><a href="https://twitter.com/dask_dev">Twitter</a></li>
-        <li><a href="https://blog.dask.org/"> Developer Blog </a></li>
-      </ul>
-    </li>
-  </ul>
-
-</nav>
-
-
+    </nav>
+  
   <div class="wy-grid-for-nav">
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
@@ -118,7 +137,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> Dask Examples
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Dask Examples
           
 
           
@@ -141,6 +160,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -148,7 +168,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">Basic Examples:</span></p>
+              <p class="caption"><span class="caption-text">Basic Examples</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../array.html">Dask Arrays</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../bag.html">Dask Bags</a></li>
@@ -158,7 +178,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../machine-learning.html">Dask for Machine Learning</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../xarray.html">Xarray with Dask Arrays</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Dataframes:</span></p>
+<p class="caption"><span class="caption-text">Dataframes</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">DataFrames: Read and Write Data</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#Start-Dask-Client-for-Dashboard">Start Dask Client for Dashboard</a></li>
@@ -174,12 +194,15 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="02-groupby.html">DataFrames: Groupby</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Machine Learning:</span></p>
+<p class="caption"><span class="caption-text">Machine Learning</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../machine-learning/blockwise-ensemble.html">Blockwise Ensemble Methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../machine-learning/scale-scikit-learn.html">Scale Scikit-Learn for Small Data Problems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../machine-learning/parallel-prediction.html">Score and Predict Large Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../machine-learning/torch-prediction.html">Batch Prediction with PyTorch</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../machine-learning/training-on-large-datasets.html">Train Models on Large Datasets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../machine-learning/incremental.html">Incrementally Train Large Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../machine-learning/text-vectorization.html">Text Vectorization Pipeline</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../machine-learning/hyperparam-opt.html">Hyperparameter optimization with Dask</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../machine-learning/xgboost.html">Scale XGBoost</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../machine-learning/voting-classifier.html">Use Voting Classifiers</a></li>
@@ -187,7 +210,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../machine-learning/glm.html">Generalized Linear Models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../machine-learning/svd.html">Singular Value Decomposition</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Applications:</span></p>
+<p class="caption"><span class="caption-text">Applications</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../applications/json-data-on-the-web.html">Analyze web-hosted JSON data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../applications/async-await.html">Async/Await and Non-Blocking Execution</a></li>
@@ -198,15 +221,18 @@
 <li class="toctree-l1"><a class="reference internal" href="../applications/prefect-etl.html">ETL Pipelines with Prefect</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../applications/satellite-imagery-geotiff.html">Reading and manipulating tiled GeoTIFF datasets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../applications/stencils-with-numba.html">Stencil Computations with Numba</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../applications/forecasting-with-prophet.html">Time Series Forecasting</a></li>
 </ul>
-<p class="caption"><span class="caption-text">User Surveys:</span></p>
+<p class="caption"><span class="caption-text">User Surveys</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../surveys/2019.html">2019 Dask User Survey Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../surveys/2020.html">2020 Dask User Survey Results</a></li>
 </ul>
 
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -245,7 +271,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li>DataFrames: Read and Write Data</li>
     
@@ -271,31 +297,45 @@
 /* CSS for nbsphinx extension */
 
 /* remove conflicting styling from Sphinx themes */
-div.nbinput,
-div.nbinput div.prompt,
-div.nbinput div.input_area,
-div.nbinput div[class*=highlight],
-div.nbinput div[class*=highlight] pre,
-div.nboutput,
-div.nbinput div.prompt,
-div.nbinput div.output_area,
-div.nboutput div[class*=highlight],
-div.nboutput div[class*=highlight] pre {
-    background: none;
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt *,
+div.nbinput.container div.input_area pre,
+div.nboutput.container div.output_area pre,
+div.nbinput.container div.input_area .highlight,
+div.nboutput.container div.output_area .highlight {
     border: none;
-    padding: 0 0;
+    padding: 0;
     margin: 0;
     box-shadow: none;
 }
 
+div.nbinput.container > div[class*=highlight],
+div.nboutput.container > div[class*=highlight] {
+    margin: 0;
+}
+
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt * {
+    background: none;
+}
+
+div.nboutput.container div.output_area .highlight,
+div.nboutput.container div.output_area pre {
+    background: unset;
+}
+
+div.nboutput.container div.output_area div.highlight {
+    color: unset;  /* override Pygments text color */
+}
+
 /* avoid gaps between output lines */
-div.nboutput div[class*=highlight] pre {
+div.nboutput.container div[class*=highlight] pre {
     line-height: normal;
 }
 
 /* input/output containers */
-div.nbinput,
-div.nboutput {
+div.nbinput.container,
+div.nboutput.container {
     display: -webkit-flex;
     display: flex;
     align-items: flex-start;
@@ -303,92 +343,104 @@ div.nboutput {
     width: 100%;
 }
 @media (max-width: 540px) {
-    div.nbinput,
-    div.nboutput {
+    div.nbinput.container,
+    div.nboutput.container {
         flex-direction: column;
     }
 }
 
 /* input container */
-div.nbinput {
+div.nbinput.container {
     padding-top: 5px;
 }
 
 /* last container */
-div.nblast {
+div.nblast.container {
     padding-bottom: 5px;
 }
 
 /* input prompt */
-div.nbinput div.prompt pre {
+div.nbinput.container div.prompt pre {
     color: #307FC1;
 }
 
 /* output prompt */
-div.nboutput div.prompt pre {
+div.nboutput.container div.prompt pre {
     color: #BF5B3D;
 }
 
 /* all prompts */
-div.nbinput div.prompt,
-div.nboutput div.prompt {
-    min-width: 7ex;
-    padding-top: 0.4em;
-    padding-right: 0.4em;
-    text-align: right;
-    flex: 0;
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
 }
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
 @media (max-width: 540px) {
-    div.nbinput div.prompt,
-    div.nboutput div.prompt {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
         text-align: left;
         padding: 0.4em;
     }
-    div.nboutput div.prompt.empty {
+    div.nboutput.container div.prompt.empty {
         padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
     }
 }
 
 /* disable scrollbars on prompts */
-div.nbinput div.prompt pre,
-div.nboutput div.prompt pre {
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
     overflow: hidden;
 }
 
 /* input/output area */
-div.nbinput div.input_area,
-div.nboutput div.output_area {
-    padding: 0.4em;
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
     -webkit-flex: 1;
     flex: 1;
     overflow: auto;
 }
 @media (max-width: 540px) {
-    div.nbinput div.input_area,
-    div.nboutput div.output_area {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
         width: 100%;
     }
 }
 
 /* input area */
-div.nbinput div.input_area {
+div.nbinput.container div.input_area {
     border: 1px solid #e0e0e0;
     border-radius: 2px;
-    background: #f5f5f5;
+    /*background: #f5f5f5;*/
 }
 
 /* override MathJax center alignment in output cells */
-div.nboutput div[class*=MathJax] {
+div.nboutput.container div[class*=MathJax] {
     text-align: left !important;
 }
 
 /* override sphinx.ext.imgmath center alignment in output cells */
-div.nboutput div.math p {
+div.nboutput.container div.math p {
     text-align: left;
 }
 
 /* standard error */
-div.nboutput div.output_area.stderr {
+div.nboutput.container div.output_area.stderr {
     background: #fdd;
 }
 
@@ -432,6 +484,28 @@ div.nboutput div.output_area.stderr {
 .ansi-bold { font-weight: bold; }
 .ansi-underline { text-decoration: underline; }
 
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+    margin: 0;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
 /* Some additional styling taken form the Jupyter notebook CSS */
 div.rendered_html table {
   border: none;
@@ -465,6 +539,28 @@ div.rendered_html tbody tr:nth-child(odd) {
 div.rendered_html tbody tr:hover {
   background: rgba(66, 165, 245, 0.2);
 }
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
 </style>
 <div class="admonition-live-notebook admonition">
 <p class="admonition-title">Live Notebook</p>
@@ -478,7 +574,7 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">HTML</span>
+<span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
 
 <span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/0eEsIA0O1iE?rel=0&amp;amp;controls=0&amp;amp;showinfo=0&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;&#39;</span><span class="p">)</span>
 </pre></div>
@@ -489,7 +585,7 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-/home/travis/miniconda/envs/test/lib/python3.7/site-packages/IPython/core/display.py:694: UserWarning: Consider using IPython.display.IFrame instead
+/usr/share/miniconda3/envs/dask-examples/lib/python3.8/site-packages/IPython/core/display.py:717: UserWarning: Consider using IPython.display.IFrame instead
   warnings.warn(&#34;Consider using IPython.display.IFrame instead&#34;)
 </pre></div></div>
 </div>
@@ -509,7 +605,7 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">from</span> <span class="nn">dask.distributed</span> <span class="k">import</span> <span class="n">Client</span>
+<span></span><span class="kn">from</span> <span class="nn">dask.distributed</span> <span class="kn">import</span> <span class="n">Client</span>
 <span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">n_workers</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">threads_per_worker</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">processes</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">memory_limit</span><span class="o">=</span><span class="s1">&#39;2GB&#39;</span><span class="p">)</span>
 <span class="n">client</span>
 </pre></div>
@@ -525,8 +621,8 @@ div.rendered_html tbody tr:hover {
 <td style="vertical-align: top; border: 0px solid white">
 <h3 style="text-align: left;">Client</h3>
 <ul style="text-align: left; list-style: none; margin: 0; padding: 0;">
-  <li><b>Scheduler: </b>inproc://10.20.1.243/12158/1</li>
-  <li><b>Dashboard: </b><a href='http://10.20.1.243/12158/1:8787/status' target='_blank'>http://10.20.1.243/12158/1:8787/status</a>
+  <li><b>Scheduler: </b>inproc://10.1.0.4/9782/1</li>
+  <li><b>Dashboard: </b><a href='http://10.1.0.4:8787/status' target='_blank'>http://10.1.0.4:8787/status</a></li>
 </ul>
 </td>
 <td style="vertical-align: top; border: 0px solid white">
@@ -634,7 +730,7 @@ div.rendered_html tbody tr:hover {
 </div>
 <div>Dask Name: make-timeseries, 30 tasks</div></div>
 </div>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
@@ -660,6 +756,44 @@ div.rendered_html tbody tr:hover {
 <span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;data/*.csv&#39;</span><span class="p">,</span> <span class="n">name_function</span><span class="o">=</span><span class="n">name</span><span class="p">);</span>
 </pre></div>
 </div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39;/home/runner/work/dask-examples/dask-examples/dataframes/data/2000-01-01.csv&#39;,
+ &#39;/home/runner/work/dask-examples/dask-examples/dataframes/data/2000-01-02.csv&#39;,
+ &#39;/home/runner/work/dask-examples/dask-examples/dataframes/data/2000-01-03.csv&#39;,
+ &#39;/home/runner/work/dask-examples/dask-examples/dataframes/data/2000-01-04.csv&#39;,
+ &#39;/home/runner/work/dask-examples/dask-examples/dataframes/data/2000-01-05.csv&#39;,
+ &#39;/home/runner/work/dask-examples/dask-examples/dataframes/data/2000-01-06.csv&#39;,
+ &#39;/home/runner/work/dask-examples/dask-examples/dataframes/data/2000-01-07.csv&#39;,
+ &#39;/home/runner/work/dask-examples/dask-examples/dataframes/data/2000-01-08.csv&#39;,
+ &#39;/home/runner/work/dask-examples/dask-examples/dataframes/data/2000-01-09.csv&#39;,
+ &#39;/home/runner/work/dask-examples/dask-examples/dataframes/data/2000-01-10.csv&#39;,
+ &#39;/home/runner/work/dask-examples/dask-examples/dataframes/data/2000-01-11.csv&#39;,
+ &#39;/home/runner/work/dask-examples/dask-examples/dataframes/data/2000-01-12.csv&#39;,
+ &#39;/home/runner/work/dask-examples/dask-examples/dataframes/data/2000-01-13.csv&#39;,
+ &#39;/home/runner/work/dask-examples/dask-examples/dataframes/data/2000-01-14.csv&#39;,
+ &#39;/home/runner/work/dask-examples/dask-examples/dataframes/data/2000-01-15.csv&#39;,
+ &#39;/home/runner/work/dask-examples/dask-examples/dataframes/data/2000-01-16.csv&#39;,
+ &#39;/home/runner/work/dask-examples/dask-examples/dataframes/data/2000-01-17.csv&#39;,
+ &#39;/home/runner/work/dask-examples/dask-examples/dataframes/data/2000-01-18.csv&#39;,
+ &#39;/home/runner/work/dask-examples/dask-examples/dataframes/data/2000-01-19.csv&#39;,
+ &#39;/home/runner/work/dask-examples/dask-examples/dataframes/data/2000-01-20.csv&#39;,
+ &#39;/home/runner/work/dask-examples/dask-examples/dataframes/data/2000-01-21.csv&#39;,
+ &#39;/home/runner/work/dask-examples/dask-examples/dataframes/data/2000-01-22.csv&#39;,
+ &#39;/home/runner/work/dask-examples/dask-examples/dataframes/data/2000-01-23.csv&#39;,
+ &#39;/home/runner/work/dask-examples/dask-examples/dataframes/data/2000-01-24.csv&#39;,
+ &#39;/home/runner/work/dask-examples/dask-examples/dataframes/data/2000-01-25.csv&#39;,
+ &#39;/home/runner/work/dask-examples/dask-examples/dataframes/data/2000-01-26.csv&#39;,
+ &#39;/home/runner/work/dask-examples/dask-examples/dataframes/data/2000-01-27.csv&#39;,
+ &#39;/home/runner/work/dask-examples/dask-examples/dataframes/data/2000-01-28.csv&#39;,
+ &#39;/home/runner/work/dask-examples/dask-examples/dataframes/data/2000-01-29.csv&#39;,
+ &#39;/home/runner/work/dask-examples/dask-examples/dataframes/data/2000-01-30.csv&#39;]
+</pre></div></div>
 </div>
 </div>
 <div class="section" id="Read-CSV-files">
@@ -706,15 +840,15 @@ data/2000-01-10.csv
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 timestamp,id,name,x,y
-2000-01-01 00:00:00,973,George,0.5323545272352643,0.4644479832473165
-2000-01-01 00:00:01,950,Dan,-0.9742954488167075,0.39414517346882416
-2000-01-01 00:00:02,1048,Zelda,0.5899397997531153,0.6707322213983693
-2000-01-01 00:00:03,1025,Norbert,0.5806900810916886,-0.5177309147784845
-2000-01-01 00:00:04,996,Frank,0.2640716830009191,-0.4828684051716825
-2000-01-01 00:00:05,984,Frank,-0.4961715300024476,0.5894806879815138
-2000-01-01 00:00:06,997,Quinn,0.10571372150947567,-0.8994397402222947
-2000-01-01 00:00:07,1027,Xavier,-0.9209417344996893,0.030491890414622524
-2000-01-01 00:00:08,956,Patricia,0.9196800400354601,0.6237577245387584
+2000-01-01 00:00:00,997,Jerry,-0.598693888964215,-0.33867533108695924
+2000-01-01 00:00:01,1025,Frank,0.8374970416821816,0.2730154114213468
+2000-01-01 00:00:02,1065,Charlie,0.6274160566202722,0.09458162185917263
+2000-01-01 00:00:03,985,Edith,-0.7815264147691583,-0.13623922932242327
+2000-01-01 00:00:04,980,Xavier,0.8169816174361666,-0.8665600691749575
+2000-01-01 00:00:05,953,Tim,0.6037074810925713,0.5248435997998275
+2000-01-01 00:00:06,984,Quinn,-0.7202916067190699,-0.31958754717519966
+2000-01-01 00:00:07,971,Charlie,0.9254134234875941,0.747743720447702
+2000-01-01 00:00:08,985,Hannah,-0.4288854843527503,-0.8142682712007057
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -732,15 +866,15 @@ timestamp,id,name,x,y
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 timestamp,id,name,x,y
-2000-01-30 00:00:00,1017,Edith,0.15268171629288552,-0.8928227494533174
-2000-01-30 00:00:01,973,Kevin,0.08001275540323682,-0.27745657835801807
-2000-01-30 00:00:02,1024,Zelda,0.5770946221964139,0.5992811330713765
-2000-01-30 00:00:03,952,Hannah,-0.4132934412479019,0.5760364741874113
-2000-01-30 00:00:04,1009,Edith,-0.45565804239469565,-0.33539646668962875
-2000-01-30 00:00:05,1046,Dan,0.43906296109467857,-0.5733613859942466
-2000-01-30 00:00:06,976,Dan,-0.7296359315863512,-0.6606432280271826
-2000-01-30 00:00:07,948,Oliver,-0.9769215439215688,0.27323227185668997
-2000-01-30 00:00:08,1043,Sarah,0.3458069340849539,-0.7047037148329118
+2000-01-30 00:00:00,1004,Zelda,-0.7100029029192205,0.007080793218195991
+2000-01-30 00:00:01,999,Victor,-0.3968957303684162,-0.8900645307981307
+2000-01-30 00:00:02,999,Dan,0.7069081103388599,0.517098000844034
+2000-01-30 00:00:03,988,Xavier,-0.6606775620100989,0.5506228469660439
+2000-01-30 00:00:04,1054,Yvonne,0.7345088384454104,0.11957991051495798
+2000-01-30 00:00:05,996,Xavier,0.7110394994360458,-0.3013309424337711
+2000-01-30 00:00:06,996,Bob,0.4192152490520309,-0.134126514062199
+2000-01-30 00:00:07,959,Alice,-0.2631793670333129,-0.23519264464066714
+2000-01-30 00:00:08,990,Sarah,-0.41924755187218654,0.9716165979942593
 </pre></div></div>
 </div>
 <p>We can read one file with <code class="docutils literal notranslate"><span class="pre">pandas.read_csv</span></code> or many files with <code class="docutils literal notranslate"><span class="pre">dask.dataframe.read_csv</span></code></p>
@@ -788,44 +922,44 @@ timestamp,id,name,x,y
   </thead>
   <tbody>
     <tr>
-      <td>0</td>
+      <th>0</th>
       <td>2000-01-01 00:00:00</td>
-      <td>973</td>
-      <td>George</td>
-      <td>0.532355</td>
-      <td>0.464448</td>
+      <td>997</td>
+      <td>Jerry</td>
+      <td>-0.598694</td>
+      <td>-0.338675</td>
     </tr>
     <tr>
-      <td>1</td>
+      <th>1</th>
       <td>2000-01-01 00:00:01</td>
-      <td>950</td>
-      <td>Dan</td>
-      <td>-0.974295</td>
-      <td>0.394145</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>2000-01-01 00:00:02</td>
-      <td>1048</td>
-      <td>Zelda</td>
-      <td>0.589940</td>
-      <td>0.670732</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>2000-01-01 00:00:03</td>
       <td>1025</td>
-      <td>Norbert</td>
-      <td>0.580690</td>
-      <td>-0.517731</td>
+      <td>Frank</td>
+      <td>0.837497</td>
+      <td>0.273015</td>
     </tr>
     <tr>
-      <td>4</td>
+      <th>2</th>
+      <td>2000-01-01 00:00:02</td>
+      <td>1065</td>
+      <td>Charlie</td>
+      <td>0.627416</td>
+      <td>0.094582</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2000-01-01 00:00:03</td>
+      <td>985</td>
+      <td>Edith</td>
+      <td>-0.781526</td>
+      <td>-0.136239</td>
+    </tr>
+    <tr>
+      <th>4</th>
       <td>2000-01-01 00:00:04</td>
-      <td>996</td>
-      <td>Frank</td>
-      <td>0.264072</td>
-      <td>-0.482868</td>
+      <td>980</td>
+      <td>Xavier</td>
+      <td>0.816982</td>
+      <td>-0.866560</td>
     </tr>
   </tbody>
 </table>
@@ -926,7 +1060,7 @@ timestamp,id,name,x,y
   </tbody>
 </table>
 </div>
-<div>Dask Name: from-delayed, 90 tasks</div></div>
+<div>Dask Name: read-csv, 30 tasks</div></div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
@@ -969,44 +1103,44 @@ timestamp,id,name,x,y
   </thead>
   <tbody>
     <tr>
-      <td>0</td>
+      <th>0</th>
       <td>2000-01-01 00:00:00</td>
-      <td>973</td>
-      <td>George</td>
-      <td>0.532355</td>
-      <td>0.464448</td>
+      <td>997</td>
+      <td>Jerry</td>
+      <td>-0.598694</td>
+      <td>-0.338675</td>
     </tr>
     <tr>
-      <td>1</td>
+      <th>1</th>
       <td>2000-01-01 00:00:01</td>
-      <td>950</td>
-      <td>Dan</td>
-      <td>-0.974295</td>
-      <td>0.394145</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>2000-01-01 00:00:02</td>
-      <td>1048</td>
-      <td>Zelda</td>
-      <td>0.589940</td>
-      <td>0.670732</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>2000-01-01 00:00:03</td>
       <td>1025</td>
-      <td>Norbert</td>
-      <td>0.580690</td>
-      <td>-0.517731</td>
+      <td>Frank</td>
+      <td>0.837497</td>
+      <td>0.273015</td>
     </tr>
     <tr>
-      <td>4</td>
+      <th>2</th>
+      <td>2000-01-01 00:00:02</td>
+      <td>1065</td>
+      <td>Charlie</td>
+      <td>0.627416</td>
+      <td>0.094582</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2000-01-01 00:00:03</td>
+      <td>985</td>
+      <td>Edith</td>
+      <td>-0.781526</td>
+      <td>-0.136239</td>
+    </tr>
+    <tr>
+      <th>4</th>
       <td>2000-01-01 00:00:04</td>
-      <td>996</td>
-      <td>Frank</td>
-      <td>0.264072</td>
-      <td>-0.482868</td>
+      <td>980</td>
+      <td>Xavier</td>
+      <td>0.816982</td>
+      <td>-0.866560</td>
     </tr>
   </tbody>
 </table>
@@ -1128,7 +1262,7 @@ timestamp,id,name,x,y
   </tbody>
 </table>
 </div>
-<div>Dask Name: from-delayed, 90 tasks</div></div>
+<div>Dask Name: read-csv, 30 tasks</div></div>
 </div>
 </div>
 <div class="section" id="Do-a-simple-computation">
@@ -1148,45 +1282,45 @@ timestamp,id,name,x,y
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-CPU times: user 5.82 s, sys: 659 ms, total: 6.48 s
-Wall time: 4.42 s
+CPU times: user 4.05 s, sys: 432 ms, total: 4.48 s
+Wall time: 3.12 s
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
 </pre></div>
 </div>
-<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>name
-Alice      -0.002870
-Bob         0.000055
-Charlie    -0.000037
-Dan        -0.001819
-Edith       0.001411
-Frank      -0.002131
-George     -0.000985
-Hannah     -0.000370
-Ingrid     -0.000146
-Jerry       0.001894
-Kevin      -0.001100
-Laura      -0.001183
-Michael     0.002263
-Norbert    -0.000146
-Oliver     -0.000851
-Patricia   -0.001639
-Quinn      -0.001100
-Ray         0.000625
-Sarah      -0.001960
-Tim         0.000302
-Ursula     -0.002604
-Victor      0.001306
-Wendy      -0.000243
-Xavier     -0.001541
-Yvonne      0.000035
-Zelda      -0.001988
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+name
+Alice       0.000408
+Bob        -0.000648
+Charlie    -0.001565
+Dan         0.001498
+Edith      -0.000778
+Frank      -0.001643
+George     -0.001610
+Hannah     -0.002178
+Ingrid      0.000240
+Jerry       0.001379
+Kevin      -0.000849
+Laura      -0.001792
+Michael    -0.001407
+Norbert     0.001216
+Oliver      0.001654
+Patricia   -0.002757
+Quinn       0.002643
+Ray        -0.000953
+Sarah      -0.002452
+Tim        -0.000243
+Ursula      0.001349
+Victor     -0.000345
+Wendy      -0.003445
+Xavier      0.001023
+Yvonne     -0.000226
+Zelda       0.002122
 Name: x, dtype: float64
-</pre></div>
-</div>
+</pre></div></div>
 </div>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
@@ -1224,14 +1358,14 @@ Name: x, dtype: float64
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-_common_metadata  part.15.parquet  part.22.parquet  part.2.parquet
-_metadata         part.16.parquet  part.23.parquet  part.3.parquet
-part.0.parquet    part.17.parquet  part.24.parquet  part.4.parquet
-part.10.parquet   part.18.parquet  part.25.parquet  part.5.parquet
-part.11.parquet   part.19.parquet  part.26.parquet  part.6.parquet
-part.12.parquet   part.1.parquet   part.27.parquet  part.7.parquet
-part.13.parquet   part.20.parquet  part.28.parquet  part.8.parquet
-part.14.parquet   part.21.parquet  part.29.parquet  part.9.parquet
+_common_metadata  part.14.parquet  part.21.parquet  part.29.parquet
+_metadata         part.15.parquet  part.22.parquet  part.3.parquet
+part.0.parquet    part.16.parquet  part.23.parquet  part.4.parquet
+part.1.parquet    part.17.parquet  part.24.parquet  part.5.parquet
+part.10.parquet   part.18.parquet  part.25.parquet  part.6.parquet
+part.11.parquet   part.19.parquet  part.26.parquet  part.7.parquet
+part.12.parquet   part.2.parquet   part.27.parquet  part.8.parquet
+part.13.parquet   part.20.parquet  part.28.parquet  part.9.parquet
 </pre></div></div>
 </div>
 </div>
@@ -1346,45 +1480,45 @@ part.14.parquet   part.21.parquet  part.29.parquet  part.9.parquet
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-CPU times: user 1.79 s, sys: 121 ms, total: 1.91 s
-Wall time: 1.36 s
+CPU times: user 1.26 s, sys: 168 ms, total: 1.43 s
+Wall time: 1.06 s
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
 </pre></div>
 </div>
-<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>name
-Alice      -0.002870
-Bob         0.000055
-Charlie    -0.000037
-Dan        -0.001819
-Edith       0.001411
-Frank      -0.002131
-George     -0.000985
-Hannah     -0.000370
-Ingrid     -0.000146
-Jerry       0.001894
-Kevin      -0.001100
-Laura      -0.001183
-Michael     0.002263
-Norbert    -0.000146
-Oliver     -0.000851
-Patricia   -0.001639
-Quinn      -0.001100
-Ray         0.000625
-Sarah      -0.001960
-Tim         0.000302
-Ursula     -0.002604
-Victor      0.001306
-Wendy      -0.000243
-Xavier     -0.001541
-Yvonne      0.000035
-Zelda      -0.001988
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+name
+Alice       0.000408
+Bob        -0.000648
+Charlie    -0.001565
+Dan         0.001498
+Edith      -0.000778
+Frank      -0.001643
+George     -0.001610
+Hannah     -0.002178
+Ingrid      0.000240
+Jerry       0.001379
+Kevin      -0.000849
+Laura      -0.001792
+Michael    -0.001407
+Norbert     0.001216
+Oliver      0.001654
+Patricia   -0.002757
+Quinn       0.002643
+Ray        -0.000953
+Sarah      -0.002452
+Tim        -0.000243
+Ursula      0.001349
+Victor     -0.000345
+Wendy      -0.003445
+Xavier      0.001023
+Yvonne     -0.000226
+Zelda       0.002122
 Name: x, dtype: float64
-</pre></div>
-</div>
+</pre></div></div>
 </div>
 </div>
 <div class="section" id="Select-only-the-columns-that-you-plan-to-use">
@@ -1406,45 +1540,45 @@ Name: x, dtype: float64
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-CPU times: user 1.55 s, sys: 88.1 ms, total: 1.63 s
-Wall time: 1.23 s
+CPU times: user 1.26 s, sys: 107 ms, total: 1.36 s
+Wall time: 1.07 s
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
 </pre></div>
 </div>
-<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>name
-Alice      -0.002870
-Bob         0.000055
-Charlie    -0.000037
-Dan        -0.001819
-Edith       0.001411
-Frank      -0.002131
-George     -0.000985
-Hannah     -0.000370
-Ingrid     -0.000146
-Jerry       0.001894
-Kevin      -0.001100
-Laura      -0.001183
-Michael     0.002263
-Norbert    -0.000146
-Oliver     -0.000851
-Patricia   -0.001639
-Quinn      -0.001100
-Ray         0.000625
-Sarah      -0.001960
-Tim         0.000302
-Ursula     -0.002604
-Victor      0.001306
-Wendy      -0.000243
-Xavier     -0.001541
-Yvonne      0.000035
-Zelda      -0.001988
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+name
+Alice       0.000408
+Bob        -0.000648
+Charlie    -0.001565
+Dan         0.001498
+Edith      -0.000778
+Frank      -0.001643
+George     -0.001610
+Hannah     -0.002178
+Ingrid      0.000240
+Jerry       0.001379
+Kevin      -0.000849
+Laura      -0.001792
+Michael    -0.001407
+Norbert     0.001216
+Oliver      0.001654
+Patricia   -0.002757
+Quinn       0.002643
+Ray        -0.000953
+Sarah      -0.002452
+Tim        -0.000243
+Ursula      0.001349
+Victor     -0.000345
+Wendy      -0.003445
+Xavier      0.001023
+Yvonne     -0.000226
+Zelda       0.002122
 Name: x, dtype: float64
-</pre></div>
-</div>
+</pre></div></div>
 </div>
 <p>Here the difference is not that large, but with larger datasets this can save a great deal of time.</p>
 </div>
@@ -1484,11 +1618,19 @@ ga('send', 'pageview');
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2018, Dask Developers
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -1499,7 +1641,6 @@ ga('send', 'pageview');
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {
